@@ -1,0 +1,29 @@
+#define MICROPY_HW_BOARD_NAME               "01Studio PYDRONE_V1.1-ESP32-S3P"
+#define MICROPY_HW_MCU_NAME                 "ESP32S3"
+
+#define MICROPY_PY_MACHINE_DAC			(0)
+
+#define MICROPY_ENABLE_ESP_DRONE		(1)
+#define MICROPY_HW_I2CDEV_V1            (1)
+#define MICROPY_HW_QMI8658              (1)
+#define MICROPY_HW_SPL06_V1             (0)
+#define MICROPY_HW_SPA06                (1)
+#define MICROPY_HW_SPA06_V1             (0)
+
+#define MICROPY_HW_SENSOR_I2C_PIN_SCL	(15)
+#define MICROPY_HW_SENSOR_I2C_PIN_SDA	(16)
+#define MICROPY_MPU_PIN_IRQ				(9)
+
+#define MICROPY_HW_DECK_I2C_PIN_SCL		(39)
+#define MICROPY_HW_DECK_I2C_PIN_SDA		(38)
+
+#define MICROPY_MOTOR01_PIN				(4)
+#define MICROPY_MOTOR02_PIN				(5)
+#define MICROPY_MOTOR03_PIN				(40)
+#define MICROPY_MOTOR04_PIN				(41) 
+
+#define MICROPY_HW_ENABLE_UART_REPL     (1)
+#define MICROPY_HW_ENABLE_USBDEV        (1)
+#define MICROPY_HW_USB_CDC               1
+#define MICROPY_HW_ESP_USB_SERIAL_JTAG   0
+
