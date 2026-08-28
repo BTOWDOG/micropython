@@ -54,6 +54,207 @@ list(APPEND MICROPY_QSTRDEFS_PORT
     ${MICROPY_PORT_DIR}/qstrdefsport.h
 )
 
+# 01Studio custom sources and include path
+
+set(CUSTOM_DIR
+    ${CMAKE_CURRENT_LIST_DIR}/01studio
+)
+
+set(CUSTOM_INC_DIRS
+    ${CUSTOM_DIR}
+)
+
+# Basic module sources
+file(GLOB CUSTOM_SOURCE_PORT
+    "${CUSTOM_DIR}/*.c"
+)
+message(STATUS "CUSTOM_SOURCE_PORT = ${CUSTOM_SOURCE_PORT}")
+# Optional module sources
+
+# Picture
+if(MICROPY_PORT_PICLIB STREQUAL "y")
+    set(CUSTOM_PICTURE_DIR
+        ${CUSTOM_DIR}/picture
+    )
+
+    file(GLOB CUSTOM_SOURCE_PICTURE
+        "${CUSTOM_PICTURE_DIR}/*.c"
+    )
+
+    list(APPEND CUSTOM_SOURCE_PORT
+        ${CUSTOM_SOURCE_PICTURE}
+    )
+
+    list(APPEND CUSTOM_INC_DIRS
+        ${CUSTOM_PICTURE_DIR}
+    )
+endif()
+
+# nes
+if(MICROPY_PORT_NESEMU STREQUAL "y")
+    set(CUSTOM_NESEMU_DIR
+        ${CUSTOM_DIR}/esp32-nesemu/components
+    )
+
+    file(GLOB_RECURSE CUSTOM_SOURCE_NESEMU
+        "${CUSTOM_NESEMU_DIR}/*.c"
+    )
+
+    list(APPEND CUSTOM_SOURCE_PORT
+        ${CUSTOM_SOURCE_NESEMU}
+    )
+
+    list(APPEND CUSTOM_INC_DIRS
+        ${CUSTOM_NESEMU_DIR}/nofrendo
+        ${CUSTOM_NESEMU_DIR}/nofrendo/cpu
+        ${CUSTOM_NESEMU_DIR}/nofrendo/libsnss
+        ${CUSTOM_NESEMU_DIR}/nofrendo/nes
+        ${CUSTOM_NESEMU_DIR}/nofrendo/sndhrdw
+        ${CUSTOM_NESEMU_DIR}/nofrendo-esp32
+    )
+endif()
+
+# cam
+idf_build_get_property(CAMLIB CAMLIB)
+if("${CAMLIB}" STREQUAL "y")
+    list(APPEND EXTRA_COMPONENT_DIRS
+        esp_jpeg
+        esp32_camera
+    )
+endif()
+
+# uvc_cam
+idf_build_get_property(USB_CAM USB_CAM)
+if("${USB_CAM}" STREQUAL "y")
+    list(APPEND EXTRA_COMPONENT_DIRS
+        decoder_ijg
+        usb_stream
+        cmake_utilities
+    )
+
+    set(CUSTOM_UVC_DIR
+        ${CUSTOM_DIR}/uvc-stream
+    )
+
+    list(APPEND CUSTOM_SOURCE_PORT
+        ${CUSTOM_UVC_DIR}/usb_uvc_port.c
+    )
+
+    list(APPEND CUSTOM_INC_DIRS
+        ${CUSTOM_UVC_DIR}/include
+    )
+endif()
+
+# web stream
+if(MICROPY_PORT_WEB_STREAM STREQUAL "y")
+    set(CUSTOM_WEB_DIR
+        ${CUSTOM_DIR}/www
+    )
+
+    set(CUSTOM_EMBED_FILES
+        ${CUSTOM_WEB_DIR}/index_uvc.html.gz
+    )
+endif()
+
+# ESPAI
+idf_build_get_property(ESPAI ESPAI)
+if("${ESPAI}" STREQUAL "y")
+    list(APPEND EXTRA_COMPONENT_DIRS
+        esp-dl
+        esp-code-scanner
+    )
+
+    set(CUSTOM_ESPAI_DIR
+        ${CUSTOM_DIR}/mpy-ai
+    )
+
+    file(GLOB_RECURSE CUSTOM_SOURCE_ESPAI
+        "${CUSTOM_ESPAI_DIR}/*.cpp"
+        "${CUSTOM_ESPAI_DIR}/*.c"
+    )
+
+    list(APPEND CUSTOM_SOURCE_PORT
+        ${CUSTOM_SOURCE_ESPAI}
+    )
+    
+    list(APPEND CUSTOM_INC_DIRS
+        ${CUSTOM_ESPAI_DIR}/ai
+        ${CUSTOM_ESPAI_DIR}/fb_gfx
+        ${CUSTOM_ESPAI_DIR}/fb_gfx/include
+    )
+endif()
+
+# AUDIO_CODEC
+idf_build_get_property(AUDIO_CODEC AUDIO_CODEC)
+if("${AUDIO_CODEC}" STREQUAL "y")
+    list(APPEND EXTRA_COMPONENT_DIRS
+        esp_audio_codec
+        esp_codec_dev
+    )
+endif()
+
+# Drone
+if(MICROPY_PORT_DRONE STREQUAL "y")
+
+	set(CUSTOM_DRONE_DIR
+        ${CUSTOM_DIR}/py-drone
+	)
+
+	file(GLOB_RECURSE CUSTOM_SOURCE_DRONE
+		"${CUSTOM_DRONE_DIR}/*.c"
+	) 
+
+    list(APPEND CUSTOM_SOURCE_PORT
+        ${CUSTOM_SOURCE_DRONE}
+    )
+
+    list(APPEND CUSTOM_INC_DIRS
+        ${CUSTOM_DRONE_DIR}
+        ${CUSTOM_DRONE_DIR}/drivers/i2c_bus/include
+        ${CUSTOM_DRONE_DIR}/drivers/i2c_devices/hmc5883l/include
+        ${CUSTOM_DRONE_DIR}/drivers/i2c_devices/mpu6050/include
+        ${CUSTOM_DRONE_DIR}/drivers/i2c_devices/qmc5883p/include
+        ${CUSTOM_DRONE_DIR}/drivers/i2c_devices/qmi8658/include
+        ${CUSTOM_DRONE_DIR}/drivers/i2c_devices/spa06/include
+        ${CUSTOM_DRONE_DIR}/drivers/i2c_devices/spl06/include
+        ${CUSTOM_DRONE_DIR}/drivers/led/include
+        ${CUSTOM_DRONE_DIR}/drivers/motors/include
+        ${CUSTOM_DRONE_DIR}/drivers/pm/include
+        ${CUSTOM_DRONE_DIR}/dsp_lib/include
+        ${CUSTOM_DRONE_DIR}/mpmodules
+        ${CUSTOM_DRONE_DIR}/port
+        ${CUSTOM_DRONE_DIR}/utils/interface
+
+    )
+
+endif()
+
+# Balance
+if(MICROPY_PORT_BALANCE STREQUAL "y")
+    set(CUSTOM_BALANCE_DIR
+        ${CUSTOM_DIR}/py-balance
+    )
+
+    file(GLOB_RECURSE CUSTOM_SOURCE_BALANCE
+        ${CUSTOM_BALANCE_DIR}/*.c
+    )
+
+    list(APPEND CUSTOM_SOURCE_PORT
+        ${CUSTOM_SOURCE_BALANCE}
+    )
+
+    list(APPEND CUSTOM_INC_DIRS
+        ${CUSTOM_BALANCE_DIR}/drivers/battery/include
+        ${CUSTOM_BALANCE_DIR}/drivers/hcsr04/include
+        ${CUSTOM_BALANCE_DIR}/drivers/i2c_bus/include
+        ${CUSTOM_BALANCE_DIR}/drivers/motors/include
+        ${CUSTOM_BALANCE_DIR}/drivers/qmi8658/include
+        ${CUSTOM_BALANCE_DIR}/port
+    )
+endif()
+
+#-----------------------------------------------------------
+
 list(APPEND MICROPY_SOURCE_SHARED
     ${MICROPY_DIR}/shared/readline/readline.c
     ${MICROPY_DIR}/shared/netutils/netutils.c
@@ -159,6 +360,9 @@ list(APPEND MICROPY_SOURCE_QSTR
     ${MICROPY_SOURCE_PORT}
     ${MICROPY_SOURCE_BOARD}
     ${MICROPY_SOURCE_TINYUSB}
+
+    # 01Studio custom sources
+    ${CUSTOM_SOURCE_PORT}
 )
 
 list(APPEND IDF_COMPONENTS
@@ -197,7 +401,13 @@ list(APPEND IDF_COMPONENTS
     ulp
     usb
     vfs
+    fatfs
+    esp_mm
+    esp_http_server
 )
+
+message(STATUS "IDF_COMPONENTS = ${IDF_COMPONENTS}")
+message(STATUS "EXTRA_COMPONENT_DIRS = ${EXTRA_COMPONENT_DIRS}")
 
 if($ENV{IDF_VERSION} VERSION_GREATER_EQUAL "5.4")
     list(APPEND IDF_COMPONENTS
@@ -231,6 +441,9 @@ idf_component_register(
         ${MICROPY_SOURCE_PORT}
         ${MICROPY_SOURCE_BOARD}
         ${MICROPY_SOURCE_TINYUSB}
+
+        # 01Studio custom sources
+        ${CUSTOM_SOURCE_PORT}
     INCLUDE_DIRS
         ${MICROPY_INC_CORE}
         ${MICROPY_INC_USERMOD}
@@ -238,10 +451,20 @@ idf_component_register(
         ${MICROPY_PORT_DIR}
         ${MICROPY_BOARD_DIR}
         ${CMAKE_BINARY_DIR}
+
+        # 01Studio custom include directories
+        ${CUSTOM_INC_DIRS}
     LDFRAGMENTS
         ${MICROPY_LDFRAGMENTS}
     REQUIRES
         ${IDF_COMPONENTS}
+        
+        # 01Studio custom ESP-IDF component directories
+        ${EXTRA_COMPONENT_DIRS}
+    EMBED_FILES
+
+        # 01Studio custom embedded files
+		${CUSTOM_EMBED_FILES}
 )
 
 # Set the MicroPython target as the current (main) IDF component target.

@@ -76,6 +76,35 @@
 #include "modespnow.h"
 #endif
 
+#if MICROPY_ENABLE_TFTLCD
+#include "modtftlcd.h"
+#include "lcd_spibus.h"
+
+#if MICROPY_HW_LCD32
+#include "ILI9341.h"
+#endif
+
+#if MICROPY_HW_LCD15
+#include "ST7789.h"
+#endif
+
+#endif
+#if MICROPY_ENABLE_TOUCH
+#include "modtouch.h"
+#endif
+
+#if MICROPY_HW_OV2640
+#include "esp_camera.h"
+#endif
+
+#if(MICROPY_ENABLE_PCA9557 ||  MICROPY_ENABLE_ES8311)
+#include "hal_i2c.h"
+#endif
+
+#if MICROPY_ENABLE_PCA9557
+#include "pca9557.h"
+#endif
+
 // MicroPython runs as a task under FreeRTOS
 #define MP_TASK_PRIORITY        (ESP_TASK_PRIO_MIN + 1)
 
@@ -129,7 +158,6 @@ void mp_task(void *pvParameter) {
     if (err != ESP_OK) {
         ESP_LOGE("esp_init", "can't create event loop: 0x%x\n", err);
     }
-
     void *mp_task_heap = MP_PLAT_ALLOC_HEAP(MICROPY_GC_INITIAL_HEAP_SIZE);
     if (mp_task_heap == NULL) {
         printf("mp_task_heap allocation failed!\n");
@@ -186,6 +214,67 @@ soft_reset:
     }
 
 soft_reset_exit:
+    #if MICROPY_ENABLE_CODE_RECOGNITION
+    extern void code_recognition_deinit();
+    code_recognition_deinit();
+    #endif
+
+    #if MICROPY_ENABLE_COLOR_DETECTION
+    extern void color_detection_deinit();
+    color_detection_deinit();
+    #endif
+
+    #if MICROPY_ENABLE_MOTION_DETECTION || MICROPY_ENABLE_CAT_DETECTION || MICROPY_ENABLE_FACE_DETECTION
+    extern void face_detection_deinit();
+    face_detection_deinit();
+    #endif
+
+    #if MICROPY_ENABLE_FACE_RECOGNITION
+    extern void face_recognition_deinit();
+    face_recognition_deinit();
+    #endif
+
+    #if MICROPY_GUI_BUTTON
+    extern void gui_btn_deinit();
+    gui_btn_deinit();
+    #endif
+
+    #if MICROPY_HW_OV2640
+    extern void sensor_deinit();
+    sensor_deinit();
+    #endif
+
+    #if MICROPY_HW_GC0308
+    extern void gc0308_deinit();
+    gc0308_deinit();
+    #endif
+
+    #if MICROPY_HW_USB_CAM
+    extern void uvc_deinit();
+    uvc_deinit();
+    #endif
+
+    #if MICROPY_ENABLE_STREAM
+    extern void deinit_httpd_app(void);
+    deinit_httpd_app();
+    #endif
+
+	#if (MICROPY_HW_XPT2046 && MICROPY_ENABLE_TOUCH)
+	xpt_deinit_internal();
+	#endif
+
+	#if MICROPY_ENABLE_TFTLCD
+	lcd_spibus_deinit();
+	#endif
+
+    #if MICROPY_ENABLE_PCA9557
+    // extern void pca9557_deinit();
+    // pca9557_deinit();
+    // extern void hal_i2c_deinit();
+    // hal_i2c_deinit();
+    extern void es8311_deinit();
+    es8311_deinit();
+    #endif
 
     #if MICROPY_BLUETOOTH_NIMBLE
     mp_bluetooth_deinit();

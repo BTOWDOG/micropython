@@ -288,7 +288,7 @@ static void mp_machine_uart_init_helper(machine_uart_obj_t *self, size_t n_args,
         self->txbuf = 256;
         self->rxbuf = 256; // IDF minimum
         self->timeout = 0;
-        self->timeout_char = 0;
+        self->timeout_char = 3;
         self->invert = 0;
         self->flowcontrol = 0;
         self->uart_event_task = NULL;

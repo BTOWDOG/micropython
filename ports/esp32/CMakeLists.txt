@@ -62,6 +62,47 @@ set(SDKCONFIG_DEFAULTS ${CMAKE_BINARY_DIR}/sdkconfig.combined)
 # Include main IDF cmake file.
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 
+# 01Studio external ESP-IDF components 
+
+set(CUSTOM_COMPONENT_DIRS
+    ${CMAKE_CURRENT_LIST_DIR}/01studio
+)
+
+if(MICROPY_PORT_CAMLIB STREQUAL "y")
+    list(APPEND EXTRA_COMPONENT_DIRS
+        ${CUSTOM_COMPONENT_DIRS}/esp_jpeg
+        ${CUSTOM_COMPONENT_DIRS}/esp32_camera
+    )
+    idf_build_set_property(CAMLIB "y")
+endif()
+
+if(MICROPY_PORT_USB_CAM STREQUAL "y")
+    list(APPEND EXTRA_COMPONENT_DIRS
+        ${CUSTOM_COMPONENT_DIRS}/decoder_ijg
+        ${CUSTOM_COMPONENT_DIRS}/usb_stream
+        ${CUSTOM_COMPONENT_DIRS}/cmake_utilities
+    )
+    idf_build_set_property(USB_CAM "y")
+endif()
+
+if(MICROPY_PORT_EN_ESPAI STREQUAL "y")
+    list(APPEND EXTRA_COMPONENT_DIRS
+        ${CUSTOM_COMPONENT_DIRS}/esp-dl
+        ${CUSTOM_COMPONENT_DIRS}/esp-code-scanner
+    )
+    idf_build_set_property(ESPAI "y")
+endif()
+
+if(MICROPY_PORT_AUDIO_CODEC STREQUAL "y")
+    list(APPEND EXTRA_COMPONENT_DIRS
+        ${CUSTOM_COMPONENT_DIRS}/esp_audio_codec
+        ${CUSTOM_COMPONENT_DIRS}/esp_codec_dev
+    )
+    idf_build_set_property(AUDIO_CODEC "y")
+endif()
+
+message(STATUS "CUSTOM_COMPONENT_DIRS = ${EXTRA_COMPONENT_DIRS}")
+
 # Generate individual dependencies.lock files based on chip target
 set(LOCKFILE_PATH lockfiles/dependencies.lock.${IDF_TARGET})
 idf_build_set_property(DEPENDENCIES_LOCK ${LOCKFILE_PATH})

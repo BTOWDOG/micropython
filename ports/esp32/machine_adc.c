@@ -198,7 +198,7 @@ void madc_init_helper(const machine_adc_obj_t *self, size_t n_pos_args, const mp
     }
 
     mp_int_t atten = args[ARG_atten].u_int;
-    mp_machine_adc_atten_set_helper(self, atten != -1 ? atten : ADC_ATTEN_MAX);
+    mp_machine_adc_atten_set_helper(self, atten != -1 ? atten : ADC_ATTEN_MIN);
     mp_machine_adc_block_width_set_helper(self->block, ADC_WIDTH_MAX);
     apply_self_adc_channel_atten(self, mp_machine_adc_atten_get_helper(self));
 
