@@ -1,0 +1,111 @@
+
+color_detector.cpp.obj:
+00000000 r $_92
+00000000 r $_93
+         U __assert_func
+         U calloc
+         U dl_tie728_memset_16b
+         U dl_tie728_memset_8b
+         U free
+00000000 t _GLOBAL__sub_D__Z21componentsStats_alloci
+00000000 t _GLOBAL__sub_I__Z21componentsStats_alloci
+         U heap_caps_aligned_alloc
+         U heap_caps_free
+         U heap_caps_get_free_size
+         U heap_caps_malloc
+00000018 r .LC13
+         U memcmp
+         U memcpy
+         U memmove
+         U printf
+         U roundf
+         U vsnprintf
+00000000 T componentsStats_free(componentsStats*)
+00000000 T componentsStats_alloc(int)
+00000000 T color_detect_preprocess(unsigned short*, dl::Tensor<unsigned char>&, std::vector<unsigned char, std::allocator<unsigned char> >)
+00000000 T color_detect_preprocess(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<unsigned char, std::allocator<unsigned char> >, bool)
+00000000 T connectedComponentsWithStats(dl::Tensor<unsigned char>&)
+00000000 t __static_initialization_and_destruction_0(int, int)
+         U operator delete(void*)
+00000000 t thresh_algo3(int, int, unsigned char*)
+00000000 T ColorDetector::clear_color()
+00000000 T ColorDetector::delete_color(int)
+00000000 T ColorDetector::delete_color(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000 T ColorDetector::register_color(unsigned short*, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int)
+00000000 T ColorDetector::register_color(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int)
+00000000 T ColorDetector::register_color(std::vector<unsigned char, std::allocator<unsigned char> >, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int)
+00000000 T ColorDetector::cal_color_thresh(unsigned short*, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >)
+00000000 T ColorDetector::cal_color_thresh(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >)
+00000000 T ColorDetector::color_detection_forward(dl::Tensor<unsigned char>&, int)
+00000000 T ColorDetector::draw_segmentation_results(unsigned short*, std::vector<int, std::allocator<int> >, std::vector<unsigned short, std::allocator<unsigned short> >, bool, unsigned short)
+00000000 T ColorDetector::draw_segmentation_results(dl::Tensor<unsigned char>&, std::vector<std::vector<unsigned char, std::allocator<unsigned char> >, std::allocator<std::vector<unsigned char, std::allocator<unsigned char> > > >, bool, std::vector<unsigned char, std::allocator<unsigned char> >)
+00000000 T ColorDetector::detect(unsigned short*, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >)
+00000000 T ColorDetector::detect(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >)
+         U dl::tool::set_zero(void*, int)
+00000000 W void dl::tool::set_value<unsigned char>(unsigned char*, unsigned char, int)
+00000000 W void dl::tool::set_value<unsigned short>(unsigned short*, unsigned short, int)
+         U dl::image::resize_image(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >, dl::image::resize_type_t)
+         U unsigned short* dl::image::resize_image_nearest<unsigned short>(unsigned short*, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >)
+         U dl::image::convert_image_rgb565_to_rgb888(unsigned short*, std::vector<int, std::allocator<int> >&)
+         U dl::image::rgb2hsv(dl::Tensor<unsigned char>&, bool, bool)
+         U dl::Tensor<unsigned char>::get_element_index(std::vector<int, std::allocator<int> >)
+         U dl::Tensor<unsigned char>::set_shape(std::vector<int, std::allocator<int> >)
+00000000 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > __gnu_cxx::__to_xstring<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>(int (*)(char*, unsigned int, char const*, __va_list_tag), unsigned int, char const*, ...)
+00000000 W void std::vector<color_info_t, std::allocator<color_info_t> >::_M_insert_aux<color_info_t>(__gnu_cxx::__normal_iterator<color_info_t*, std::vector<color_info_t, std::allocator<color_info_t> > >, color_info_t&&)
+00000000 W void std::vector<color_info_t, std::allocator<color_info_t> >::_M_realloc_insert<color_info_t const&>(__gnu_cxx::__normal_iterator<color_info_t*, std::vector<color_info_t, std::allocator<color_info_t> > >, color_info_t const&)
+00000000 W std::vector<color_info_t, std::allocator<color_info_t> >::insert(__gnu_cxx::__normal_iterator<color_info_t const*, std::vector<color_info_t, std::allocator<color_info_t> > >, color_info_t const&)
+00000000 W std::vector<color_info_t, std::allocator<color_info_t> >::_M_erase(__gnu_cxx::__normal_iterator<color_info_t*, std::vector<color_info_t, std::allocator<color_info_t> > >)
+00000000 W void std::vector<color_detect_result_t, std::allocator<color_detect_result_t> >::_M_realloc_insert<color_detect_result_t const&>(__gnu_cxx::__normal_iterator<color_detect_result_t*, std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > >, color_detect_result_t const&)
+00000000 W std::vector<color_detect_result_t, std::allocator<color_detect_result_t> >::operator=(std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > const&)
+00000000 W void std::vector<color_segment_result_t, std::allocator<color_segment_result_t> >::emplace_back<color_segment_result_t>(color_segment_result_t&&)
+00000000 W void std::vector<color_segment_result_t, std::allocator<color_segment_result_t> >::_M_assign_aux<color_segment_result_t const*>(color_segment_result_t const*, color_segment_result_t const*, std::forward_iterator_tag)
+00000000 W void std::vector<color_segment_result_t, std::allocator<color_segment_result_t> >::_M_realloc_insert<color_segment_result_t>(__gnu_cxx::__normal_iterator<color_segment_result_t*, std::vector<color_segment_result_t, std::allocator<color_segment_result_t> > >, color_segment_result_t&&)
+00000000 W std::vector<unsigned char, std::allocator<unsigned char> >::operator=(std::vector<unsigned char, std::allocator<unsigned char> > const&)
+00000000 W void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&)
+00000000 W void std::vector<int, std::allocator<int> >::_M_assign_aux<int const*>(int const*, int const*, std::forward_iterator_tag)
+00000000 W void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&)
+00000000 W void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&)
+00000000 W std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&)
+00000000 W void std::vector<std::vector<color_detect_result_t, std::allocator<color_detect_result_t> >, std::allocator<std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > > >::emplace_back<std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > >(std::vector<color_detect_result_t, std::allocator<color_detect_result_t> >&&)
+00000000 W void std::vector<std::vector<color_detect_result_t, std::allocator<color_detect_result_t> >, std::allocator<std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > > >::_M_assign_aux<std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > const*>(std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > const*, std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > const*, std::forward_iterator_tag)
+00000000 W void std::vector<std::vector<color_detect_result_t, std::allocator<color_detect_result_t> >, std::allocator<std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > > >::_M_realloc_insert<std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > >(__gnu_cxx::__normal_iterator<std::vector<color_detect_result_t, std::allocator<color_detect_result_t> >*, std::vector<std::vector<color_detect_result_t, std::allocator<color_detect_result_t> >, std::allocator<std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > > > >, std::vector<color_detect_result_t, std::allocator<color_detect_result_t> >&&)
+00000000 W void std::vector<short, std::allocator<short> >::emplace_back<short>(short&&)
+00000000 W void std::vector<short, std::allocator<short> >::_M_realloc_insert<short>(__gnu_cxx::__normal_iterator<short*, std::vector<short, std::allocator<short> > >, short&&)
+         U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned int, unsigned int, char const*, unsigned int)
+00000000 W void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag)
+         U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned int&, unsigned int)
+         U std::ios_base::Init::Init()
+         U std::ios_base::Init::~Init()
+         U operator new(unsigned int)
+00000000 W void std::__make_heap<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter&)
+00000000 W void std::__push_heap<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int, int, __gnu_cxx::__ops::_Iter_less_val>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int, int, int, __gnu_cxx::__ops::_Iter_less_val&)
+00000000 W void std::__sort_heap<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter&)
+00000000 W decltype (__miter_base(({parm#1}.base)())) std::__miter_base<int*>(std::move_iterator<int*>)
+00000000 W decltype (__miter_base(({parm#1}.base)())) std::__miter_base<short*>(std::move_iterator<short*>)
+00000000 W color_info_t* std::__niter_base<color_info_t*, std::vector<color_info_t, std::allocator<color_info_t> > >(__gnu_cxx::__normal_iterator<color_info_t*, std::vector<color_info_t, std::allocator<color_info_t> > >)
+00000000 W color_detect_result_t* std::__niter_base<color_detect_result_t*, std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > >(__gnu_cxx::__normal_iterator<color_detect_result_t*, std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > >)
+00000000 W unsigned char* std::__niter_base<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >)
+00000000 W int* std::__niter_base<int*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >)
+00000000 W color_detect_result_t const* std::__niter_base<color_detect_result_t const*, std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > >(__gnu_cxx::__normal_iterator<color_detect_result_t const*, std::vector<color_detect_result_t, std::allocator<color_detect_result_t> > >)
+00000000 W unsigned char const* std::__niter_base<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >)
+00000000 W int const* std::__niter_base<int const*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >)
+00000000 W void std::__adjust_heap<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int, int, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int, int, int, __gnu_cxx::__ops::_Iter_less_iter)
+00000000 W void std::__heap_select<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter)
+00000000 W void std::__insertion_sort<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter)
+00000000 W void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int, __gnu_cxx::__ops::_Iter_less_iter)
+         U std::__throw_bad_alloc()
+         U std::__throw_logic_error(char const*)
+         U std::__throw_length_error(char const*)
+00000000 W __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > std::__unguarded_partition<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter)
+00000000 W void std::__final_insertion_sort<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter)
+00000000 W void std::__move_median_to_first<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter)
+         U std::__throw_out_of_range_fmt(char const*, ...)
+00000000 W void std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Val_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Val_less_iter)
+00000000 b std::__ioinit
+00000000 r ColorDetector::register_color(std::vector<unsigned char, std::allocator<unsigned char> >, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int)::__PRETTY_FUNCTION__
+00000000 r ColorDetector::cal_color_thresh(unsigned short*, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >)::__PRETTY_FUNCTION__
+00000000 r ColorDetector::cal_color_thresh(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >)::__PRETTY_FUNCTION__
+00000000 r ColorDetector::draw_segmentation_results(unsigned short*, std::vector<int, std::allocator<int> >, std::vector<unsigned short, std::allocator<unsigned short> >, bool, unsigned short)::__PRETTY_FUNCTION__
+00000000 r ColorDetector::draw_segmentation_results(dl::Tensor<unsigned char>&, std::vector<std::vector<unsigned char, std::allocator<unsigned char> >, std::allocator<std::vector<unsigned char, std::allocator<unsigned char> > > >, bool, std::vector<unsigned char, std::allocator<unsigned char> >)::__PRETTY_FUNCTION__
+00000000 r ColorDetector::detect(unsigned short*, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >)::__PRETTY_FUNCTION__
+00000000 r ColorDetector::detect(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >)::__PRETTY_FUNCTION__

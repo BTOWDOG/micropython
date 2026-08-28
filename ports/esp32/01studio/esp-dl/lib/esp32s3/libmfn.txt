@@ -1,0 +1,2565 @@
+
+face_recognition_tool.cpp.obj:
+00000000 r $_102
+00000000 r $_103
+00000000 r $_104
+00000000 r $_105
+         U __assert_func
+         U calloc
+         U __divdf3
+         U __divsf3
+         U __extendsfdf2
+         U __floatsidf
+         U free
+00000000 t _GLOBAL__sub_D__ZN21face_recognition_tool7l2_normERN2dl6TensorIfEE
+00000000 t _GLOBAL__sub_I__ZN21face_recognition_tool7l2_normERN2dl6TensorIfEE
+         U heap_caps_aligned_alloc
+         U heap_caps_free
+         U heap_caps_get_free_size
+         U heap_caps_malloc
+00000014 r .LC128
+00000024 r .LC33
+         U memcpy
+         U memmove
+         U __muldf3
+         U printf
+         U rintf
+         U __subdf3
+         U __truncdfsf2
+         U vsnprintf
+00000000 t __static_initialization_and_destruction_0(int, int)
+         U operator delete(void*)
+00000000 W void face_recognition_tool::align_face<unsigned char>(dl::Tensor<unsigned char>*, dl::Tensor<unsigned char>*, std::vector<int, std::allocator<int> >&)
+00000000 W void face_recognition_tool::align_face<unsigned char>(unsigned short*, std::vector<int, std::allocator<int> >, dl::Tensor<unsigned char>*, std::vector<int, std::allocator<int> >&)
+00000000 W void face_recognition_tool::align_face<short>(dl::Tensor<short>*, dl::Tensor<short>*, std::vector<int, std::allocator<int> >&)
+00000000 W void face_recognition_tool::align_face<short>(unsigned short*, std::vector<int, std::allocator<int> >, dl::Tensor<short>*, std::vector<int, std::allocator<int> >&)
+00000000 T face_recognition_tool::cos_distance(dl::Tensor<float>&, dl::Tensor<float>&, bool, signed char)
+00000000 T dl::Tensor<signed char>* face_recognition_tool::transform_mfn_input<signed char>(dl::Tensor<unsigned char>&, bool)
+00000000 T void face_recognition_tool::transform_mfn_input<signed char>(dl::Tensor<unsigned char>&, dl::Tensor<signed char>&, bool)
+00000000 T dl::Tensor<short>* face_recognition_tool::transform_mfn_input<short>(dl::Tensor<unsigned char>&, bool)
+00000000 T void face_recognition_tool::transform_mfn_input<short>(dl::Tensor<unsigned char>&, dl::Tensor<short>&, bool)
+00000000 W dl::Tensor<float>* face_recognition_tool::transform_mfn_output<signed char>(dl::Tensor<signed char>&, bool, bool)
+00000000 W void face_recognition_tool::transform_mfn_output<signed char>(dl::Tensor<signed char>&, dl::Tensor<float>&, bool, bool)
+00000000 W dl::Tensor<float>* face_recognition_tool::transform_mfn_output<short>(dl::Tensor<short>&, bool, bool)
+00000000 W void face_recognition_tool::transform_mfn_output<short>(dl::Tensor<short>&, dl::Tensor<float>&, bool, bool)
+00000000 T face_recognition_tool::l2_norm(dl::Tensor<float>&)
+00000000 b face_recognition_tool::std_ldks_112
+         U dl::math::get_similarity_transform(dl::math::Matrix<float>&, dl::math::Matrix<float>&)
+00000000 W dl::math::Matrix<float>::~Matrix()
+00000000 W dl::math::Matrix<float>::~Matrix()
+00000000 W dl::math::Matrix<float>::~Matrix()
+00000000 n dl::math::Matrix<float>::~Matrix()
+         U dl::tool::copy_memory(void*, void*, int)
+         U dl::tool::set_zero(void*, int)
+         U void dl::image::warp_affine<unsigned char>(dl::Tensor<unsigned char>*, dl::Tensor<unsigned char>*, dl::math::Matrix<float>*)
+         U void dl::image::warp_affine<unsigned char>(unsigned short*, std::vector<int, std::allocator<int> >, dl::Tensor<unsigned char>*, dl::math::Matrix<float>*)
+         U void dl::image::warp_affine<short>(dl::Tensor<short>*, dl::Tensor<short>*, dl::math::Matrix<float>*)
+         U void dl::image::warp_affine<short>(unsigned short*, std::vector<int, std::allocator<int> >, dl::Tensor<short>*, dl::math::Matrix<float>*)
+         U dl::Tensor<signed char>::set_shape(std::vector<int, std::allocator<int> >)
+         U dl::Tensor<float>::flatten()
+         U dl::Tensor<float>::set_shape(std::vector<int, std::allocator<int> >)
+         U dl::Tensor<short>::set_shape(std::vector<int, std::allocator<int> >)
+00000000 W FaceID<signed char>::print()
+00000000 W FaceID<signed char>::FaceID(int, dl::Tensor<signed char>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000 W FaceID<signed char>::FaceID(FaceID<signed char>&)
+00000000 W FaceID<signed char>::FaceID(int, dl::Tensor<signed char>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000 W FaceID<signed char>::FaceID(FaceID<signed char>&)
+00000000 n FaceID<signed char>::FaceID(int, dl::Tensor<signed char>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000 n FaceID<signed char>::FaceID(FaceID<signed char>&)
+00000000 W FaceID<float>::print()
+00000000 W FaceID<float>::FaceID(int, dl::Tensor<float>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000 W FaceID<float>::FaceID(FaceID<float>&)
+00000000 W FaceID<float>::FaceID(int, dl::Tensor<float>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000 W FaceID<float>::FaceID(FaceID<float>&)
+00000000 n FaceID<float>::FaceID(int, dl::Tensor<float>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000 n FaceID<float>::FaceID(FaceID<float>&)
+00000000 W FaceID<short>::print()
+00000000 W FaceID<short>::FaceID(int, dl::Tensor<short>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000 W FaceID<short>::FaceID(FaceID<short>&)
+00000000 W FaceID<short>::FaceID(int, dl::Tensor<short>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000 W FaceID<short>::FaceID(FaceID<short>&)
+00000000 n FaceID<short>::FaceID(int, dl::Tensor<short>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000 n FaceID<short>::FaceID(FaceID<short>&)
+00000000 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > __gnu_cxx::__to_xstring<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>(int (*)(char*, unsigned int, char const*, __va_list_tag), unsigned int, char const*, ...)
+         U std::ostream::operator<<(int)
+         U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned int, unsigned int, char const*, unsigned int)
+00000000 W void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag)
+         U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+         U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned int&, unsigned int)
+         U std::ios_base::Init::Init()
+         U std::ios_base::Init::~Init()
+         U operator new(unsigned int)
+00000000 W int const* std::__niter_base<int const*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >)
+         U std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)
+         U std::__throw_bad_alloc()
+         U std::__throw_logic_error(char const*)
+         U std::cout
+00000000 b std::__ioinit
+00000000 V vtable for dl::math::Matrix<float>
+00000000 r face_recognition_tool::cos_distance(dl::Tensor<float>&, dl::Tensor<float>&, bool, signed char)::__PRETTY_FUNCTION__
+00000000 r dl::math::Matrix<float>::set_value<int>(std::vector<int, std::allocator<int> >)::__PRETTY_FUNCTION__
+
+face_recognizer.cpp.obj:
+00000000 t _GLOBAL__sub_D_face_recognizer_cpp
+00000000 t _GLOBAL__sub_I_face_recognizer_cpp
+         U memcpy
+00000000 t __static_initialization_and_destruction_0(int, int)
+         U operator delete(void*)
+00000000 W FaceRecognizer<signed char>::get_thresh()
+00000000 W FaceRecognizer<signed char>::set_thresh(float)
+00000000 W FaceRecognizer<signed char>::get_face_emb(int)
+00000000 W FaceRecognizer<signed char>::set_partition(esp_partition_type_t, esp_partition_subtype_t, char const*)
+00000000 W FaceRecognizer<signed char>::check_partition()
+00000000 W FaceRecognizer<signed char>::get_input_shape()
+00000000 W FaceRecognizer<signed char>::get_enrolled_ids()
+00000000 W FaceRecognizer<signed char>::set_ids_from_flash()
+00000000 W FaceRecognizer<signed char>::write_ids_to_flash()
+00000000 W FaceRecognizer<signed char>::get_enrolled_id_num()
+00000000 W FaceRecognizer<signed char>::get_enrolled_ids_with_name(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000 W FaceRecognizer<signed char>::forward(dl::Tensor<signed char>&)
+00000000 W FaceRecognizer<signed char>::set_ids(std::vector<FaceID<float>*, std::allocator<FaceID<float>*> >&, bool)
+00000000 W FaceRecognizer<signed char>::clear_id(bool)
+00000000 W FaceRecognizer<signed char>::delete_id(bool)
+00000000 W FaceRecognizer<signed char>::delete_id(int, bool)
+00000000 W FaceRecognizer<signed char>::enroll_id(unsigned short*, std::vector<int, std::allocator<int> >, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W FaceRecognizer<signed char>::enroll_id(unsigned short*, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W FaceRecognizer<signed char>::enroll_id(dl::Tensor<float>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W FaceRecognizer<signed char>::enroll_id(dl::Tensor<unsigned char>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W FaceRecognizer<signed char>::enroll_id(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W FaceRecognizer<signed char>::enroll_id(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W FaceRecognizer<signed char>::recognize(unsigned short*, std::vector<int, std::allocator<int> >, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W FaceRecognizer<signed char>::recognize(unsigned short*, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >&)
+00000000 W FaceRecognizer<signed char>::recognize(dl::Tensor<float>&)
+00000000 W FaceRecognizer<signed char>::recognize(dl::Tensor<unsigned char>&)
+00000000 W FaceRecognizer<signed char>::recognize(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W FaceRecognizer<signed char>::recognize(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W FaceRecognizer<signed char>::FaceRecognizer()
+00000000 W FaceRecognizer<signed char>::FaceRecognizer()
+00000000 n FaceRecognizer<signed char>::FaceRecognizer()
+00000000 W FaceRecognizer<signed char>::~FaceRecognizer()
+00000000 W FaceRecognizer<signed char>::~FaceRecognizer()
+00000000 W FaceRecognizer<signed char>::~FaceRecognizer()
+00000000 n FaceRecognizer<signed char>::~FaceRecognizer()
+00000000 W FaceRecognizer<short>::get_thresh()
+00000000 W FaceRecognizer<short>::set_thresh(float)
+00000000 W FaceRecognizer<short>::get_face_emb(int)
+00000000 W FaceRecognizer<short>::set_partition(esp_partition_type_t, esp_partition_subtype_t, char const*)
+00000000 W FaceRecognizer<short>::check_partition()
+00000000 W FaceRecognizer<short>::get_input_shape()
+00000000 W FaceRecognizer<short>::get_enrolled_ids()
+00000000 W FaceRecognizer<short>::set_ids_from_flash()
+00000000 W FaceRecognizer<short>::write_ids_to_flash()
+00000000 W FaceRecognizer<short>::get_enrolled_id_num()
+00000000 W FaceRecognizer<short>::get_enrolled_ids_with_name(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000 W FaceRecognizer<short>::forward(dl::Tensor<short>&)
+00000000 W FaceRecognizer<short>::set_ids(std::vector<FaceID<float>*, std::allocator<FaceID<float>*> >&, bool)
+00000000 W FaceRecognizer<short>::clear_id(bool)
+00000000 W FaceRecognizer<short>::delete_id(bool)
+00000000 W FaceRecognizer<short>::delete_id(int, bool)
+00000000 W FaceRecognizer<short>::enroll_id(unsigned short*, std::vector<int, std::allocator<int> >, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W FaceRecognizer<short>::enroll_id(unsigned short*, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W FaceRecognizer<short>::enroll_id(dl::Tensor<float>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W FaceRecognizer<short>::enroll_id(dl::Tensor<unsigned char>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W FaceRecognizer<short>::enroll_id(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W FaceRecognizer<short>::enroll_id(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W FaceRecognizer<short>::recognize(unsigned short*, std::vector<int, std::allocator<int> >, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W FaceRecognizer<short>::recognize(unsigned short*, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >&)
+00000000 W FaceRecognizer<short>::recognize(dl::Tensor<float>&)
+00000000 W FaceRecognizer<short>::recognize(dl::Tensor<unsigned char>&)
+00000000 W FaceRecognizer<short>::recognize(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W FaceRecognizer<short>::recognize(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W FaceRecognizer<short>::FaceRecognizer()
+00000000 W FaceRecognizer<short>::FaceRecognizer()
+00000000 n FaceRecognizer<short>::FaceRecognizer()
+00000000 W FaceRecognizer<short>::~FaceRecognizer()
+00000000 W FaceRecognizer<short>::~FaceRecognizer()
+00000000 W FaceRecognizer<short>::~FaceRecognizer()
+00000000 n FaceRecognizer<short>::~FaceRecognizer()
+         U dl::layer::Model<signed char>::forward(dl::Tensor<signed char>&)
+         U dl::layer::Model<short>::forward(dl::Tensor<short>&)
+         U mfn::MFN<signed char>::get_thresh()
+         U mfn::MFN<signed char>::set_thresh(float)
+         U mfn::MFN<signed char>::get_face_emb(int)
+         U mfn::MFN<signed char>::set_partition(esp_partition_type_t, esp_partition_subtype_t, char const*)
+         U mfn::MFN<signed char>::check_partition()
+         U mfn::MFN<signed char>::get_input_shape()
+         U mfn::MFN<signed char>::get_enrolled_ids()
+         U mfn::MFN<signed char>::set_ids_from_flash()
+         U mfn::MFN<signed char>::write_ids_to_flash()
+         U mfn::MFN<signed char>::get_enrolled_id_num()
+         U mfn::MFN<signed char>::get_enrolled_ids_with_name(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+         U mfn::MFN<signed char>::set_ids(std::vector<FaceID<float>*, std::allocator<FaceID<float>*> >&, bool)
+         U mfn::MFN<signed char>::clear_id(bool)
+         U mfn::MFN<signed char>::delete_id(bool)
+         U mfn::MFN<signed char>::delete_id(int, bool)
+         U mfn::MFN<signed char>::enroll_id(unsigned short*, std::vector<int, std::allocator<int> >&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+         U mfn::MFN<signed char>::enroll_id(unsigned short*, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+         U mfn::MFN<signed char>::enroll_id(dl::Tensor<float>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+         U mfn::MFN<signed char>::enroll_id(dl::Tensor<unsigned char>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+         U mfn::MFN<signed char>::enroll_id(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+         U mfn::MFN<signed char>::enroll_id(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+         U mfn::MFN<signed char>::recognize(unsigned short*, std::vector<int, std::allocator<int> >&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+         U mfn::MFN<signed char>::recognize(unsigned short*, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&)
+         U mfn::MFN<signed char>::recognize(dl::Tensor<float>&)
+         U mfn::MFN<signed char>::recognize(dl::Tensor<unsigned char>&)
+         U mfn::MFN<signed char>::recognize(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+         U mfn::MFN<signed char>::recognize(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+         U mfn::MFN<short>::get_thresh()
+         U mfn::MFN<short>::set_thresh(float)
+         U mfn::MFN<short>::get_face_emb(int)
+         U mfn::MFN<short>::set_partition(esp_partition_type_t, esp_partition_subtype_t, char const*)
+         U mfn::MFN<short>::check_partition()
+         U mfn::MFN<short>::get_input_shape()
+         U mfn::MFN<short>::get_enrolled_ids()
+         U mfn::MFN<short>::set_ids_from_flash()
+         U mfn::MFN<short>::write_ids_to_flash()
+         U mfn::MFN<short>::get_enrolled_id_num()
+         U mfn::MFN<short>::get_enrolled_ids_with_name(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+         U mfn::MFN<short>::set_ids(std::vector<FaceID<float>*, std::allocator<FaceID<float>*> >&, bool)
+         U mfn::MFN<short>::clear_id(bool)
+         U mfn::MFN<short>::delete_id(bool)
+         U mfn::MFN<short>::delete_id(int, bool)
+         U mfn::MFN<short>::enroll_id(unsigned short*, std::vector<int, std::allocator<int> >&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+         U mfn::MFN<short>::enroll_id(unsigned short*, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+         U mfn::MFN<short>::enroll_id(dl::Tensor<float>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+         U mfn::MFN<short>::enroll_id(dl::Tensor<unsigned char>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+         U mfn::MFN<short>::enroll_id(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+         U mfn::MFN<short>::enroll_id(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+         U mfn::MFN<short>::recognize(unsigned short*, std::vector<int, std::allocator<int> >&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+         U mfn::MFN<short>::recognize(unsigned short*, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&)
+         U mfn::MFN<short>::recognize(dl::Tensor<float>&)
+         U mfn::MFN<short>::recognize(dl::Tensor<unsigned char>&)
+         U mfn::MFN<short>::recognize(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+         U mfn::MFN<short>::recognize(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag)
+         U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned int&, unsigned int)
+         U std::ios_base::Init::Init()
+         U std::ios_base::Init::~Init()
+         U std::__throw_logic_error(char const*)
+00000000 b std::__ioinit
+00000000 V vtable for FaceRecognizer<signed char>
+00000000 V vtable for FaceRecognizer<short>
+
+mfn_model.cpp.obj:
+00000000 r $_115
+00000000 r $_116
+00000000 r $_117
+00000000 r $_118
+         U __assert_func
+         U __cxa_pure_virtual
+         U esp_log_timestamp
+         U esp_log_write
+         U esp_partition_erase_range
+         U esp_partition_find_first
+         U esp_partition_read
+         U esp_partition_write
+00000000 t _GLOBAL__sub_D_mfn_model_cpp
+00000000 t _GLOBAL__sub_I_mfn_model_cpp
+         U heap_caps_aligned_alloc
+         U heap_caps_free
+         U heap_caps_get_free_size
+         U heap_caps_malloc
+00000024 r .LC53
+         U memcmp
+         U memcpy
+         U memmove
+         U printf
+         U strlen
+00000000 t __static_initialization_and_destruction_0(int, int)
+         U operator delete(void*)
+         U void face_recognition_tool::align_face<unsigned char>(dl::Tensor<unsigned char>*, dl::Tensor<unsigned char>*, std::vector<int, std::allocator<int> >&)
+         U void face_recognition_tool::align_face<unsigned char>(unsigned short*, std::vector<int, std::allocator<int> >, dl::Tensor<unsigned char>*, std::vector<int, std::allocator<int> >&)
+         U face_recognition_tool::cos_distance(dl::Tensor<float>&, dl::Tensor<float>&, bool, signed char)
+         U dl::Tensor<signed char>* face_recognition_tool::transform_mfn_input<signed char>(dl::Tensor<unsigned char>&, bool)
+         U dl::Tensor<short>* face_recognition_tool::transform_mfn_input<short>(dl::Tensor<unsigned char>&, bool)
+         U void face_recognition_tool::transform_mfn_output<signed char>(dl::Tensor<signed char>&, dl::Tensor<float>&, bool, bool)
+         U void face_recognition_tool::transform_mfn_output<short>(dl::Tensor<short>&, dl::Tensor<float>&, bool, bool)
+         U dl::tool::cache::preload_init(unsigned char)
+         U dl::tool::cache::autoload_init(unsigned char, unsigned char, unsigned char)
+         U dl::tool::set_zero(void*, int)
+         U dl::layer::Model<signed char>::forward(dl::Tensor<signed char>&)
+         U dl::layer::Model<short>::forward(dl::Tensor<short>&)
+         U dl::Tensor<float>::set_shape(std::vector<int, std::allocator<int> >)
+         U dl::Tensor<unsigned char>::set_shape(std::vector<int, std::allocator<int> >)
+00000000 W mfn::MFN<signed char>::get_thresh()
+00000000 W mfn::MFN<signed char>::set_thresh(float)
+00000000 W mfn::MFN<signed char>::update_emb()
+00000000 W mfn::MFN<signed char>::set_preload(bool)
+00000000 W mfn::MFN<signed char>::get_face_emb(int)
+00000000 W mfn::MFN<signed char>::set_autoload(bool)
+00000000 W mfn::MFN<signed char>::set_partition(esp_partition_type_t, esp_partition_subtype_t, char const*)
+00000000 W mfn::MFN<signed char>::get_similarity(dl::Tensor<float>&, std::vector<FaceID<float>*, std::allocator<FaceID<float>*> >&, bool)
+00000000 W mfn::MFN<signed char>::check_partition()
+00000000 W mfn::MFN<signed char>::get_input_shape()
+00000000 W mfn::MFN<signed char>::set_input_shape(std::vector<int, std::allocator<int> >)
+00000000 W mfn::MFN<signed char>::get_enrolled_ids()
+00000000 W mfn::MFN<signed char>::set_ids_from_flash()
+00000000 W mfn::MFN<signed char>::write_ids_to_flash()
+00000000 W mfn::MFN<signed char>::get_enrolled_id_num()
+00000000 W mfn::MFN<signed char>::set_print_layer_result(bool)
+00000000 W mfn::MFN<signed char>::get_enrolled_ids_with_name(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000 W mfn::MFN<signed char>::infer(unsigned short*, std::vector<int, std::allocator<int> >&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<signed char>::infer(unsigned short*, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<signed char>::infer(dl::Tensor<unsigned char>&)
+00000000 W mfn::MFN<signed char>::infer(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<signed char>::infer(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<signed char>::set_ids(std::vector<FaceID<float>*, std::allocator<FaceID<float>*> >&, bool)
+00000000 W mfn::MFN<signed char>::clear_id(bool)
+00000000 W mfn::MFN<signed char>::delete_id(bool)
+00000000 W mfn::MFN<signed char>::delete_id(int, bool)
+00000000 W mfn::MFN<signed char>::enroll_id(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W mfn::MFN<signed char>::enroll_id(unsigned short*, std::vector<int, std::allocator<int> >&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W mfn::MFN<signed char>::enroll_id(unsigned short*, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W mfn::MFN<signed char>::enroll_id(dl::Tensor<float>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W mfn::MFN<signed char>::enroll_id(dl::Tensor<unsigned char>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W mfn::MFN<signed char>::enroll_id(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W mfn::MFN<signed char>::enroll_id(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W mfn::MFN<signed char>::recognize(unsigned short*, std::vector<int, std::allocator<int> >&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<signed char>::recognize(unsigned short*, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<signed char>::recognize(dl::Tensor<float>&)
+00000000 W mfn::MFN<signed char>::recognize(dl::Tensor<float>&, std::vector<FaceID<float>*, std::allocator<FaceID<float>*> >&)
+00000000 W mfn::MFN<signed char>::recognize(dl::Tensor<unsigned char>&)
+00000000 W mfn::MFN<signed char>::recognize(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<signed char>::recognize(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<signed char>::recognize()
+00000000 W mfn::MFN<signed char>::MFN(float, std::vector<int, std::allocator<int> >)
+00000000 W mfn::MFN<signed char>::MFN()
+00000000 W mfn::MFN<signed char>::MFN(float, std::vector<int, std::allocator<int> >)
+00000000 W mfn::MFN<signed char>::MFN()
+00000000 n mfn::MFN<signed char>::MFN(float, std::vector<int, std::allocator<int> >)
+00000000 n mfn::MFN<signed char>::MFN()
+00000000 W mfn::MFN<signed char>::~MFN()
+00000000 W mfn::MFN<signed char>::~MFN()
+00000000 W mfn::MFN<signed char>::~MFN()
+00000000 n mfn::MFN<signed char>::~MFN()
+00000000 W mfn::MFN<short>::get_thresh()
+00000000 W mfn::MFN<short>::set_thresh(float)
+00000000 W mfn::MFN<short>::update_emb()
+00000000 W mfn::MFN<short>::set_preload(bool)
+00000000 W mfn::MFN<short>::get_face_emb(int)
+00000000 W mfn::MFN<short>::set_autoload(bool)
+00000000 W mfn::MFN<short>::set_partition(esp_partition_type_t, esp_partition_subtype_t, char const*)
+00000000 W mfn::MFN<short>::get_similarity(dl::Tensor<float>&, std::vector<FaceID<float>*, std::allocator<FaceID<float>*> >&, bool)
+00000000 W mfn::MFN<short>::check_partition()
+00000000 W mfn::MFN<short>::get_input_shape()
+00000000 W mfn::MFN<short>::set_input_shape(std::vector<int, std::allocator<int> >)
+00000000 W mfn::MFN<short>::get_enrolled_ids()
+00000000 W mfn::MFN<short>::set_ids_from_flash()
+00000000 W mfn::MFN<short>::write_ids_to_flash()
+00000000 W mfn::MFN<short>::get_enrolled_id_num()
+00000000 W mfn::MFN<short>::set_print_layer_result(bool)
+00000000 W mfn::MFN<short>::get_enrolled_ids_with_name(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00000000 W mfn::MFN<short>::infer(unsigned short*, std::vector<int, std::allocator<int> >&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<short>::infer(unsigned short*, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<short>::infer(dl::Tensor<unsigned char>&)
+00000000 W mfn::MFN<short>::infer(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<short>::infer(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<short>::set_ids(std::vector<FaceID<float>*, std::allocator<FaceID<float>*> >&, bool)
+00000000 W mfn::MFN<short>::clear_id(bool)
+00000000 W mfn::MFN<short>::delete_id(bool)
+00000000 W mfn::MFN<short>::delete_id(int, bool)
+00000000 W mfn::MFN<short>::enroll_id(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W mfn::MFN<short>::enroll_id(unsigned short*, std::vector<int, std::allocator<int> >&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W mfn::MFN<short>::enroll_id(unsigned short*, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W mfn::MFN<short>::enroll_id(dl::Tensor<float>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W mfn::MFN<short>::enroll_id(dl::Tensor<unsigned char>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W mfn::MFN<short>::enroll_id(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W mfn::MFN<short>::enroll_id(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)
+00000000 W mfn::MFN<short>::recognize(unsigned short*, std::vector<int, std::allocator<int> >&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<short>::recognize(unsigned short*, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<short>::recognize(dl::Tensor<float>&)
+00000000 W mfn::MFN<short>::recognize(dl::Tensor<float>&, std::vector<FaceID<float>*, std::allocator<FaceID<float>*> >&)
+00000000 W mfn::MFN<short>::recognize(dl::Tensor<unsigned char>&)
+00000000 W mfn::MFN<short>::recognize(dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<short>::recognize(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)
+00000000 W mfn::MFN<short>::recognize()
+00000000 W mfn::MFN<short>::MFN(float, std::vector<int, std::allocator<int> >)
+00000000 W mfn::MFN<short>::MFN()
+00000000 W mfn::MFN<short>::MFN(float, std::vector<int, std::allocator<int> >)
+00000000 W mfn::MFN<short>::MFN()
+00000000 n mfn::MFN<short>::MFN(float, std::vector<int, std::allocator<int> >)
+00000000 n mfn::MFN<short>::MFN()
+00000000 W mfn::MFN<short>::~MFN()
+00000000 W mfn::MFN<short>::~MFN()
+00000000 W mfn::MFN<short>::~MFN()
+00000000 n mfn::MFN<short>::~MFN()
+00000000 t mfn::comp_face_similarity(face_info_t const&, face_info_t const&)
+         U FaceID<float>::FaceID(int, dl::Tensor<float>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+         U FaceID<float>::FaceID(FaceID<float>&)
+00000000 W void std::vector<face_info_t, std::allocator<face_info_t> >::emplace_back<face_info_t>(face_info_t&&)
+00000000 W void std::vector<face_info_t, std::allocator<face_info_t> >::_M_realloc_insert<face_info_t>(__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, face_info_t&&)
+00000000 W std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&)
+00000000 W void std::vector<FaceID<float>*, std::allocator<FaceID<float>*> >::_M_realloc_insert<FaceID<float>* const&>(__gnu_cxx::__normal_iterator<FaceID<float>**, std::vector<FaceID<float>*, std::allocator<FaceID<float>*> > >, FaceID<float>* const&)
+00000000 W std::vector<FaceID<float>*, std::allocator<FaceID<float>*> >::_M_erase(__gnu_cxx::__normal_iterator<FaceID<float>**, std::vector<FaceID<float>*, std::allocator<FaceID<float>*> > >)
+         U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned int, unsigned int, char const*, unsigned int)
+00000000 W void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag)
+00000000 W void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+         U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+         U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned int&, unsigned int)
+         U std::ios_base::Init::Init()
+         U std::ios_base::Init::~Init()
+         U operator new(unsigned int)
+00000000 W void std::__make_heap<__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)> >(__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)>&)
+00000000 W void std::__push_heap<__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, int, face_info_t, __gnu_cxx::__ops::_Iter_comp_val<bool (*)(face_info_t const&, face_info_t const&)> >(__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, int, int, face_info_t, __gnu_cxx::__ops::_Iter_comp_val<bool (*)(face_info_t const&, face_info_t const&)>&)
+00000000 W void std::__sort_heap<__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)> >(__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)>&)
+00000000 W decltype (__miter_base(({parm#1}.base)())) std::__miter_base<FaceID<float>**>(std::move_iterator<FaceID<float>**>)
+00000000 W face_info_t* std::__niter_base<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >(__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >)
+00000000 W int* std::__niter_base<int*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >)
+00000000 W int const* std::__niter_base<int const*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >)
+00000000 W FaceID<float>** std::__niter_base<FaceID<float>**, std::vector<FaceID<float>*, std::allocator<FaceID<float>*> > >(__gnu_cxx::__normal_iterator<FaceID<float>**, std::vector<FaceID<float>*, std::allocator<FaceID<float>*> > >)
+00000000 W void std::__adjust_heap<__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, int, face_info_t, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)> >(__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, int, int, face_info_t, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)>)
+00000000 W void std::__heap_select<__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)> >(__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)>)
+00000000 W void std::__insertion_sort<__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)> >(__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)>)
+00000000 W void std::__introsort_loop<__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, int, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)> >(__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, int, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)>)
+         U std::__throw_bad_alloc()
+         U std::__throw_logic_error(char const*)
+         U std::__throw_length_error(char const*)
+00000000 W __gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > > std::__unguarded_partition<__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)> >(__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)>)
+00000000 W void std::__final_insertion_sort<__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)> >(__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)>)
+00000000 W void std::__move_median_to_first<__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)> >(__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(face_info_t const&, face_info_t const&)>)
+00000000 W void std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(face_info_t const&, face_info_t const&)> >(__gnu_cxx::__normal_iterator<face_info_t*, std::vector<face_info_t, std::allocator<face_info_t> > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(face_info_t const&, face_info_t const&)>)
+00000000 b std::__ioinit
+00000000 V vtable for dl::layer::Model<signed char>
+00000000 V vtable for dl::layer::Model<short>
+00000000 V vtable for mfn::MFN<signed char>
+00000000 V vtable for mfn::MFN<short>
+00000000 r mfn::MFN<signed char>::infer(unsigned short*, std::vector<int, std::allocator<int> >&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)::__PRETTY_FUNCTION__
+00000000 r mfn::MFN<signed char>::infer(dl::Tensor<unsigned char>&)::__PRETTY_FUNCTION__
+00000000 r mfn::MFN<signed char>::infer(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)::__PRETTY_FUNCTION__
+00000000 r mfn::MFN<short>::infer(unsigned short*, std::vector<int, std::allocator<int> >&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)::__PRETTY_FUNCTION__
+00000000 r mfn::MFN<short>::infer(dl::Tensor<unsigned char>&)::__PRETTY_FUNCTION__
+00000000 r mfn::MFN<short>::infer(dl::Tensor<unsigned char>&, dl::Tensor<unsigned char>&, std::vector<int, std::allocator<int> >&)::__PRETTY_FUNCTION__
+
+mfn112_440m_prelu_512_coefficient_s16.cpp.obj:
+00000000 r $_100
+00000000 r $_101
+00000000 r $_102
+00000000 r $_103
+00000000 r $_104
+00000000 r $_105
+00000000 r $_106
+00000000 r $_107
+00000000 r $_108
+00000000 r $_109
+00000000 r $_110
+00000000 r $_111
+00000000 r $_112
+00000000 r $_113
+00000000 r $_114
+00000000 r $_115
+00000000 r $_116
+00000000 r $_117
+00000000 r $_118
+00000000 r $_119
+00000000 r $_120
+00000000 r $_121
+00000000 r $_122
+00000000 r $_123
+00000000 r $_124
+00000000 r $_125
+00000000 r $_126
+00000000 r $_127
+00000000 r $_128
+00000000 r $_129
+00000000 r $_130
+00000000 r $_131
+00000000 r $_132
+00000000 r $_133
+00000000 r $_134
+00000000 r $_135
+00000000 r $_136
+00000000 r $_137
+00000000 r $_138
+00000000 r $_139
+00000000 r $_140
+00000000 r $_141
+00000000 r $_142
+00000000 r $_143
+00000000 r $_144
+00000000 r $_145
+00000000 r $_146
+00000000 r $_147
+00000000 r $_148
+00000000 r $_149
+00000000 r $_150
+00000000 r $_151
+00000000 r $_152
+00000000 r $_153
+00000000 r $_154
+00000000 r $_155
+00000000 r $_156
+00000000 r $_157
+00000000 r $_158
+00000000 r $_159
+00000000 r $_160
+00000000 r $_161
+00000000 r $_162
+00000000 r $_163
+00000000 r $_164
+00000000 r $_165
+00000000 r $_166
+00000000 r $_167
+00000000 r $_168
+00000000 r $_169
+00000000 r $_170
+00000000 r $_171
+00000000 r $_172
+00000000 r $_173
+00000000 r $_174
+00000000 r $_175
+00000000 r $_176
+00000000 r $_177
+00000000 r $_178
+00000000 r $_179
+00000000 r $_180
+00000000 r $_181
+00000000 r $_182
+00000000 r $_183
+00000000 r $_184
+00000000 r $_185
+00000000 r $_186
+00000000 r $_187
+00000000 r $_188
+00000000 r $_189
+00000000 r $_190
+00000000 r $_191
+00000000 r $_192
+00000000 r $_193
+00000000 r $_194
+00000000 r $_195
+00000000 r $_196
+00000000 r $_197
+00000000 r $_198
+00000000 r $_199
+00000000 r $_200
+00000000 r $_201
+00000000 r $_202
+00000000 r $_203
+00000000 r $_204
+00000000 r $_205
+00000000 r $_206
+00000000 r $_207
+00000000 r $_208
+00000000 r $_209
+00000000 r $_210
+00000000 r $_211
+00000000 r $_212
+00000000 r $_213
+00000000 r $_214
+00000000 r $_215
+00000000 r $_216
+00000000 r $_217
+00000000 r $_218
+00000000 r $_219
+00000000 r $_220
+00000000 r $_221
+00000000 r $_222
+00000000 r $_223
+00000000 r $_224
+00000000 r $_225
+00000000 r $_226
+00000000 r $_227
+00000000 r $_228
+00000000 r $_229
+00000000 r $_230
+00000000 r $_231
+00000000 r $_232
+00000000 r $_233
+00000000 r $_234
+00000000 r $_235
+00000000 r $_236
+00000000 r $_237
+00000000 r $_238
+00000000 r $_239
+00000000 r $_240
+00000000 r $_241
+00000000 r $_242
+00000000 r $_243
+00000000 r $_244
+00000000 r $_245
+00000000 r $_246
+00000000 r $_247
+00000000 r $_248
+00000000 r $_249
+00000000 r $_250
+00000000 r $_251
+00000000 r $_252
+00000000 r $_253
+00000000 r $_254
+00000000 r $_255
+00000000 r $_256
+00000000 r $_257
+00000000 r $_258
+00000000 r $_259
+00000000 r $_260
+00000000 r $_261
+00000000 r $_262
+00000000 r $_263
+00000000 r $_264
+00000000 r $_265
+00000000 r $_266
+00000000 r $_267
+00000000 r $_268
+00000000 r $_269
+00000000 r $_270
+00000000 r $_271
+00000000 r $_272
+00000000 r $_273
+00000000 r $_274
+00000000 r $_275
+00000000 r $_276
+00000000 r $_277
+00000000 r $_278
+00000000 r $_279
+00000000 r $_280
+00000000 r $_281
+00000000 r $_282
+00000000 r $_283
+00000000 r $_284
+00000000 r $_285
+00000000 r $_286
+00000000 r $_287
+00000000 r $_288
+00000000 r $_289
+00000000 r $_290
+00000000 r $_291
+00000000 r $_292
+00000000 r $_293
+00000000 r $_294
+00000000 r $_295
+00000000 r $_296
+00000000 r $_297
+00000000 r $_298
+00000000 r $_299
+00000000 r $_300
+00000000 r $_301
+00000000 r $_302
+00000000 r $_303
+00000000 r $_304
+00000000 r $_305
+00000000 r $_306
+00000000 r $_307
+00000000 r $_308
+00000000 r $_309
+00000000 r $_310
+00000000 r $_311
+00000000 r $_312
+00000000 r $_313
+00000000 r $_314
+00000000 r $_315
+00000000 r $_316
+00000000 r $_317
+00000000 r $_43
+00000000 r $_44
+00000000 r $_45
+00000000 r $_46
+00000000 r $_47
+00000000 r $_48
+00000000 r $_49
+00000000 r $_50
+00000000 r $_51
+00000000 r $_52
+00000000 r $_53
+00000000 r $_54
+00000000 r $_55
+00000000 r $_56
+00000000 r $_57
+00000000 r $_58
+00000000 r $_59
+00000000 r $_60
+00000000 r $_61
+00000000 r $_62
+00000000 r $_63
+00000000 r $_64
+00000000 r $_65
+00000000 r $_66
+00000000 r $_67
+00000000 r $_68
+00000000 r $_69
+00000000 r $_70
+00000000 r $_71
+00000000 r $_72
+00000000 r $_73
+00000000 r $_74
+00000000 r $_75
+00000000 r $_76
+00000000 r $_77
+00000000 r $_78
+00000000 r $_79
+00000000 r $_80
+00000000 r $_81
+00000000 r $_82
+00000000 r $_83
+00000000 r $_84
+00000000 r $_85
+00000000 r $_86
+00000000 r $_87
+00000000 r $_88
+00000000 r $_89
+00000000 r $_90
+00000000 r $_91
+00000000 r $_92
+00000000 r $_93
+00000000 r $_94
+00000000 r $_95
+00000000 r $_96
+00000000 r $_97
+00000000 r $_98
+00000000 r $_99
+00000000 t _GLOBAL__sub_D__ZN37mfn112_440m_prelu_512_coefficient_s1617get_conv_1_filterEv
+00000000 t _GLOBAL__sub_I__ZN37mfn112_440m_prelu_512_coefficient_s1617get_conv_1_filterEv
+         U memmove
+00000000 t __static_initialization_and_destruction_0(int, int)
+         U operator delete(void*)
+         U dl::Activation<short>::Activation(dl::activation_type_t, short const*, int, std::vector<int, std::allocator<int> >)
+         U dl::Filter<short>::Filter(short const*, int, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >)
+00000000 W dl::Filter<short>::~Filter()
+00000000 W dl::Filter<short>::~Filter()
+00000000 n dl::Filter<short>::~Filter()
+         U dl::Constant<short>::Constant(short const*, int, std::vector<int, std::allocator<int> >)
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_fc1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_fc1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_2_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_2_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_6dw7_7_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_3_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_4_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_1_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_6dw7_7_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_3_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_4_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_2_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_1_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_2_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_3_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_4_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_3_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_4_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_proj_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_proj_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_3_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_4_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_3_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_4_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_proj_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_proj_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_3_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_4_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_sep_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_sep_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_sep_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_sep_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_sep_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_sep_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_sep_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_sep_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_sep_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_sep_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_sep_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_sep_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_sep_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_sep_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_sep_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_sep_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_proj_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_proj_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_proj_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_proj_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_proj_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_proj_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_proj_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_proj_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_proj_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_proj_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_proj_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_proj_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_proj_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_proj_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_proj_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_proj_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_1_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_2_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_3_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_4_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_sep_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_sep_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_sep_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_sep_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_sep_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_sep_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_sep_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_sep_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_sep_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_sep_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_sep_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_sep_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_sep_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_sep_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_sep_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_sep_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_proj_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_proj_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_proj_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_proj_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_proj_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_proj_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_proj_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_proj_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_proj_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_proj_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_proj_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_proj_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_proj_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_proj_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_proj_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_proj_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_sep_1_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_sep_2_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_sep_1_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_sep_2_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_sep_1_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_sep_2_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_sep_1_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_sep_2_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_sep_1_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_sep_2_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_sep_1_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_sep_2_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_sep_1_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_sep_2_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_sep_1_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_sep_2_activation()
+00000000 b mfn112_440m_prelu_512_coefficient_s16::fc1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_2_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_2_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_6dw7_7_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_6sep_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_6sep_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_6sep_3_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_6sep_4_bias
+00000000 r mfn112_440m_prelu_512_coefficient_s16::fc1_bias_element
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_1_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_6dw7_7_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_6sep_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_6sep_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_6sep_3_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_6sep_4_filter
+00000000 r mfn112_440m_prelu_512_coefficient_s16::fc1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_1_bias_element
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_2_dw_activation
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_1_filter_element
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_dw_bias
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_2_dw_bias_element
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_6sep_1_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_6sep_2_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_6sep_3_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::conv_6sep_4_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_dw_filter
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_2_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_6dw7_7_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_6sep_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_6sep_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_6sep_3_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_6sep_4_bias_element
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_3_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_4_bias
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_1_activation_element
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_proj_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_proj_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_3_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_4_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_dw_bias
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_6dw7_7_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_6sep_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_6sep_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_6sep_3_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_6sep_4_filter_element
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_3_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_4_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_proj_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_proj_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_3_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_4_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_dw_filter
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_2_dw_activation_element
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_sep_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_sep_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_sep_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_sep_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_sep_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_sep_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_sep_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_sep_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_sep_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_sep_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_sep_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_sep_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_sep_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_sep_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_sep_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_sep_2_bias
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_dw_bias_element
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_proj_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_proj_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_proj_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_proj_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_proj_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_proj_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_proj_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_proj_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_proj_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_proj_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_proj_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_proj_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_proj_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_proj_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_proj_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_proj_2_bias
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_6sep_1_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_6sep_2_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_6sep_3_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::conv_6sep_4_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_sep_bias_element
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_1_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_2_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_3_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_4_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_sep_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_sep_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_sep_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_sep_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_sep_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_sep_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_sep_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_sep_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_sep_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_sep_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_sep_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_sep_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_sep_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_sep_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_sep_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_sep_2_filter
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_dw_filter_element
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_proj_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_proj_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_proj_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_proj_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_proj_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_proj_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_proj_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_proj_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_proj_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_proj_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_proj_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_proj_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_proj_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_proj_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_proj_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_proj_2_filter
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_3_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_4_bias_element
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_sep_activation
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_proj_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_proj_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_3_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_4_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_3_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_4_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_sep_bias_element
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_sep_1_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_sep_2_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_sep_1_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_sep_2_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_sep_1_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_sep_2_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_sep_1_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_sep_2_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_sep_1_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_sep_2_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_sep_1_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_sep_2_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_sep_1_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_sep_2_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_sep_1_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_sep_2_activation
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_proj_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_proj_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_3_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_proj_4_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_23_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_34_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_sep_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_sep_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_sep_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_sep_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_sep_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_sep_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_sep_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_sep_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_sep_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_sep_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_sep_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_sep_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_sep_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_sep_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_sep_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_sep_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_proj_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_proj_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_proj_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_proj_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_proj_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_proj_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_proj_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_proj_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_proj_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_proj_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_proj_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_proj_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_proj_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_proj_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_proj_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_proj_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_1_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_2_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_3_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::dconv_45_conv_sep_4_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_sep_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_sep_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_sep_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_sep_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_sep_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_sep_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_sep_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_sep_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_sep_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_sep_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_sep_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_sep_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_sep_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_sep_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_sep_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_sep_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_proj_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_proj_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_proj_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_proj_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_proj_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_proj_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_proj_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_proj_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_proj_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_proj_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_proj_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_proj_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_proj_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_proj_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_proj_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_proj_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block0_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block1_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block2_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_3_block3_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_sep_1_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block0_conv_sep_2_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_sep_1_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block1_conv_sep_2_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_sep_1_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block2_conv_sep_2_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_sep_1_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block3_conv_sep_2_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_sep_1_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block4_conv_sep_2_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_sep_1_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_4_block5_conv_sep_2_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_sep_1_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block0_conv_sep_2_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_sep_1_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s16::res_5_block1_conv_sep_2_activation_element
+00000000 b mfn112_440m_prelu_512_coefficient_s16::fc1_bias
+00000000 W void std::vector<int, std::allocator<int> >::_M_range_initialize<int const*>(int const*, int const*, std::forward_iterator_tag)
+         U operator new(unsigned int)
+         U std::__throw_bad_alloc()
+
+mfn112_440m_prelu_512_coefficient_s8.cpp.obj:
+00000000 r $_100
+00000000 r $_101
+00000000 r $_102
+00000000 r $_103
+00000000 r $_104
+00000000 r $_105
+00000000 r $_106
+00000000 r $_107
+00000000 r $_108
+00000000 r $_109
+00000000 r $_110
+00000000 r $_111
+00000000 r $_112
+00000000 r $_113
+00000000 r $_114
+00000000 r $_115
+00000000 r $_116
+00000000 r $_117
+00000000 r $_118
+00000000 r $_119
+00000000 r $_120
+00000000 r $_121
+00000000 r $_122
+00000000 r $_123
+00000000 r $_124
+00000000 r $_125
+00000000 r $_126
+00000000 r $_127
+00000000 r $_128
+00000000 r $_129
+00000000 r $_130
+00000000 r $_131
+00000000 r $_132
+00000000 r $_133
+00000000 r $_134
+00000000 r $_135
+00000000 r $_136
+00000000 r $_137
+00000000 r $_138
+00000000 r $_139
+00000000 r $_140
+00000000 r $_141
+00000000 r $_142
+00000000 r $_143
+00000000 r $_144
+00000000 r $_145
+00000000 r $_146
+00000000 r $_147
+00000000 r $_148
+00000000 r $_149
+00000000 r $_150
+00000000 r $_151
+00000000 r $_152
+00000000 r $_153
+00000000 r $_154
+00000000 r $_155
+00000000 r $_156
+00000000 r $_157
+00000000 r $_158
+00000000 r $_159
+00000000 r $_160
+00000000 r $_161
+00000000 r $_162
+00000000 r $_163
+00000000 r $_164
+00000000 r $_165
+00000000 r $_166
+00000000 r $_167
+00000000 r $_168
+00000000 r $_169
+00000000 r $_170
+00000000 r $_171
+00000000 r $_172
+00000000 r $_173
+00000000 r $_174
+00000000 r $_175
+00000000 r $_176
+00000000 r $_177
+00000000 r $_178
+00000000 r $_179
+00000000 r $_180
+00000000 r $_181
+00000000 r $_182
+00000000 r $_183
+00000000 r $_184
+00000000 r $_185
+00000000 r $_186
+00000000 r $_187
+00000000 r $_188
+00000000 r $_189
+00000000 r $_190
+00000000 r $_191
+00000000 r $_192
+00000000 r $_193
+00000000 r $_194
+00000000 r $_195
+00000000 r $_196
+00000000 r $_197
+00000000 r $_198
+00000000 r $_199
+00000000 r $_200
+00000000 r $_201
+00000000 r $_202
+00000000 r $_203
+00000000 r $_204
+00000000 r $_205
+00000000 r $_206
+00000000 r $_207
+00000000 r $_208
+00000000 r $_209
+00000000 r $_210
+00000000 r $_211
+00000000 r $_212
+00000000 r $_213
+00000000 r $_214
+00000000 r $_215
+00000000 r $_216
+00000000 r $_217
+00000000 r $_218
+00000000 r $_219
+00000000 r $_220
+00000000 r $_221
+00000000 r $_222
+00000000 r $_223
+00000000 r $_224
+00000000 r $_225
+00000000 r $_226
+00000000 r $_227
+00000000 r $_228
+00000000 r $_229
+00000000 r $_230
+00000000 r $_231
+00000000 r $_232
+00000000 r $_233
+00000000 r $_234
+00000000 r $_235
+00000000 r $_236
+00000000 r $_43
+00000000 r $_44
+00000000 r $_45
+00000000 r $_46
+00000000 r $_47
+00000000 r $_48
+00000000 r $_49
+00000000 r $_50
+00000000 r $_51
+00000000 r $_52
+00000000 r $_53
+00000000 r $_54
+00000000 r $_55
+00000000 r $_56
+00000000 r $_57
+00000000 r $_58
+00000000 r $_59
+00000000 r $_60
+00000000 r $_61
+00000000 r $_62
+00000000 r $_63
+00000000 r $_64
+00000000 r $_65
+00000000 r $_66
+00000000 r $_67
+00000000 r $_68
+00000000 r $_69
+00000000 r $_70
+00000000 r $_71
+00000000 r $_72
+00000000 r $_73
+00000000 r $_74
+00000000 r $_75
+00000000 r $_76
+00000000 r $_77
+00000000 r $_78
+00000000 r $_79
+00000000 r $_80
+00000000 r $_81
+00000000 r $_82
+00000000 r $_83
+00000000 r $_84
+00000000 r $_85
+00000000 r $_86
+00000000 r $_87
+00000000 r $_88
+00000000 r $_89
+00000000 r $_90
+00000000 r $_91
+00000000 r $_92
+00000000 r $_93
+00000000 r $_94
+00000000 r $_95
+00000000 r $_96
+00000000 r $_97
+00000000 r $_98
+00000000 r $_99
+00000000 t _GLOBAL__sub_D__ZN36mfn112_440m_prelu_512_coefficient_s817get_conv_1_filterEv
+00000000 t _GLOBAL__sub_I__ZN36mfn112_440m_prelu_512_coefficient_s817get_conv_1_filterEv
+         U memmove
+00000000 t __static_initialization_and_destruction_0(int, int)
+         U operator delete(void*)
+         U dl::Activation<signed char>::Activation(dl::activation_type_t, signed char const*, int, std::vector<int, std::allocator<int> >)
+         U dl::Filter<signed char>::Filter(signed char const*, signed char const*, int, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >)
+00000000 W dl::Filter<signed char>::~Filter()
+00000000 W dl::Filter<signed char>::~Filter()
+00000000 n dl::Filter<signed char>::~Filter()
+         U dl::Constant<short>::Constant(short const*, int, std::vector<int, std::allocator<int> >)
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_fc1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_fc1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_conv_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_conv_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_conv_2_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_conv_2_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_conv_6dw7_7_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_conv_6sep_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_conv_6sep_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_conv_1_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_conv_6dw7_7_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_conv_6sep_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_conv_6sep_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_conv_2_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_conv_6sep_1_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_conv_6sep_2_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_sep_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_sep_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_proj_1_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_proj_2_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_dw_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_sep_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_sep_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_sep_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_proj_1_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_proj_2_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_dw_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_proj_bias()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_sep_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_proj_filter()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_sep_1_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_sep_2_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_dw_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_sep_activation()
+00000000 T mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_sep_activation()
+00000000 b mfn112_440m_prelu_512_coefficient_s8::fc1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::conv_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::conv_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::conv_2_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::conv_2_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::conv_6dw7_7_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::conv_6sep_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::conv_6sep_2_bias
+00000000 r mfn112_440m_prelu_512_coefficient_s8::fc1_bias_element
+00000000 b mfn112_440m_prelu_512_coefficient_s8::conv_1_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::conv_6dw7_7_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::conv_6sep_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::conv_6sep_2_filter
+00000000 r mfn112_440m_prelu_512_coefficient_s8::fc1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::fc1_filter_exponent
+00000000 b mfn112_440m_prelu_512_coefficient_s8::conv_2_dw_activation
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_1_filter_element
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_dw_bias
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_1_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_2_dw_bias_element
+00000000 b mfn112_440m_prelu_512_coefficient_s8::conv_6sep_1_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::conv_6sep_2_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_dw_filter
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_2_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_6dw7_7_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_6sep_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_6sep_2_bias_element
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_sep_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_sep_2_bias
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_1_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_2_dw_filter_exponent
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_proj_1_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_proj_2_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_dw_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_dw_bias
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_6dw7_7_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_6sep_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_6sep_2_filter_element
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_sep_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_sep_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_sep_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_sep_bias
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_6dw7_7_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_6sep_1_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_6sep_2_filter_exponent
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_proj_1_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_proj_2_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_proj_bias
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_dw_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_proj_bias
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_2_dw_activation_element
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_sep_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_sep_filter
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_dw_bias_element
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_proj_filter
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_proj_filter
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_6sep_1_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::conv_6sep_2_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_sep_bias_element
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_sep_1_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_sep_2_activation
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_dw_filter_element
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_dw_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_dw_activation
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_sep_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_sep_2_bias_element
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_sep_activation
+00000000 b mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_sep_activation
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_sep_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_sep_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_proj_1_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_proj_2_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_dw_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_proj_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_proj_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_sep_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_sep_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_sep_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_proj_1_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_proj_2_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_sep_1_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_sep_2_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_dw_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_proj_bias_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_23_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_34_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_proj_1_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_proj_2_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_dw_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_sep_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_sep_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_sep_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_sep_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_sep_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_sep_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_sep_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_sep_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_sep_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_sep_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_sep_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_sep_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_proj_filter_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_sep_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_sep_1_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::dconv_45_conv_sep_2_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_proj_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_proj_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_proj_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_proj_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_proj_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_proj_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_proj_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_proj_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_proj_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_proj_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_proj_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_proj_filter_exponent
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_dw_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block0_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block1_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block2_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_3_block3_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block0_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block1_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block2_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block3_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block4_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_4_block5_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block0_conv_sep_activation_element
+00000000 r mfn112_440m_prelu_512_coefficient_s8::res_5_block1_conv_sep_activation_element
+00000000 b mfn112_440m_prelu_512_coefficient_s8::fc1_bias
+00000000 W void std::vector<int, std::allocator<int> >::_M_range_initialize<int const*>(int const*, int const*, std::forward_iterator_tag)
+         U operator new(unsigned int)
+         U std::__throw_bad_alloc()
+
+face_recognition_112_v1_s16.cpp.obj:
+00000000 t _GLOBAL__sub_D__ZN23FaceRecognition112V1S16C2Ev
+00000000 t _GLOBAL__sub_I__ZN23FaceRecognition112V1S16C2Ev
+00000000 t __static_initialization_and_destruction_0(int, int)
+         U operator delete(void*)
+         U FaceRecognizer<short>::FaceRecognizer()
+         U FaceRecognizer<short>::~FaceRecognizer()
+00000000 T FaceRecognition112V1S16::FaceRecognition112V1S16()
+00000000 T FaceRecognition112V1S16::FaceRecognition112V1S16()
+00000000 T FaceRecognition112V1S16::~FaceRecognition112V1S16()
+00000000 T FaceRecognition112V1S16::~FaceRecognition112V1S16()
+00000000 T FaceRecognition112V1S16::~FaceRecognition112V1S16()
+         U mfn::MFN112_1X_S16::MFN112_1X_S16()
+         U std::ios_base::Init::Init()
+         U std::ios_base::Init::~Init()
+         U operator new(unsigned int)
+00000000 b std::__ioinit
+00000000 V vtable for FaceRecognition112V1S16
+
+face_recognition_112_v1_s8.cpp.obj:
+00000000 t _GLOBAL__sub_D__ZN22FaceRecognition112V1S8C2Ev
+00000000 t _GLOBAL__sub_I__ZN22FaceRecognition112V1S8C2Ev
+00000000 t __static_initialization_and_destruction_0(int, int)
+         U operator delete(void*)
+         U FaceRecognizer<signed char>::FaceRecognizer()
+         U FaceRecognizer<signed char>::~FaceRecognizer()
+00000000 T FaceRecognition112V1S8::FaceRecognition112V1S8()
+00000000 T FaceRecognition112V1S8::FaceRecognition112V1S8()
+00000000 T FaceRecognition112V1S8::~FaceRecognition112V1S8()
+00000000 T FaceRecognition112V1S8::~FaceRecognition112V1S8()
+00000000 T FaceRecognition112V1S8::~FaceRecognition112V1S8()
+         U mfn::MFN112_1X_S8::MFN112_1X_S8()
+         U std::ios_base::Init::Init()
+         U std::ios_base::Init::~Init()
+         U operator new(unsigned int)
+00000000 b std::__ioinit
+00000000 V vtable for FaceRecognition112V1S8
+
+mfn112_1x_model_s16.cpp.obj:
+00000000 r $_112
+00000000 r $_113
+00000000 r $_114
+00000000 r $_115
+00000000 r $_116
+00000000 r $_117
+00000000 r $_118
+00000000 r $_119
+00000000 r $_120
+00000000 r $_121
+00000000 r $_122
+00000000 r $_123
+00000000 r $_124
+00000000 r $_125
+00000000 r $_126
+00000000 r $_127
+00000000 r $_128
+00000000 r $_129
+00000000 r $_130
+00000000 r $_131
+00000000 r $_132
+00000000 r $_137
+         U __assert_func
+00000000 t _GLOBAL__sub_D__ZN3mfn13MFN112_1X_S16C2Ev
+00000000 t _GLOBAL__sub_I__ZN3mfn13MFN112_1X_S16C2Ev
+         U heap_caps_aligned_alloc
+         U heap_caps_free
+         U heap_caps_get_free_size
+         U heap_caps_malloc
+0000001c r .LC105
+00000000 r .LC111
+00000010 r .LC581
+00000020 r .LC600
+         U memcmp
+         U memcpy
+         U memmove
+         U printf
+         U puts
+         U strlen
+00000000 t __static_initialization_and_destruction_0(int, int)
+         U operator delete(void*)
+         U dl::nn::get_pad_size(std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, int, int, dl::padding_type_t)
+         U dl::nn::depthwise_conv2d(dl::Tensor<short>&, dl::Tensor<short>&, std::vector<int, std::allocator<int> >&, dl::Filter<short> const&, int, int, dl::Bias<short> const*, dl::Activation<short> const*, std::vector<int, std::allocator<int> > const&)
+         U dl::nn::get_output_shape(std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, int, int, dl::padding_type_t, bool, std::vector<int, std::allocator<int> >)
+         U dl::nn::add2d(dl::Tensor<short>&, dl::Tensor<short>&, dl::Tensor<short>&, dl::Activation<short> const*, std::vector<int, std::allocator<int> > const&, int)
+         U void dl::nn::concat<short>(dl::Tensor<short>&, std::vector<dl::Tensor<short>*, std::allocator<dl::Tensor<short>*> >&, int, bool)
+         U dl::nn::conv2d(dl::Tensor<short>&, dl::Tensor<short>&, std::vector<int, std::allocator<int> >&, dl::Filter<short> const&, int, int, dl::Bias<short> const*, dl::Activation<short> const*, std::vector<int, std::allocator<int> > const&)
+         U dl::tool::cache::preload_func(unsigned int, unsigned int)
+         U dl::tool::cache::autoload_func(unsigned int, unsigned int, unsigned int, unsigned int)
+00000000 W dl::layer::DepthwiseConv2D<short, short>::call(dl::Tensor<short>&, bool, std::vector<int, std::allocator<int> > const&)
+00000000 W dl::layer::DepthwiseConv2D<short, short>::build(dl::Tensor<short>&, bool)
+00000000 W dl::layer::DepthwiseConv2D<short, short>::DepthwiseConv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 W dl::layer::DepthwiseConv2D<short, short>::DepthwiseConv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 n dl::layer::DepthwiseConv2D<short, short>::DepthwiseConv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 W dl::layer::Add2D<short>::call(dl::Tensor<short>&, dl::Tensor<short>&, std::vector<int, std::allocator<int> > const&)
+00000000 W dl::layer::Add2D<short>::build(dl::Tensor<short>&, dl::Tensor<short>&, bool)
+         U dl::layer::Layer::Layer(char const*)
+         U dl::layer::Layer::~Layer()
+00000000 W dl::layer::Concat<short>::call(std::vector<dl::Tensor<short>*, std::allocator<dl::Tensor<short>*> >, bool)
+00000000 W dl::layer::Concat<short>::build(std::vector<dl::Tensor<short>*, std::allocator<dl::Tensor<short>*> >, bool)
+00000000 W dl::layer::Concat<short>::Concat(int, char const*)
+00000000 W dl::layer::Concat<short>::Concat(int, char const*)
+00000000 n dl::layer::Concat<short>::Concat(int, char const*)
+00000000 W dl::layer::Conv2D<short, short>::call(dl::Tensor<short>&, bool, std::vector<int, std::allocator<int> > const&)
+00000000 W dl::layer::Conv2D<short, short>::build(dl::Tensor<short>&, bool)
+00000000 W dl::layer::Conv2D<short, short>::Conv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 W dl::layer::Conv2D<short, short>::Conv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 n dl::layer::Conv2D<short, short>::Conv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 W dl::layer::Conv2D<short, short>::~Conv2D()
+00000000 W dl::layer::Conv2D<short, short>::~Conv2D()
+00000000 n dl::layer::Conv2D<short, short>::~Conv2D()
+         U dl::Tensor<short>::print(std::vector<int, std::allocator<int> >, char const*)
+         U dl::Tensor<short>::set_shape(std::vector<int, std::allocator<int> >)
+         U mfn112_440m_prelu_512_coefficient_s16::get_fc1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_fc1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_2_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_2_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_6dw7_7_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_3_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_4_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_1_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_6dw7_7_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_3_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_4_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_2_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_1_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_2_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_3_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_conv_6sep_4_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_3_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_4_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_proj_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_proj_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_3_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_4_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_3_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_4_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_proj_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_proj_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_3_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_proj_4_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_23_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_34_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_sep_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_sep_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_sep_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_sep_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_sep_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_sep_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_sep_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_sep_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_sep_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_sep_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_sep_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_sep_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_sep_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_sep_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_sep_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_sep_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_proj_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_proj_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_proj_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_proj_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_proj_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_proj_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_proj_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_proj_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_proj_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_proj_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_proj_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_proj_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_proj_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_proj_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_proj_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_proj_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_1_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_2_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_3_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_dconv_45_conv_sep_4_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_sep_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_sep_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_sep_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_sep_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_sep_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_sep_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_sep_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_sep_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_sep_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_sep_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_sep_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_sep_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_sep_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_sep_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_sep_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_sep_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_proj_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_proj_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_proj_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_proj_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_proj_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_proj_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_proj_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_proj_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_proj_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_proj_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_proj_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_proj_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_proj_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_proj_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_proj_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_proj_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block0_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block1_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block2_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_3_block3_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_sep_1_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block0_conv_sep_2_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_sep_1_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block1_conv_sep_2_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_sep_1_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block2_conv_sep_2_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_sep_1_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block3_conv_sep_2_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_sep_1_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block4_conv_sep_2_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_sep_1_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_4_block5_conv_sep_2_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_sep_1_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block0_conv_sep_2_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_sep_1_activation()
+         U mfn112_440m_prelu_512_coefficient_s16::get_res_5_block1_conv_sep_2_activation()
+00000000 T mfn::MFN112_1X_S16::get_output()
+00000000 T mfn::MFN112_1X_S16::call(dl::Tensor<short>&)
+00000000 T mfn::MFN112_1X_S16::build(dl::Tensor<short>&)
+00000000 T mfn::MFN112_1X_S16::MFN112_1X_S16()
+00000000 T mfn::MFN112_1X_S16::MFN112_1X_S16()
+00000000 T mfn::MFN112_1X_S16::~MFN112_1X_S16()
+00000000 T mfn::MFN112_1X_S16::~MFN112_1X_S16()
+00000000 T mfn::MFN112_1X_S16::~MFN112_1X_S16()
+         U mfn::MFN<short>::MFN()
+         U mfn::MFN<short>::~MFN()
+00000000 W std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&)
+00000000 W std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+00000000 W std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+00000000 n std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+         U std::ios_base::Init::Init()
+         U std::ios_base::Init::~Init()
+         U std::basic_ios<char, std::char_traits<char> >::clear(std::_Ios_Iostate)
+         U operator new(unsigned int)
+00000000 W int* std::__niter_base<int*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >)
+00000000 W int const* std::__niter_base<int const*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >)
+         U std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)
+         U std::__throw_bad_alloc()
+         U std::cout
+00000000 b std::__ioinit
+00000000 V vtable for mfn::MFN112_1X_S16
+00000000 r dl::layer::DepthwiseConv2D<short, short>::build(dl::Tensor<short>&, bool)::__PRETTY_FUNCTION__
+00000000 r dl::layer::DepthwiseConv2D<short, short>::DepthwiseConv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)::__PRETTY_FUNCTION__
+00000000 r dl::layer::Add2D<short>::build(dl::Tensor<short>&, dl::Tensor<short>&, bool)::__PRETTY_FUNCTION__
+00000000 r dl::layer::Concat<short>::build(std::vector<dl::Tensor<short>*, std::allocator<dl::Tensor<short>*> >, bool)::__PRETTY_FUNCTION__
+00000000 r dl::layer::Conv2D<short, short>::build(dl::Tensor<short>&, bool)::__PRETTY_FUNCTION__
+00000000 r dl::layer::Conv2D<short, short>::Conv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)::__PRETTY_FUNCTION__
+
+mfn112_1x_model_s8.cpp.obj:
+00000000 r $_116
+         U __assert_func
+00000000 t _GLOBAL__sub_D__ZN3mfn12MFN112_1X_S8C2Ev
+00000000 t _GLOBAL__sub_I__ZN3mfn12MFN112_1X_S8C2Ev
+         U heap_caps_aligned_alloc
+         U heap_caps_free
+         U heap_caps_get_free_size
+         U heap_caps_malloc
+00000020 r .LC400
+00000010 r .LC437
+0000001c r .LC60
+00000000 r .LC66
+         U memcmp
+         U memmove
+         U printf
+         U puts
+         U strlen
+00000000 t __static_initialization_and_destruction_0(int, int)
+         U operator delete(void*)
+         U dl::nn::get_pad_size(std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, int, int, dl::padding_type_t)
+         U dl::nn::depthwise_conv2d(dl::Tensor<signed char>&, dl::Tensor<signed char>&, std::vector<int, std::allocator<int> >&, dl::Filter<signed char> const&, int, int, dl::Bias<short> const*, dl::Activation<signed char> const*, std::vector<int, std::allocator<int> > const&)
+         U dl::nn::get_output_shape(std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, int, int, dl::padding_type_t, bool, std::vector<int, std::allocator<int> >)
+         U dl::nn::add2d(dl::Tensor<signed char>&, dl::Tensor<signed char>&, dl::Tensor<signed char>&, dl::Activation<signed char> const*, std::vector<int, std::allocator<int> > const&, int)
+         U void dl::nn::concat<signed char>(dl::Tensor<signed char>&, std::vector<dl::Tensor<signed char>*, std::allocator<dl::Tensor<signed char>*> >&, int, bool)
+         U dl::nn::conv2d(dl::Tensor<signed char>&, dl::Tensor<signed char>&, std::vector<int, std::allocator<int> >&, dl::Filter<signed char> const&, int, int, dl::Bias<short> const*, dl::Activation<signed char> const*, std::vector<int, std::allocator<int> > const&)
+         U dl::tool::cache::preload_func(unsigned int, unsigned int)
+         U dl::tool::cache::autoload_func(unsigned int, unsigned int, unsigned int, unsigned int)
+00000000 W dl::layer::DepthwiseConv2D<signed char, short>::call(dl::Tensor<signed char>&, bool, std::vector<int, std::allocator<int> > const&)
+00000000 W dl::layer::DepthwiseConv2D<signed char, short>::build(dl::Tensor<signed char>&, bool)
+00000000 W dl::layer::DepthwiseConv2D<signed char, short>::DepthwiseConv2D(int, dl::Filter<signed char> const*, dl::Bias<short> const*, dl::Activation<signed char> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 W dl::layer::DepthwiseConv2D<signed char, short>::DepthwiseConv2D(int, dl::Filter<signed char> const*, dl::Bias<short> const*, dl::Activation<signed char> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 n dl::layer::DepthwiseConv2D<signed char, short>::DepthwiseConv2D(int, dl::Filter<signed char> const*, dl::Bias<short> const*, dl::Activation<signed char> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 W dl::layer::Add2D<signed char>::call(dl::Tensor<signed char>&, dl::Tensor<signed char>&, std::vector<int, std::allocator<int> > const&)
+00000000 W dl::layer::Add2D<signed char>::build(dl::Tensor<signed char>&, dl::Tensor<signed char>&, bool)
+         U dl::layer::Layer::Layer(char const*)
+         U dl::layer::Layer::~Layer()
+00000000 W dl::layer::Conv2D<signed char, short>::call(dl::Tensor<signed char>&, bool, std::vector<int, std::allocator<int> > const&)
+00000000 W dl::layer::Conv2D<signed char, short>::build(dl::Tensor<signed char>&, bool)
+00000000 W dl::layer::Conv2D<signed char, short>::Conv2D(int, dl::Filter<signed char> const*, dl::Bias<short> const*, dl::Activation<signed char> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 W dl::layer::Conv2D<signed char, short>::Conv2D(int, dl::Filter<signed char> const*, dl::Bias<short> const*, dl::Activation<signed char> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 n dl::layer::Conv2D<signed char, short>::Conv2D(int, dl::Filter<signed char> const*, dl::Bias<short> const*, dl::Activation<signed char> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 W dl::Tensor<signed char>::print_all(char const*)
+         U dl::Tensor<signed char>::set_shape(std::vector<int, std::allocator<int> >)
+         U mfn112_440m_prelu_512_coefficient_s8::get_fc1_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_fc1_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_conv_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_conv_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_conv_2_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_conv_2_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_conv_6dw7_7_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_conv_6sep_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_conv_6sep_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_conv_1_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_conv_6dw7_7_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_conv_6sep_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_conv_6sep_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_conv_2_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_conv_6sep_1_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_conv_6sep_2_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_sep_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_sep_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_proj_1_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_proj_2_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_dw_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_sep_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_sep_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_sep_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_proj_1_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_proj_2_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_dw_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_proj_bias()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_23_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_34_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_sep_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_proj_filter()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_sep_1_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_dconv_45_conv_sep_2_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_dw_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block0_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block1_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block2_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_3_block3_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block0_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block1_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block2_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block3_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block4_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_4_block5_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block0_conv_sep_activation()
+         U mfn112_440m_prelu_512_coefficient_s8::get_res_5_block1_conv_sep_activation()
+00000000 T mfn::MFN112_1X_S8::get_output()
+00000000 T mfn::MFN112_1X_S8::call(dl::Tensor<signed char>&)
+00000000 T mfn::MFN112_1X_S8::build(dl::Tensor<signed char>&)
+00000000 T mfn::MFN112_1X_S8::MFN112_1X_S8()
+00000000 T mfn::MFN112_1X_S8::MFN112_1X_S8()
+00000000 T mfn::MFN112_1X_S8::~MFN112_1X_S8()
+00000000 T mfn::MFN112_1X_S8::~MFN112_1X_S8()
+00000000 T mfn::MFN112_1X_S8::~MFN112_1X_S8()
+         U mfn::MFN<signed char>::MFN()
+         U mfn::MFN<signed char>::~MFN()
+00000000 W std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&)
+00000000 W std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+00000000 W std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+00000000 n std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+         U std::ios_base::Init::Init()
+         U std::ios_base::Init::~Init()
+         U std::basic_ios<char, std::char_traits<char> >::clear(std::_Ios_Iostate)
+         U operator new(unsigned int)
+00000000 W int* std::__niter_base<int*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >)
+00000000 W int const* std::__niter_base<int const*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >)
+         U std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)
+         U std::__throw_bad_alloc()
+         U std::cout
+00000000 b std::__ioinit
+00000000 V vtable for mfn::MFN112_1X_S8
+00000000 r dl::layer::DepthwiseConv2D<signed char, short>::build(dl::Tensor<signed char>&, bool)::__PRETTY_FUNCTION__
+00000000 r dl::layer::DepthwiseConv2D<signed char, short>::DepthwiseConv2D(int, dl::Filter<signed char> const*, dl::Bias<short> const*, dl::Activation<signed char> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)::__PRETTY_FUNCTION__
+00000000 r dl::layer::Add2D<signed char>::build(dl::Tensor<signed char>&, dl::Tensor<signed char>&, bool)::__PRETTY_FUNCTION__
+00000000 r dl::layer::Concat<signed char>::build(std::vector<dl::Tensor<signed char>*, std::allocator<dl::Tensor<signed char>*> >, bool)::__PRETTY_FUNCTION__
+00000000 r dl::layer::Conv2D<signed char, short>::build(dl::Tensor<signed char>&, bool)::__PRETTY_FUNCTION__
+00000000 r dl::layer::Conv2D<signed char, short>::Conv2D(int, dl::Filter<signed char> const*, dl::Bias<short> const*, dl::Activation<signed char> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)::__PRETTY_FUNCTION__

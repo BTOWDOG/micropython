@@ -1,0 +1,831 @@
+
+human_face_detect_msr01.cpp.obj:
+00000000 r $_100
+00000000 r $_101
+00000000 r $_102
+00000000 r $_106
+00000000 r $_107
+00000000 r $_108
+00000000 r $_109
+00000000 r $_99
+         U __adddf3
+         U __assert_func
+         U __cxa_pure_virtual
+         U __divdf3
+         U __divsf3
+         U expf
+         U __extendsfdf2
+         U __fixdfsi
+         U __floatsidf
+00000000 t _GLOBAL__sub_D__ZN20HumanFaceDetectMSR01C2Effif
+00000000 t _GLOBAL__sub_I__ZN20HumanFaceDetectMSR01C2Effif
+         U heap_caps_aligned_alloc
+         U heap_caps_free
+         U heap_caps_get_free_size
+         U heap_caps_malloc
+00000010 r .LC234
+0000001c r .LC45
+00000000 r .LC51
+         U log
+         U memcmp
+         U memcpy
+         U memmove
+         U __muldf3
+         U printf
+         U puts
+         U strlen
+         U __subdf3
+         U __truncdfsf2
+00000000 t __static_initialization_and_destruction_0(int, int)
+         U operator delete(void*)
+00000000 W MSR01Model::call(dl::Tensor<short>&)
+00000000 W MSR01Model::build(dl::Tensor<short>&)
+00000000 W MSR01Model::MSR01Model()
+00000000 W MSR01Model::MSR01Model()
+00000000 n MSR01Model::MSR01Model()
+00000000 W MSR01Model::~MSR01Model()
+00000000 W MSR01Model::~MSR01Model()
+00000000 W MSR01Model::~MSR01Model()
+00000000 n MSR01Model::~MSR01Model()
+00000000 W MSR01Detect::call()
+00000000 W MSR01Detect::MSR01Detect(float, float, int, float)
+00000000 W MSR01Detect::MSR01Detect(float, float, int, float)
+00000000 n MSR01Detect::MSR01Detect(float, float, int, float)
+00000000 W MSR01Detect::~MSR01Detect()
+00000000 W MSR01Detect::~MSR01Detect()
+00000000 W MSR01Detect::~MSR01Detect()
+00000000 n MSR01Detect::~MSR01Detect()
+         U msr01_coefficient::get_b_0_bias()
+         U msr01_coefficient::get_b_0_filter()
+         U msr01_coefficient::get_box_0_bias()
+         U msr01_coefficient::get_box_1_bias()
+         U msr01_coefficient::get_box_0_filter()
+         U msr01_coefficient::get_box_1_filter()
+         U msr01_coefficient::get_score_0_bias()
+         U msr01_coefficient::get_score_1_bias()
+         U msr01_coefficient::get_b_0_activation()
+         U msr01_coefficient::get_score_0_filter()
+         U msr01_coefficient::get_score_1_filter()
+         U msr01_coefficient::get_b_1_depth_filter()
+         U msr01_coefficient::get_b_2_depth_filter()
+         U msr01_coefficient::get_b_3_depth_filter()
+         U msr01_coefficient::get_b_4_depth_filter()
+         U msr01_coefficient::get_b_5_depth_filter()
+         U msr01_coefficient::get_b_6_depth_filter()
+         U msr01_coefficient::get_b_1_compress_bias()
+         U msr01_coefficient::get_b_2_compress_bias()
+         U msr01_coefficient::get_b_3_compress_bias()
+         U msr01_coefficient::get_b_4_compress_bias()
+         U msr01_coefficient::get_b_5_compress_bias()
+         U msr01_coefficient::get_b_6_compress_bias()
+         U msr01_coefficient::get_s_0_a_depth_filter()
+         U msr01_coefficient::get_s_0_b_depth_filter()
+         U msr01_coefficient::get_s_0_c_depth_filter()
+         U msr01_coefficient::get_s_0_d_depth_filter()
+         U msr01_coefficient::get_s_0_e_depth_filter()
+         U msr01_coefficient::get_s_1_a_depth_filter()
+         U msr01_coefficient::get_s_1_b_depth_filter()
+         U msr01_coefficient::get_s_1_c_depth_filter()
+         U msr01_coefficient::get_s_1_d_depth_filter()
+         U msr01_coefficient::get_s_1_e_depth_filter()
+         U msr01_coefficient::get_b_1_compress_filter()
+         U msr01_coefficient::get_b_2_compress_filter()
+         U msr01_coefficient::get_b_3_compress_filter()
+         U msr01_coefficient::get_b_4_compress_filter()
+         U msr01_coefficient::get_b_5_compress_filter()
+         U msr01_coefficient::get_b_6_compress_filter()
+         U msr01_coefficient::get_s_0_a_compress_bias()
+         U msr01_coefficient::get_s_0_b_compress_bias()
+         U msr01_coefficient::get_s_0_c_compress_bias()
+         U msr01_coefficient::get_s_0_d_compress_bias()
+         U msr01_coefficient::get_s_0_e_compress_bias()
+         U msr01_coefficient::get_s_1_a_compress_bias()
+         U msr01_coefficient::get_s_1_b_compress_bias()
+         U msr01_coefficient::get_s_1_c_compress_bias()
+         U msr01_coefficient::get_s_1_d_compress_bias()
+         U msr01_coefficient::get_s_1_e_compress_bias()
+         U msr01_coefficient::get_b_1_depth_activation()
+         U msr01_coefficient::get_b_2_depth_activation()
+         U msr01_coefficient::get_b_3_depth_activation()
+         U msr01_coefficient::get_b_4_depth_activation()
+         U msr01_coefficient::get_b_5_depth_activation()
+         U msr01_coefficient::get_b_6_depth_activation()
+         U msr01_coefficient::get_s_0_a_compress_filter()
+         U msr01_coefficient::get_s_0_b_compress_filter()
+         U msr01_coefficient::get_s_0_c_compress_filter()
+         U msr01_coefficient::get_s_0_d_compress_filter()
+         U msr01_coefficient::get_s_0_e_compress_filter()
+         U msr01_coefficient::get_s_1_a_compress_filter()
+         U msr01_coefficient::get_s_1_b_compress_filter()
+         U msr01_coefficient::get_s_1_c_compress_filter()
+         U msr01_coefficient::get_s_1_d_compress_filter()
+         U msr01_coefficient::get_s_1_e_compress_filter()
+         U msr01_coefficient::get_s_0_a_depth_activation()
+         U msr01_coefficient::get_s_0_b_depth_activation()
+         U msr01_coefficient::get_s_0_c_depth_activation()
+         U msr01_coefficient::get_s_0_d_depth_activation()
+         U msr01_coefficient::get_s_0_e_depth_activation()
+         U msr01_coefficient::get_s_1_a_depth_activation()
+         U msr01_coefficient::get_s_1_b_depth_activation()
+         U msr01_coefficient::get_s_1_c_depth_activation()
+         U msr01_coefficient::get_s_1_d_depth_activation()
+         U msr01_coefficient::get_s_1_e_depth_activation()
+00000000 W std::__cxx11::list<dl::detect::result_t, std::allocator<dl::detect::result_t> >& HumanFaceDetectMSR01::infer<unsigned char>(unsigned char*, std::vector<int, std::allocator<int> >)
+00000000 W std::__cxx11::list<dl::detect::result_t, std::allocator<dl::detect::result_t> >& HumanFaceDetectMSR01::infer<unsigned short>(unsigned short*, std::vector<int, std::allocator<int> >)
+00000000 T HumanFaceDetectMSR01::HumanFaceDetectMSR01(float, float, int, float)
+00000000 T HumanFaceDetectMSR01::HumanFaceDetectMSR01(float, float, int, float)
+00000000 T HumanFaceDetectMSR01::~HumanFaceDetectMSR01()
+00000000 T HumanFaceDetectMSR01::~HumanFaceDetectMSR01()
+         U dl::nn::get_pad_size(std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, int, int, dl::padding_type_t)
+         U dl::nn::depthwise_conv2d(dl::Tensor<short>&, dl::Tensor<short>&, std::vector<int, std::allocator<int> >&, dl::Filter<short> const&, int, int, dl::Bias<short> const*, dl::Activation<short> const*, std::vector<int, std::allocator<int> > const&)
+         U dl::nn::get_output_shape(std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, int, int, dl::padding_type_t, bool, std::vector<int, std::allocator<int> >)
+         U void dl::nn::concat<short>(dl::Tensor<short>&, std::vector<dl::Tensor<short>*, std::allocator<dl::Tensor<short>*> >&, int, bool)
+         U dl::nn::conv2d(dl::Tensor<short>&, dl::Tensor<short>&, std::vector<int, std::allocator<int> >&, dl::Filter<short> const&, int, int, dl::Bias<short> const*, dl::Activation<short> const*, std::vector<int, std::allocator<int> > const&)
+         U dl::tool::cache::autoload_func(unsigned int, unsigned int, unsigned int, unsigned int)
+         U void dl::image::crop_and_resize<short>(short*, int, int, int, int, int, int, unsigned char*, int, int, int, int, int, int, int, dl::image::resize_type_t, int)
+         U void dl::image::crop_and_resize<short>(short*, int, int, int, int, int, int, unsigned short*, int, int, int, int, int, int, int, dl::image::resize_type_t, int)
+00000000 W dl::layer::DepthwiseConv2D<short, short>::call(dl::Tensor<short>&, bool, std::vector<int, std::allocator<int> > const&)
+00000000 W dl::layer::DepthwiseConv2D<short, short>::build(dl::Tensor<short>&, bool)
+00000000 W dl::layer::DepthwiseConv2D<short, short>::DepthwiseConv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 W dl::layer::DepthwiseConv2D<short, short>::DepthwiseConv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 n dl::layer::DepthwiseConv2D<short, short>::DepthwiseConv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+         U dl::layer::Layer::Layer(char const*)
+         U dl::layer::Layer::~Layer()
+         U dl::layer::Model<short>::forward(dl::Tensor<short>&)
+00000000 W dl::layer::Conv2D<short, short>::call(dl::Tensor<short>&, bool, std::vector<int, std::allocator<int> > const&)
+00000000 W dl::layer::Conv2D<short, short>::build(dl::Tensor<short>&, bool)
+00000000 W dl::layer::Conv2D<short, short>::Conv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 W dl::layer::Conv2D<short, short>::Conv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 n dl::layer::Conv2D<short, short>::Conv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)
+00000000 W dl::detect::DetectAnchorBox<short, short>::parse_stage(dl::Tensor<short>&, dl::Tensor<short>&, int)
+00000000 W dl::detect::DetectAnchorBox<short, short>::parse_stage(dl::Tensor<short>&, dl::Tensor<short>&, dl::Tensor<short>&, int)
+00000000 W dl::detect::compare_greater_box(dl::detect::result_t, dl::detect::result_t)
+         U dl::Tensor<short>::set_shape(std::vector<int, std::allocator<int> >)
+00000000 W std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&)
+00000000 W std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+00000000 W std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+00000000 n std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+00000000 W std::__cxx11::_List_base<dl::detect::result_t, std::allocator<dl::detect::result_t> >::_M_clear()
+00000000 W std::__cxx11::list<dl::detect::result_t, std::allocator<dl::detect::result_t> >::erase(std::_List_const_iterator<dl::detect::result_t>)
+00000000 W std::__cxx11::list<dl::detect::result_t, std::allocator<dl::detect::result_t> >::insert(std::_List_const_iterator<dl::detect::result_t>, dl::detect::result_t const&)
+         U std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)
+         U std::__detail::_List_node_base::_M_unhook()
+         U std::ios_base::Init::Init()
+         U std::ios_base::Init::~Init()
+         U std::basic_ios<char, std::char_traits<char> >::clear(std::_Ios_Iostate)
+         U operator new(unsigned int)
+00000000 W int* std::__niter_base<int*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >)
+00000000 W int const* std::__niter_base<int const*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >)
+00000000 W std::_List_iterator<dl::detect::result_t> std::__upper_bound<std::_List_iterator<dl::detect::result_t>, dl::detect::result_t, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(dl::detect::result_t, dl::detect::result_t)> >(std::_List_iterator<dl::detect::result_t>, std::_List_iterator<dl::detect::result_t>, dl::detect::result_t const&, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(dl::detect::result_t, dl::detect::result_t)>)
+         U std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)
+         U std::__throw_bad_alloc()
+         U std::cout
+00000000 b std::__ioinit
+00000000 V vtable for MSR01Model
+00000000 V vtable for MSR01Detect
+00000000 V vtable for dl::layer::Model<short>
+00000000 V vtable for dl::detect::DetectAnchorBox<short, short>
+00000000 V vtable for dl::detect::Detect<short, short>
+00000000 r dl::layer::DepthwiseConv2D<short, short>::build(dl::Tensor<short>&, bool)::__PRETTY_FUNCTION__
+00000000 r dl::layer::DepthwiseConv2D<short, short>::DepthwiseConv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)::__PRETTY_FUNCTION__
+00000000 r dl::layer::Concat<short>::build(std::vector<dl::Tensor<short>*, std::allocator<dl::Tensor<short>*> >, bool)::__PRETTY_FUNCTION__
+00000000 r dl::layer::Conv2D<short, short>::build(dl::Tensor<short>&, bool)::__PRETTY_FUNCTION__
+00000000 r dl::layer::Conv2D<short, short>::Conv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)::__PRETTY_FUNCTION__
+
+msr01_coefficient.cpp.obj:
+00000000 r $_100
+00000000 r $_101
+00000000 r $_102
+00000000 r $_103
+00000000 r $_104
+00000000 r $_105
+00000000 r $_106
+00000000 r $_107
+00000000 r $_108
+00000000 r $_109
+00000000 r $_110
+00000000 r $_111
+00000000 r $_112
+00000000 r $_113
+00000000 r $_114
+00000000 r $_115
+00000000 r $_116
+00000000 r $_117
+00000000 r $_118
+00000000 r $_119
+00000000 r $_120
+00000000 r $_121
+00000000 r $_122
+00000000 r $_123
+00000000 r $_124
+00000000 r $_125
+00000000 r $_126
+00000000 r $_127
+00000000 r $_128
+00000000 r $_129
+00000000 r $_130
+00000000 r $_131
+00000000 r $_132
+00000000 r $_133
+00000000 r $_134
+00000000 r $_135
+00000000 r $_136
+00000000 r $_137
+00000000 r $_138
+00000000 r $_139
+00000000 r $_140
+00000000 r $_141
+00000000 r $_142
+00000000 r $_143
+00000000 r $_144
+00000000 r $_145
+00000000 r $_146
+00000000 r $_147
+00000000 r $_148
+00000000 r $_149
+00000000 r $_150
+00000000 r $_151
+00000000 r $_152
+00000000 r $_153
+00000000 r $_154
+00000000 r $_155
+00000000 r $_156
+00000000 r $_157
+00000000 r $_158
+00000000 r $_159
+00000000 r $_160
+00000000 r $_161
+00000000 r $_43
+00000000 r $_44
+00000000 r $_45
+00000000 r $_47
+00000000 r $_48
+00000000 r $_49
+00000000 r $_50
+00000000 r $_51
+00000000 r $_52
+00000000 r $_53
+00000000 r $_54
+00000000 r $_55
+00000000 r $_56
+00000000 r $_57
+00000000 r $_58
+00000000 r $_59
+00000000 r $_60
+00000000 r $_61
+00000000 r $_62
+00000000 r $_63
+00000000 r $_64
+00000000 r $_65
+00000000 r $_66
+00000000 r $_67
+00000000 r $_68
+00000000 r $_69
+00000000 r $_70
+00000000 r $_71
+00000000 r $_72
+00000000 r $_73
+00000000 r $_74
+00000000 r $_75
+00000000 r $_76
+00000000 r $_77
+00000000 r $_78
+00000000 r $_79
+00000000 r $_80
+00000000 r $_81
+00000000 r $_82
+00000000 r $_83
+00000000 r $_84
+00000000 r $_85
+00000000 r $_86
+00000000 r $_87
+00000000 r $_88
+00000000 r $_89
+00000000 r $_90
+00000000 r $_91
+00000000 r $_92
+00000000 r $_93
+00000000 r $_94
+00000000 r $_95
+00000000 r $_96
+00000000 r $_97
+00000000 r $_98
+00000000 r $_99
+00000000 t _GLOBAL__sub_D__ZN17msr01_coefficient14get_b_0_filterEv
+00000000 t _GLOBAL__sub_I__ZN17msr01_coefficient14get_b_0_filterEv
+         U memmove
+00000000 t __static_initialization_and_destruction_0(int, int)
+         U operator delete(void*)
+00000000 T msr01_coefficient::get_b_0_bias()
+00000000 T msr01_coefficient::get_b_0_filter()
+00000000 T msr01_coefficient::get_box_0_bias()
+00000000 T msr01_coefficient::get_box_1_bias()
+00000000 T msr01_coefficient::get_box_0_filter()
+00000000 T msr01_coefficient::get_box_1_filter()
+00000000 T msr01_coefficient::get_score_0_bias()
+00000000 T msr01_coefficient::get_score_1_bias()
+00000000 T msr01_coefficient::get_b_0_activation()
+00000000 T msr01_coefficient::get_score_0_filter()
+00000000 T msr01_coefficient::get_score_1_filter()
+00000000 T msr01_coefficient::get_landmark_0_bias()
+00000000 T msr01_coefficient::get_landmark_1_bias()
+00000000 T msr01_coefficient::get_b_1_depth_filter()
+00000000 T msr01_coefficient::get_b_2_depth_filter()
+00000000 T msr01_coefficient::get_b_3_depth_filter()
+00000000 T msr01_coefficient::get_b_4_depth_filter()
+00000000 T msr01_coefficient::get_b_5_depth_filter()
+00000000 T msr01_coefficient::get_b_6_depth_filter()
+00000000 T msr01_coefficient::get_b_1_compress_bias()
+00000000 T msr01_coefficient::get_b_2_compress_bias()
+00000000 T msr01_coefficient::get_b_3_compress_bias()
+00000000 T msr01_coefficient::get_b_4_compress_bias()
+00000000 T msr01_coefficient::get_b_5_compress_bias()
+00000000 T msr01_coefficient::get_b_6_compress_bias()
+00000000 T msr01_coefficient::get_landmark_0_filter()
+00000000 T msr01_coefficient::get_landmark_1_filter()
+00000000 T msr01_coefficient::get_s_0_a_depth_filter()
+00000000 T msr01_coefficient::get_s_0_b_depth_filter()
+00000000 T msr01_coefficient::get_s_0_c_depth_filter()
+00000000 T msr01_coefficient::get_s_0_d_depth_filter()
+00000000 T msr01_coefficient::get_s_0_e_depth_filter()
+00000000 T msr01_coefficient::get_s_1_a_depth_filter()
+00000000 T msr01_coefficient::get_s_1_b_depth_filter()
+00000000 T msr01_coefficient::get_s_1_c_depth_filter()
+00000000 T msr01_coefficient::get_s_1_d_depth_filter()
+00000000 T msr01_coefficient::get_s_1_e_depth_filter()
+00000000 T msr01_coefficient::get_b_1_compress_filter()
+00000000 T msr01_coefficient::get_b_2_compress_filter()
+00000000 T msr01_coefficient::get_b_3_compress_filter()
+00000000 T msr01_coefficient::get_b_4_compress_filter()
+00000000 T msr01_coefficient::get_b_5_compress_filter()
+00000000 T msr01_coefficient::get_b_6_compress_filter()
+00000000 T msr01_coefficient::get_s_0_a_compress_bias()
+00000000 T msr01_coefficient::get_s_0_b_compress_bias()
+00000000 T msr01_coefficient::get_s_0_c_compress_bias()
+00000000 T msr01_coefficient::get_s_0_d_compress_bias()
+00000000 T msr01_coefficient::get_s_0_e_compress_bias()
+00000000 T msr01_coefficient::get_s_1_a_compress_bias()
+00000000 T msr01_coefficient::get_s_1_b_compress_bias()
+00000000 T msr01_coefficient::get_s_1_c_compress_bias()
+00000000 T msr01_coefficient::get_s_1_d_compress_bias()
+00000000 T msr01_coefficient::get_s_1_e_compress_bias()
+00000000 T msr01_coefficient::get_b_1_depth_activation()
+00000000 T msr01_coefficient::get_b_2_depth_activation()
+00000000 T msr01_coefficient::get_b_3_depth_activation()
+00000000 T msr01_coefficient::get_b_4_depth_activation()
+00000000 T msr01_coefficient::get_b_5_depth_activation()
+00000000 T msr01_coefficient::get_b_6_depth_activation()
+00000000 T msr01_coefficient::get_s_0_a_compress_filter()
+00000000 T msr01_coefficient::get_s_0_b_compress_filter()
+00000000 T msr01_coefficient::get_s_0_c_compress_filter()
+00000000 T msr01_coefficient::get_s_0_d_compress_filter()
+00000000 T msr01_coefficient::get_s_0_e_compress_filter()
+00000000 T msr01_coefficient::get_s_1_a_compress_filter()
+00000000 T msr01_coefficient::get_s_1_b_compress_filter()
+00000000 T msr01_coefficient::get_s_1_c_compress_filter()
+00000000 T msr01_coefficient::get_s_1_d_compress_filter()
+00000000 T msr01_coefficient::get_s_1_e_compress_filter()
+00000000 T msr01_coefficient::get_s_0_a_depth_activation()
+00000000 T msr01_coefficient::get_s_0_b_depth_activation()
+00000000 T msr01_coefficient::get_s_0_c_depth_activation()
+00000000 T msr01_coefficient::get_s_0_d_depth_activation()
+00000000 T msr01_coefficient::get_s_0_e_depth_activation()
+00000000 T msr01_coefficient::get_s_1_a_depth_activation()
+00000000 T msr01_coefficient::get_s_1_b_depth_activation()
+00000000 T msr01_coefficient::get_s_1_c_depth_activation()
+00000000 T msr01_coefficient::get_s_1_d_depth_activation()
+00000000 T msr01_coefficient::get_s_1_e_depth_activation()
+00000000 b msr01_coefficient::b_0_filter
+00000000 b msr01_coefficient::box_0_bias
+00000000 b msr01_coefficient::box_1_bias
+00000000 b msr01_coefficient::box_0_filter
+00000000 b msr01_coefficient::box_1_filter
+00000000 b msr01_coefficient::score_0_bias
+00000000 b msr01_coefficient::score_1_bias
+00000000 b msr01_coefficient::b_0_activation
+00000000 b msr01_coefficient::score_0_filter
+00000000 b msr01_coefficient::score_1_filter
+00000000 b msr01_coefficient::landmark_0_bias
+00000000 b msr01_coefficient::landmark_1_bias
+00000000 r msr01_coefficient::b_0_bias_element
+00000000 b msr01_coefficient::b_1_depth_filter
+00000000 b msr01_coefficient::b_2_depth_filter
+00000000 b msr01_coefficient::b_3_depth_filter
+00000000 b msr01_coefficient::b_4_depth_filter
+00000000 b msr01_coefficient::b_5_depth_filter
+00000000 b msr01_coefficient::b_6_depth_filter
+00000000 b msr01_coefficient::b_1_compress_bias
+00000000 b msr01_coefficient::b_2_compress_bias
+00000000 b msr01_coefficient::b_3_compress_bias
+00000000 b msr01_coefficient::b_4_compress_bias
+00000000 b msr01_coefficient::b_5_compress_bias
+00000000 b msr01_coefficient::b_6_compress_bias
+00000000 b msr01_coefficient::landmark_0_filter
+00000000 b msr01_coefficient::landmark_1_filter
+00000000 r msr01_coefficient::b_0_filter_element
+00000000 r msr01_coefficient::box_0_bias_element
+00000000 r msr01_coefficient::box_1_bias_element
+00000000 b msr01_coefficient::s_0_a_depth_filter
+00000000 b msr01_coefficient::s_0_b_depth_filter
+00000000 b msr01_coefficient::s_0_c_depth_filter
+00000000 b msr01_coefficient::s_0_d_depth_filter
+00000000 b msr01_coefficient::s_0_e_depth_filter
+00000000 b msr01_coefficient::s_1_a_depth_filter
+00000000 b msr01_coefficient::s_1_b_depth_filter
+00000000 b msr01_coefficient::s_1_c_depth_filter
+00000000 b msr01_coefficient::s_1_d_depth_filter
+00000000 b msr01_coefficient::s_1_e_depth_filter
+00000000 b msr01_coefficient::b_1_compress_filter
+00000000 b msr01_coefficient::b_2_compress_filter
+00000000 b msr01_coefficient::b_3_compress_filter
+00000000 b msr01_coefficient::b_4_compress_filter
+00000000 b msr01_coefficient::b_5_compress_filter
+00000000 b msr01_coefficient::b_6_compress_filter
+00000000 b msr01_coefficient::s_0_a_compress_bias
+00000000 b msr01_coefficient::s_0_b_compress_bias
+00000000 b msr01_coefficient::s_0_c_compress_bias
+00000000 b msr01_coefficient::s_0_d_compress_bias
+00000000 b msr01_coefficient::s_0_e_compress_bias
+00000000 b msr01_coefficient::s_1_a_compress_bias
+00000000 b msr01_coefficient::s_1_b_compress_bias
+00000000 b msr01_coefficient::s_1_c_compress_bias
+00000000 b msr01_coefficient::s_1_d_compress_bias
+00000000 b msr01_coefficient::s_1_e_compress_bias
+00000000 b msr01_coefficient::b_1_depth_activation
+00000000 b msr01_coefficient::b_2_depth_activation
+00000000 b msr01_coefficient::b_3_depth_activation
+00000000 b msr01_coefficient::b_4_depth_activation
+00000000 b msr01_coefficient::b_5_depth_activation
+00000000 b msr01_coefficient::b_6_depth_activation
+00000000 r msr01_coefficient::box_0_filter_element
+00000000 r msr01_coefficient::box_1_filter_element
+00000000 r msr01_coefficient::score_0_bias_element
+00000000 r msr01_coefficient::score_1_bias_element
+00000000 b msr01_coefficient::s_0_a_compress_filter
+00000000 b msr01_coefficient::s_0_b_compress_filter
+00000000 b msr01_coefficient::s_0_c_compress_filter
+00000000 b msr01_coefficient::s_0_d_compress_filter
+00000000 b msr01_coefficient::s_0_e_compress_filter
+00000000 b msr01_coefficient::s_1_a_compress_filter
+00000000 b msr01_coefficient::s_1_b_compress_filter
+00000000 b msr01_coefficient::s_1_c_compress_filter
+00000000 b msr01_coefficient::s_1_d_compress_filter
+00000000 b msr01_coefficient::s_1_e_compress_filter
+00000000 b msr01_coefficient::s_0_a_depth_activation
+00000000 b msr01_coefficient::s_0_b_depth_activation
+00000000 b msr01_coefficient::s_0_c_depth_activation
+00000000 b msr01_coefficient::s_0_d_depth_activation
+00000000 b msr01_coefficient::s_0_e_depth_activation
+00000000 b msr01_coefficient::s_1_a_depth_activation
+00000000 b msr01_coefficient::s_1_b_depth_activation
+00000000 b msr01_coefficient::s_1_c_depth_activation
+00000000 b msr01_coefficient::s_1_d_depth_activation
+00000000 b msr01_coefficient::s_1_e_depth_activation
+00000000 r msr01_coefficient::score_0_filter_element
+00000000 r msr01_coefficient::score_1_filter_element
+00000000 r msr01_coefficient::landmark_0_bias_element
+00000000 r msr01_coefficient::landmark_1_bias_element
+00000000 r msr01_coefficient::b_1_depth_filter_element
+00000000 r msr01_coefficient::b_2_depth_filter_element
+00000000 r msr01_coefficient::b_3_depth_filter_element
+00000000 r msr01_coefficient::b_4_depth_filter_element
+00000000 r msr01_coefficient::b_5_depth_filter_element
+00000000 r msr01_coefficient::b_6_depth_filter_element
+00000000 r msr01_coefficient::b_1_compress_bias_element
+00000000 r msr01_coefficient::b_2_compress_bias_element
+00000000 r msr01_coefficient::b_3_compress_bias_element
+00000000 r msr01_coefficient::b_4_compress_bias_element
+00000000 r msr01_coefficient::b_5_compress_bias_element
+00000000 r msr01_coefficient::b_6_compress_bias_element
+00000000 r msr01_coefficient::landmark_0_filter_element
+00000000 r msr01_coefficient::landmark_1_filter_element
+00000000 r msr01_coefficient::s_0_a_depth_filter_element
+00000000 r msr01_coefficient::s_0_b_depth_filter_element
+00000000 r msr01_coefficient::s_0_c_depth_filter_element
+00000000 r msr01_coefficient::s_0_d_depth_filter_element
+00000000 r msr01_coefficient::s_0_e_depth_filter_element
+00000000 r msr01_coefficient::s_1_a_depth_filter_element
+00000000 r msr01_coefficient::s_1_b_depth_filter_element
+00000000 r msr01_coefficient::s_1_c_depth_filter_element
+00000000 r msr01_coefficient::s_1_d_depth_filter_element
+00000000 r msr01_coefficient::s_1_e_depth_filter_element
+00000000 r msr01_coefficient::b_1_compress_filter_element
+00000000 r msr01_coefficient::b_2_compress_filter_element
+00000000 r msr01_coefficient::b_3_compress_filter_element
+00000000 r msr01_coefficient::b_4_compress_filter_element
+00000000 r msr01_coefficient::b_5_compress_filter_element
+00000000 r msr01_coefficient::b_6_compress_filter_element
+00000000 r msr01_coefficient::s_0_a_compress_bias_element
+00000000 r msr01_coefficient::s_0_b_compress_bias_element
+00000000 r msr01_coefficient::s_0_c_compress_bias_element
+00000000 r msr01_coefficient::s_0_d_compress_bias_element
+00000000 r msr01_coefficient::s_0_e_compress_bias_element
+00000000 r msr01_coefficient::s_1_a_compress_bias_element
+00000000 r msr01_coefficient::s_1_b_compress_bias_element
+00000000 r msr01_coefficient::s_1_c_compress_bias_element
+00000000 r msr01_coefficient::s_1_d_compress_bias_element
+00000000 r msr01_coefficient::s_1_e_compress_bias_element
+00000000 r msr01_coefficient::s_0_a_compress_filter_element
+00000000 r msr01_coefficient::s_0_b_compress_filter_element
+00000000 r msr01_coefficient::s_0_c_compress_filter_element
+00000000 r msr01_coefficient::s_0_d_compress_filter_element
+00000000 r msr01_coefficient::s_0_e_compress_filter_element
+00000000 r msr01_coefficient::s_1_a_compress_filter_element
+00000000 r msr01_coefficient::s_1_b_compress_filter_element
+00000000 r msr01_coefficient::s_1_c_compress_filter_element
+00000000 r msr01_coefficient::s_1_d_compress_filter_element
+00000000 r msr01_coefficient::s_1_e_compress_filter_element
+00000000 b msr01_coefficient::b_0_bias
+         U dl::Activation<short>::Activation(dl::activation_type_t, short const*, int, std::vector<int, std::allocator<int> >)
+         U dl::Filter<short>::Filter(short const*, int, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >)
+00000000 W dl::Filter<short>::~Filter()
+00000000 W dl::Filter<short>::~Filter()
+00000000 n dl::Filter<short>::~Filter()
+         U dl::Constant<short>::Constant(short const*, int, std::vector<int, std::allocator<int> >)
+00000000 W void std::vector<int, std::allocator<int> >::_M_range_initialize<int const*>(int const*, int const*, std::forward_iterator_tag)
+         U operator new(unsigned int)
+         U std::__throw_bad_alloc()
+
+human_face_detect_mnp01.cpp.obj:
+00000000 r $_102
+00000000 r $_103
+00000000 r $_104
+00000000 r $_105
+00000000 r $_99
+         U __adddf3
+         U __assert_func
+         U __cxa_pure_virtual
+         U __divdf3
+         U __divsf3
+         U expf
+         U __extendsfdf2
+         U __floatsidf
+00000000 t _GLOBAL__sub_D__ZN20HumanFaceDetectMNP01C2Effi
+00000000 t _GLOBAL__sub_I__ZN20HumanFaceDetectMNP01C2Effi
+         U heap_caps_aligned_alloc
+         U heap_caps_free
+         U heap_caps_get_free_size
+         U heap_caps_malloc
+00000014 r .LC45
+00000030 r .LC85
+         U log
+         U memcmp
+         U memcpy
+         U memmove
+         U __muldf3
+         U printf
+         U puts
+         U strlen
+         U __subdf3
+         U __truncdfsf2
+00000000 t __static_initialization_and_destruction_0(int, int)
+         U operator delete(void*)
+00000000 W MNP01Model::call(dl::Tensor<short>&)
+00000000 W MNP01Model::build(dl::Tensor<short>&)
+00000000 W MNP01Model::MNP01Model()
+00000000 W MNP01Model::MNP01Model()
+00000000 n MNP01Model::MNP01Model()
+00000000 W MNP01Model::~MNP01Model()
+00000000 W MNP01Model::~MNP01Model()
+00000000 W MNP01Model::~MNP01Model()
+00000000 n MNP01Model::~MNP01Model()
+00000000 W MNP01Detect::call()
+00000000 W MNP01Detect::~MNP01Detect()
+00000000 W MNP01Detect::~MNP01Detect()
+00000000 W MNP01Detect::~MNP01Detect()
+00000000 n MNP01Detect::~MNP01Detect()
+         U mnp01_coefficient::get_b_1_bias()
+         U mnp01_coefficient::get_box_bias()
+         U mnp01_coefficient::get_b_1_filter()
+         U mnp01_coefficient::get_b_2_c_bias()
+         U mnp01_coefficient::get_b_3_c_bias()
+         U mnp01_coefficient::get_b_4_c_bias()
+         U mnp01_coefficient::get_b_5_c_bias()
+         U mnp01_coefficient::get_box_filter()
+         U mnp01_coefficient::get_score_bias()
+         U mnp01_coefficient::get_b_2_a_filter()
+         U mnp01_coefficient::get_b_2_b_filter()
+         U mnp01_coefficient::get_b_2_c_filter()
+         U mnp01_coefficient::get_b_3_b_filter()
+         U mnp01_coefficient::get_b_3_c_filter()
+         U mnp01_coefficient::get_b_4_a_filter()
+         U mnp01_coefficient::get_b_4_b_filter()
+         U mnp01_coefficient::get_b_4_c_filter()
+         U mnp01_coefficient::get_b_5_a_filter()
+         U mnp01_coefficient::get_b_5_b_filter()
+         U mnp01_coefficient::get_b_5_c_filter()
+         U mnp01_coefficient::get_score_filter()
+         U mnp01_coefficient::get_keypoint_bias()
+         U mnp01_coefficient::get_b_1_activation()
+         U mnp01_coefficient::get_keypoint_filter()
+         U mnp01_coefficient::get_b_2_a_activation()
+         U mnp01_coefficient::get_b_2_b_activation()
+         U mnp01_coefficient::get_b_3_b_activation()
+         U mnp01_coefficient::get_b_4_a_activation()
+         U mnp01_coefficient::get_b_4_b_activation()
+         U mnp01_coefficient::get_b_5_a_activation()
+         U mnp01_coefficient::get_b_5_b_activation()
+00000000 W std::__cxx11::list<dl::detect::result_t, std::allocator<dl::detect::result_t> >& HumanFaceDetectMNP01::infer<unsigned char>(unsigned char*, std::vector<int, std::allocator<int> >, std::__cxx11::list<dl::detect::result_t, std::allocator<dl::detect::result_t> >&)
+00000000 W std::__cxx11::list<dl::detect::result_t, std::allocator<dl::detect::result_t> >& HumanFaceDetectMNP01::infer<unsigned short>(unsigned short*, std::vector<int, std::allocator<int> >, std::__cxx11::list<dl::detect::result_t, std::allocator<dl::detect::result_t> >&)
+00000000 T HumanFaceDetectMNP01::HumanFaceDetectMNP01(float, float, int)
+00000000 T HumanFaceDetectMNP01::HumanFaceDetectMNP01(float, float, int)
+00000000 T HumanFaceDetectMNP01::~HumanFaceDetectMNP01()
+00000000 T HumanFaceDetectMNP01::~HumanFaceDetectMNP01()
+         U dl::nn::get_pad_size(std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, int, int, dl::padding_type_t)
+         U dl::nn::depthwise_conv2d(dl::Tensor<short>&, dl::Tensor<short>&, std::vector<int, std::allocator<int> >&, dl::Filter<short> const&, int, int, dl::Bias<short> const*, dl::Activation<short> const*, std::vector<int, std::allocator<int> > const&)
+         U dl::nn::get_output_shape(std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, int, int, dl::padding_type_t, bool, std::vector<int, std::allocator<int> >)
+         U dl::nn::conv2d(dl::Tensor<short>&, dl::Tensor<short>&, std::vector<int, std::allocator<int> >&, dl::Filter<short> const&, int, int, dl::Bias<short> const*, dl::Activation<short> const*, std::vector<int, std::allocator<int> > const&)
+         U dl::tool::cache::autoload_func(unsigned int, unsigned int, unsigned int, unsigned int)
+         U void dl::image::crop_and_resize<short>(short*, int, int, int, int, int, int, unsigned char*, int, int, int, int, int, int, int, dl::image::resize_type_t, int)
+         U void dl::image::crop_and_resize<short>(short*, int, int, int, int, int, int, unsigned short*, int, int, int, int, int, int, int, dl::image::resize_type_t, int)
+         U dl::layer::Layer::Layer(char const*)
+         U dl::layer::Layer::~Layer()
+         U dl::layer::Model<short>::forward(dl::Tensor<short>&)
+00000000 W dl::layer::Conv2D<short, short>::call(dl::Tensor<short>&, bool, std::vector<int, std::allocator<int> > const&)
+00000000 W dl::layer::Conv2D<short, short>::build(dl::Tensor<short>&, bool)
+00000000 W dl::detect::DetectAnchorBox<short, short>::parse_stage(dl::Tensor<short>&, dl::Tensor<short>&, int)
+00000000 W dl::detect::DetectAnchorBox<short, short>::parse_stage(dl::Tensor<short>&, dl::Tensor<short>&, dl::Tensor<short>&, int)
+00000000 W dl::detect::compare_greater_box(dl::detect::result_t, dl::detect::result_t)
+         U dl::Tensor<short>::set_shape(std::vector<int, std::allocator<int> >)
+00000000 W std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+00000000 W std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+00000000 n std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+00000000 W std::__cxx11::_List_base<dl::detect::result_t, std::allocator<dl::detect::result_t> >::_M_clear()
+00000000 W std::__cxx11::list<dl::detect::result_t, std::allocator<dl::detect::result_t> >::erase(std::_List_const_iterator<dl::detect::result_t>)
+00000000 W std::__cxx11::list<dl::detect::result_t, std::allocator<dl::detect::result_t> >::insert(std::_List_const_iterator<dl::detect::result_t>, dl::detect::result_t const&)
+         U std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)
+         U std::__detail::_List_node_base::_M_unhook()
+         U std::ios_base::Init::Init()
+         U std::ios_base::Init::~Init()
+         U std::basic_ios<char, std::char_traits<char> >::clear(std::_Ios_Iostate)
+         U operator new(unsigned int)
+00000000 W int const* std::__niter_base<int const*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >)
+00000000 W std::_List_iterator<dl::detect::result_t> std::__upper_bound<std::_List_iterator<dl::detect::result_t>, dl::detect::result_t, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(dl::detect::result_t, dl::detect::result_t)> >(std::_List_iterator<dl::detect::result_t>, std::_List_iterator<dl::detect::result_t>, dl::detect::result_t const&, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(dl::detect::result_t, dl::detect::result_t)>)
+         U std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)
+         U std::__throw_bad_alloc()
+         U std::cout
+00000000 b std::__ioinit
+00000000 V vtable for MNP01Model
+00000000 V vtable for MNP01Detect
+00000000 V vtable for dl::layer::Model<short>
+00000000 V vtable for dl::detect::DetectAnchorBox<short, short>
+00000000 V vtable for dl::detect::Detect<short, short>
+00000000 r dl::layer::DepthwiseConv2D<short, short>::build(dl::Tensor<short>&, bool)::__PRETTY_FUNCTION__
+00000000 r dl::layer::DepthwiseConv2D<short, short>::DepthwiseConv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)::__PRETTY_FUNCTION__
+00000000 r dl::layer::Conv2D<short, short>::build(dl::Tensor<short>&, bool)::__PRETTY_FUNCTION__
+00000000 r dl::layer::Conv2D<short, short>::Conv2D(int, dl::Filter<short> const*, dl::Bias<short> const*, dl::Activation<short> const*, dl::padding_type_t, std::vector<int, std::allocator<int> >, int, int, char const*)::__PRETTY_FUNCTION__
+
+mnp01_coefficient.cpp.obj:
+00000000 r $_43
+00000000 r $_44
+00000000 r $_45
+00000000 r $_46
+00000000 r $_47
+00000000 r $_48
+00000000 r $_49
+00000000 r $_50
+00000000 r $_51
+00000000 r $_52
+00000000 r $_53
+00000000 r $_54
+00000000 r $_55
+00000000 r $_56
+00000000 r $_57
+00000000 r $_58
+00000000 r $_59
+00000000 r $_60
+00000000 r $_61
+00000000 r $_62
+00000000 r $_63
+00000000 r $_64
+00000000 r $_65
+00000000 r $_66
+00000000 r $_67
+00000000 r $_68
+00000000 r $_69
+00000000 r $_70
+00000000 r $_71
+00000000 r $_72
+00000000 r $_73
+00000000 r $_74
+00000000 r $_75
+00000000 r $_76
+00000000 r $_77
+00000000 r $_78
+00000000 r $_79
+00000000 r $_80
+00000000 r $_81
+00000000 r $_82
+00000000 r $_83
+00000000 r $_84
+00000000 r $_85
+00000000 r $_86
+00000000 r $_87
+00000000 r $_88
+00000000 t _GLOBAL__sub_D__ZN17mnp01_coefficient14get_b_1_filterEv
+00000000 t _GLOBAL__sub_I__ZN17mnp01_coefficient14get_b_1_filterEv
+         U memmove
+00000000 t __static_initialization_and_destruction_0(int, int)
+         U operator delete(void*)
+00000000 T mnp01_coefficient::get_b_1_bias()
+00000000 T mnp01_coefficient::get_box_bias()
+00000000 T mnp01_coefficient::get_b_1_filter()
+00000000 T mnp01_coefficient::get_b_2_c_bias()
+00000000 T mnp01_coefficient::get_b_3_c_bias()
+00000000 T mnp01_coefficient::get_b_4_c_bias()
+00000000 T mnp01_coefficient::get_b_5_c_bias()
+00000000 T mnp01_coefficient::get_box_filter()
+00000000 T mnp01_coefficient::get_score_bias()
+00000000 T mnp01_coefficient::get_b_2_a_filter()
+00000000 T mnp01_coefficient::get_b_2_b_filter()
+00000000 T mnp01_coefficient::get_b_2_c_filter()
+00000000 T mnp01_coefficient::get_b_3_b_filter()
+00000000 T mnp01_coefficient::get_b_3_c_filter()
+00000000 T mnp01_coefficient::get_b_4_a_filter()
+00000000 T mnp01_coefficient::get_b_4_b_filter()
+00000000 T mnp01_coefficient::get_b_4_c_filter()
+00000000 T mnp01_coefficient::get_b_5_a_filter()
+00000000 T mnp01_coefficient::get_b_5_b_filter()
+00000000 T mnp01_coefficient::get_b_5_c_filter()
+00000000 T mnp01_coefficient::get_score_filter()
+00000000 T mnp01_coefficient::get_keypoint_bias()
+00000000 T mnp01_coefficient::get_b_1_activation()
+00000000 T mnp01_coefficient::get_keypoint_filter()
+00000000 T mnp01_coefficient::get_b_2_a_activation()
+00000000 T mnp01_coefficient::get_b_2_b_activation()
+00000000 T mnp01_coefficient::get_b_3_b_activation()
+00000000 T mnp01_coefficient::get_b_4_a_activation()
+00000000 T mnp01_coefficient::get_b_4_b_activation()
+00000000 T mnp01_coefficient::get_b_5_a_activation()
+00000000 T mnp01_coefficient::get_b_5_b_activation()
+00000000 b mnp01_coefficient::b_1_filter
+00000000 b mnp01_coefficient::b_2_c_bias
+00000000 b mnp01_coefficient::b_3_c_bias
+00000000 b mnp01_coefficient::b_4_c_bias
+00000000 b mnp01_coefficient::b_5_c_bias
+00000000 b mnp01_coefficient::box_filter
+00000000 b mnp01_coefficient::score_bias
+00000000 b mnp01_coefficient::b_2_a_filter
+00000000 b mnp01_coefficient::b_2_b_filter
+00000000 b mnp01_coefficient::b_2_c_filter
+00000000 b mnp01_coefficient::b_3_b_filter
+00000000 b mnp01_coefficient::b_3_c_filter
+00000000 b mnp01_coefficient::b_4_a_filter
+00000000 b mnp01_coefficient::b_4_b_filter
+00000000 b mnp01_coefficient::b_4_c_filter
+00000000 b mnp01_coefficient::b_5_a_filter
+00000000 b mnp01_coefficient::b_5_b_filter
+00000000 b mnp01_coefficient::b_5_c_filter
+00000000 b mnp01_coefficient::score_filter
+00000000 b mnp01_coefficient::keypoint_bias
+00000000 b mnp01_coefficient::b_1_activation
+00000000 b mnp01_coefficient::keypoint_filter
+00000000 r mnp01_coefficient::b_1_bias_element
+00000000 b mnp01_coefficient::b_2_a_activation
+00000000 b mnp01_coefficient::b_2_b_activation
+00000000 b mnp01_coefficient::b_3_b_activation
+00000000 b mnp01_coefficient::b_4_a_activation
+00000000 b mnp01_coefficient::b_4_b_activation
+00000000 b mnp01_coefficient::b_5_a_activation
+00000000 b mnp01_coefficient::b_5_b_activation
+00000000 r mnp01_coefficient::box_bias_element
+00000000 r mnp01_coefficient::b_1_filter_element
+00000000 r mnp01_coefficient::b_2_c_bias_element
+00000000 r mnp01_coefficient::b_3_c_bias_element
+00000000 r mnp01_coefficient::b_4_c_bias_element
+00000000 r mnp01_coefficient::b_5_c_bias_element
+00000000 r mnp01_coefficient::box_filter_element
+00000000 r mnp01_coefficient::score_bias_element
+00000000 r mnp01_coefficient::b_2_a_filter_element
+00000000 r mnp01_coefficient::b_2_b_filter_element
+00000000 r mnp01_coefficient::b_2_c_filter_element
+00000000 r mnp01_coefficient::b_3_b_filter_element
+00000000 r mnp01_coefficient::b_3_c_filter_element
+00000000 r mnp01_coefficient::b_4_a_filter_element
+00000000 r mnp01_coefficient::b_4_b_filter_element
+00000000 r mnp01_coefficient::b_4_c_filter_element
+00000000 r mnp01_coefficient::b_5_a_filter_element
+00000000 r mnp01_coefficient::b_5_b_filter_element
+00000000 r mnp01_coefficient::b_5_c_filter_element
+00000000 r mnp01_coefficient::score_filter_element
+00000000 r mnp01_coefficient::keypoint_bias_element
+00000000 r mnp01_coefficient::b_1_activation_element
+00000000 r mnp01_coefficient::keypoint_filter_element
+00000000 r mnp01_coefficient::b_2_a_activation_element
+00000000 r mnp01_coefficient::b_2_b_activation_element
+00000000 r mnp01_coefficient::b_3_b_activation_element
+00000000 r mnp01_coefficient::b_4_a_activation_element
+00000000 r mnp01_coefficient::b_4_b_activation_element
+00000000 r mnp01_coefficient::b_5_a_activation_element
+00000000 r mnp01_coefficient::b_5_b_activation_element
+00000000 b mnp01_coefficient::b_1_bias
+00000000 b mnp01_coefficient::box_bias
+         U dl::Activation<short>::Activation(dl::activation_type_t, short const*, int, std::vector<int, std::allocator<int> >)
+         U dl::Filter<short>::Filter(short const*, int, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >)
+00000000 W dl::Filter<short>::~Filter()
+00000000 W dl::Filter<short>::~Filter()
+00000000 n dl::Filter<short>::~Filter()
+         U dl::Constant<short>::Constant(short const*, int, std::vector<int, std::allocator<int> >)
+00000000 W void std::vector<int, std::allocator<int> >::_M_range_initialize<int const*>(int const*, int const*, std::forward_iterator_tag)
+         U operator new(unsigned int)
+         U std::__throw_bad_alloc()
