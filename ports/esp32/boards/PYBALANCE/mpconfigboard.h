@@ -1,0 +1,46 @@
+#define MICROPY_HW_BOARD_NAME "01Studio PYBALANCE-ESP32S3-N16R8"
+#define MICROPY_HW_MCU_NAME "ESP32S3"
+
+#define MICROPY_ENABLE_ESP_PYBALANCE    (1)
+#define MICROPY_PY_ESP32_PCNT           (0)
+#define MICROPY_PY_MACHINE_DAC          (0)
+
+#define MICROPY_PY_PICLIB				(1)
+
+#define MICROPY_ENABLE_TFTLCD			(1)
+#define MICROPY_STRING_SIZE_24			(1)
+#define MICROPY_STRING_SIZE_32			(1)
+#define MICROPY_STRING_SIZE_48			(1)
+
+#define MICROPY_HW_LCD15				(1)	
+
+
+#define LCD_PIN_DC						(38)
+#define LCD_PIN_RST						(41)
+#define LCD_PIN_CS						(42)
+#define LCD_PIN_CLK						(40)
+#define LCD_PIN_MISO					(-1)
+#define LCD_PIN_MOSI					(39)
+
+#define MICROPY_HW_SENSOR_I2C_PIN_SCL   (2)
+#define MICROPY_HW_SENSOR_I2C_PIN_SDA   (1)
+
+#define MICROPY_MOTOR01_PWM_PIN         (4)
+#define MICROPY_MOTOR01_PWM_CHANNEL     (0)
+#define MICROPY_MOTOR01_DIR1_PIN        (5)
+#define MICROPY_MOTOR01_DIR2_PIN        (6)
+#define MICROPY_MOTOR01_ENC_A_PIN       (7)
+#define MICROPY_MOTOR01_ENC_B_PIN       (15)
+
+#define MICROPY_MOTOR02_PWM_PIN         (16)
+#define MICROPY_MOTOR02_PWM_CHANNEL     (1)
+#define MICROPY_MOTOR02_DIR1_PIN        (17)
+#define MICROPY_MOTOR02_DIR2_PIN        (18)
+#define MICROPY_MOTOR02_ENC_A_PIN       (8)
+#define MICROPY_MOTOR02_ENC_B_PIN       (3)
+
+#define MICROPY_HW_ENABLE_UART_REPL     (1)
+
+#define MICROPY_HW_ENABLE_USBDEV        (1)
+#define MICROPY_HW_USB_CDC      1
+#define MICROPY_HW_ESP_USB_SERIAL_JTAG    0
