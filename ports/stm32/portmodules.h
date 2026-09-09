@@ -30,6 +30,14 @@ extern const mp_obj_module_t pyb_module;
 extern const mp_obj_module_t stm_module;
 extern const mp_obj_module_t mp_module_socket;
 
+//01studio
+extern const mp_obj_module_t tftlcd_module;
+extern const mp_obj_module_t touch_module;
+extern const mp_obj_module_t audio_module;
+extern const mp_obj_module_t video_module;
+extern const mp_obj_module_t sensor_module;
+extern const mp_obj_module_t gui_module;
+
 // additional helper functions exported by the modules
 
 MP_DECLARE_CONST_FUN_OBJ_1(time_sleep_ms_obj);

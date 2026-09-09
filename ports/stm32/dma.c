@@ -35,6 +35,16 @@
 #include "irq.h"
 #include "mpu.h"
 
+#if MICROPY_HW_WM8978
+#include "wm8978.h"
+#endif
+#if MICROPY_HW_OV2640
+#include "ov2640.h"
+#endif
+
+#if defined(STM32F7) && defined(MICROPY_PY_HJPEG_DECODE) && defined(MICROPY_ENABLE_JPEG_UTILS)
+#include "hjpgd.h"
+#endif
 // When this option is enabled, the DMA will turn off automatically after
 // a period of inactivity.
 #ifndef MICROPY_HW_DMA_ENABLE_AUTO_TURN_OFF
@@ -997,6 +1007,16 @@ void DMA1_Stream0_IRQHandler(void) {
 }
 void DMA1_Stream1_IRQHandler(void) {
     IRQ_ENTER(DMA1_Stream1_IRQn);
+	#if defined(STM32H7)
+	#if MICROPY_HW_OV2640
+	if(__HAL_DMA_GET_FLAG(&DMADMCI_Handler,DMA_FLAG_TCIF1_5)!=RESET)
+	{
+		__HAL_DMA_CLEAR_FLAG(&DMADMCI_Handler,DMA_FLAG_TCIF1_5);
+		dcmi_rx_callback();
+		SCB_CleanInvalidateDCache();
+	} 
+	#endif
+	#endif
     if (dma_handle[dma_id_1] != NULL) {
         HAL_DMA_IRQHandler(dma_handle[dma_id_1]);
     }
@@ -1011,6 +1031,17 @@ void DMA1_Stream2_IRQHandler(void) {
 }
 void DMA1_Stream3_IRQHandler(void) {
     IRQ_ENTER(DMA1_Stream3_IRQn);
+
+    #if MICROPY_HW_WM8978
+
+    if(__HAL_DMA_GET_FLAG(&I2S2_RXDMA_Handler,DMA_FLAG_TCIF3_7)!=RESET) 
+    {
+		__HAL_DMA_CLEAR_FLAG(&I2S2_RXDMA_Handler,DMA_FLAG_TCIF3_7);   
+		i2s_rx_callback();
+    } 
+
+    #endif
+
     if (dma_handle[dma_id_3] != NULL) {
         HAL_DMA_IRQHandler(dma_handle[dma_id_3]);
     }
@@ -1018,6 +1049,17 @@ void DMA1_Stream3_IRQHandler(void) {
 }
 void DMA1_Stream4_IRQHandler(void) {
     IRQ_ENTER(DMA1_Stream4_IRQn);
+    
+    #if MICROPY_HW_WM8978
+  	 if(__HAL_DMA_GET_FLAG(&I2S2_TXDMA_Handler,DMA_FLAG_TCIF0_4)!=RESET) 
+	 {
+		 __HAL_DMA_CLEAR_FLAG(&I2S2_TXDMA_Handler,DMA_FLAG_TCIF0_4);		 
+		 i2s_tx_callback();
+		 #if defined(STM32F7)
+		 SCB_CleanInvalidateDCache();////////////
+		 #endif
+	 } 
+     #endif
     if (dma_handle[dma_id_4] != NULL) {
         HAL_DMA_IRQHandler(dma_handle[dma_id_4]);
     }
@@ -1053,6 +1095,18 @@ void DMA2_Stream0_IRQHandler(void) {
 }
 void DMA2_Stream1_IRQHandler(void) {
     IRQ_ENTER(DMA2_Stream1_IRQn);
+	#if defined(STM32F4) || defined(STM32F7)
+	#if MICROPY_HW_OV2640
+	if(__HAL_DMA_GET_FLAG(&DMADMCI_Handler,DMA_FLAG_TCIF1_5)!=RESET)
+		{
+			__HAL_DMA_CLEAR_FLAG(&DMADMCI_Handler,DMA_FLAG_TCIF1_5);
+			dcmi_rx_callback();
+			#if defined(STM32F7)
+			SCB_CleanInvalidateDCache();
+			#endif
+		} 
+	#endif
+	#endif
     if (dma_handle[dma_id_9] != NULL) {
         HAL_DMA_IRQHandler(dma_handle[dma_id_9]);
     }

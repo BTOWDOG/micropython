@@ -189,7 +189,7 @@ static MP_DEFINE_CONST_DICT(network_lan_locals_dict, network_lan_locals_dict_tab
 
 MP_DEFINE_CONST_OBJ_TYPE(
     network_lan_type,
-    MP_QSTR_LAN,
+    MP_QSTR_Ethernet,
     MP_TYPE_FLAG_NONE,
     make_new, network_lan_make_new,
     print, network_lan_print,

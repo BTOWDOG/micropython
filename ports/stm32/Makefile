@@ -309,6 +309,97 @@ SRC_C += \
 	xspi.c \
 	$(wildcard $(BOARD_DIR)/*.c)
 
+# 01Studio custom sources and include path
+
+CUSTOM_DIR = 01studio
+
+# Basic module sources
+
+CUSTOM_SRC_C := $(wildcard $(CUSTOM_DIR)/*.c)
+CUSTOM_INC := -I$(CUSTOM_DIR)
+
+# Optional module sources
+
+DECODE_DIR = ${CUSTOM_DIR}/decoder
+
+ifeq ($(MICROPY_PY_PICLIB),1)
+# pic
+CUSTOM_SRC_C += $(addprefix $(DECODE_DIR)/picture/,\
+	piclib.c \
+	tjpgd.c \
+	bmp.c \
+	hjpgd.c \
+	)
+CUSTOM_INC += -I$(DECODE_DIR)/picture
+endif
+
+# mp3
+ifeq ($(MICROPY_PY_MP3),1)
+CUSTOM_SRC_O += $(addprefix $(DECODE_DIR)/helix-v100/real/arm/,\
+	asmmisc_gcc.o \
+	asmpoly_thumb2_gcc.o \
+	)
+CUSTOM_SRC_C  += $(wildcard $(DECODE_DIR)/helix-v100/real/*.c)
+CUSTOM_SRC_C += $(wildcard $(DECODE_DIR)/helix-v100/*.c)
+CUSTOM_INC += -I$(DECODE_DIR)/helix-v100/real
+CUSTOM_INC += -I$(DECODE_DIR)/helix-v100/pub
+CUSTOM_INC += -I$(DECODE_DIR)/helix-v100
+endif
+
+# utils-jpeg
+ifeq ($(MICROPY_PY_JPEG_UTILS),1)
+CUSTOM_SRC_C += $(wildcard $(DECODE_DIR)/utils-jpeg/*.c)
+CUSTOM_INC += -I$(DECODE_DIR)/utils-jpeg
+endif
+
+# mjpeg
+ifeq ($(MICROPY_PY_VIDEO),1)
+CUSTOM_SRC_C += $(wildcard $(DECODE_DIR)/mjpeg/*.c) \
+	$(addprefix $(DECODE_DIR)/mjpeg/jpeg/,\
+	jaricom.c \
+	jcomapi.c \
+	jutils.c \
+	jerror.c \
+	jmemmgr.c \
+	jdapimin.c \
+	jdapistd.c \
+	jdarith.c \
+	jdmaster.c \
+	jdinput.c \
+	jdmarker.c \
+	jdhuff.c \
+	jdmainct.c \
+	jdcoefct.c \
+	jdpostct.c \
+	jddctmgr.c \
+	jidctfst.c \
+	jidctflt.c \
+	jidctint.c \
+	jdsample.c \
+	jdcolor.c \
+	jquant1.c \
+	jquant2.c \
+	jdmerge.c \
+	jmemnobs.c \
+	wrppm.c \
+	)
+
+CUSTOM_INC += -I$(DECODE_DIR)/mjpeg
+CUSTOM_INC += -I$(DECODE_DIR)/mjpeg/jpeg
+endif
+
+# add source
+SRC_C += \
+	$(CUSTOM_SRC_C)
+
+INC += \
+	$(CUSTOM_INC)
+
+SRC_O += \
+	$(CUSTOM_SRC_O)
+
+#------------------------------------------------------endif
+
 SRC_O += \
 	$(STARTUP_FILE) \
 	$(SYSTEM_FILE)
@@ -358,6 +449,13 @@ HAL_SRC_C += $(addprefix $(STM32LIB_HAL_BASE)/Src/stm32$(MCU_SERIES)xx_,\
 	ll_rcc.c \
 	ll_utils.c \
 	)
+
+ifeq ($(MCU_SERIES),h7)
+HAL_SRC_C += $(addprefix $(STM32LIB_HAL_BASE)/Src/stm32$(MCU_SERIES)xx_,\
+	hal_ltdc.c \
+	hal_ltdc_ex.c\
+	)
+endif
 
 ifneq ($(MCU_SERIES),n6)
 HAL_SRC_C += $(addprefix $(STM32LIB_HAL_BASE)/Src/stm32$(MCU_SERIES)xx_,\

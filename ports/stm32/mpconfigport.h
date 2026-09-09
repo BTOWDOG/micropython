@@ -226,6 +226,61 @@ extern const struct _mp_obj_type_t network_lan_type;
 #define MICROPY_HW_NIC_ETH
 #endif
 
+//01studio moudle 
+#if MICROPY_ENABLE_TFTLCD
+extern const struct _mp_obj_module_t tftlcd_module;
+#define TFTLCD_MODULE \
+    { MP_ROM_QSTR(MP_QSTR_tftlcd), MP_ROM_PTR(&tftlcd_module) },
+#else
+#endif
+
+#if MICROPY_ENABLE_TOUCH
+extern const struct _mp_obj_module_t touch_module;
+#define TOUCH_MODULE \
+    { MP_ROM_QSTR(MP_QSTR_touch), MP_ROM_PTR(&touch_module) },
+#else
+#endif
+
+#if MICROPY_ENABLE_AUDIO
+extern const struct _mp_obj_module_t audio_module;
+#define AUDIO_MODULE        \
+    { MP_ROM_QSTR(MP_QSTR_audio), MP_ROM_PTR(&audio_module) },
+#else
+#define AUDIO_MODULE
+#endif
+
+#if MICROPY_ENABLE_VIDEO
+extern const struct _mp_obj_module_t video_module;
+#define VIDEO_MODULE           \
+   { MP_ROM_QSTR(MP_QSTR_video), MP_ROM_PTR(&video_module) },
+#else
+#define VIDEO_MODULE
+#endif
+
+#if MICROPY_ENABLE_SENSOR
+extern const struct _mp_obj_module_t sensor_module;
+#define SENSOR_MODULE        \
+    { MP_ROM_QSTR(MP_QSTR_sensor), MP_ROM_PTR(&sensor_module) },
+#else
+#define SENSOR_MODULE
+#endif
+
+#if MICROPY_ENABLE_GUI
+extern const struct _mp_obj_module_t gui_module;
+#define GUI_MODULE \
+    { MP_ROM_QSTR(MP_QSTR_gui), MP_ROM_PTR(&gui_module) },
+#else
+#endif
+
+#if defined(MICROPY_HW_ETH_MDC)
+extern const struct _mp_obj_type_t network_lan_type;
+#define MICROPY_HW_NIC_ETH                  { MP_ROM_QSTR(MP_QSTR_LAN), MP_ROM_PTR(&network_lan_type) },
+#define MICROPY_HW_01STUDIO_ETH				{ MP_ROM_QSTR(MP_QSTR_Ethernet), MP_ROM_PTR(&network_lan_type) },
+#else
+#define MICROPY_HW_NIC_ETH
+#define MICROPY_HW_01STUDIO_ETH
+#endif
+
 // Provide a port-level default of MICROPY_HW_NUM_CAN based on pin definitions
 #ifndef MICROPY_HW_NUM_CAN
 #if defined(MICROPY_HW_CAN3_TX)
@@ -250,6 +305,7 @@ extern const struct _mp_obj_type_t network_lan_type;
 #define MICROPY_PORT_NETWORK_INTERFACES \
     MICROPY_HW_NIC_ETH  \
     MICROPY_BOARD_NETWORK_INTERFACES \
+    MICROPY_HW_01STUDIO_ETH	\
 
 #define MP_STATE_PORT MP_STATE_VM
 

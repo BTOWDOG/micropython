@@ -223,7 +223,7 @@ void sdcard_select_mmc(void) {
 static void sdmmc_msp_init(void) {
     // enable SDIO clock
     SDMMC_CLK_ENABLE();
-
+#if !MICROPY_ENABLE_SDCARD_NIRQ
     #if defined(STM32H7) || defined(STM32N6)
     // Reset SDMMC
     SDMMC_FORCE_RESET();
@@ -235,6 +235,7 @@ static void sdmmc_msp_init(void) {
     HAL_NVIC_EnableIRQ(SDMMC_IRQn);
 
     // GPIO have already been initialised by sdcard_init
+#endif
 }
 
 void sdmmc_msp_deinit(void) {
@@ -283,7 +284,11 @@ static HAL_StatusTypeDef sdmmc_init_sd(void) {
     #if !defined(STM32H5) && !defined(STM32H7) && !defined(STM32N6)
     sdmmc_handle.sd.Init.ClockBypass = SDIO_CLOCK_BYPASS_DISABLE;
     #endif
-    sdmmc_handle.sd.Init.ClockPowerSave = SDIO_CLOCK_POWER_SAVE_ENABLE;
+    #if MICROPY_ENABLE_SDCARD_NIRQ
+	sdmmc_handle.sd.Init.ClockPowerSave = SDIO_CLOCK_POWER_SAVE_DISABLE;
+	#else
+    sdmmc_handle.sd.Init.ClockPowerSave = SDIO_CLOCK_POWER_SAVE_ENABLE;		
+	#endif
     sdmmc_handle.sd.Init.BusWide = SDIO_BUS_WIDE_1B;
     sdmmc_handle.sd.Init.HardwareFlowControl = SDIO_HARDWARE_FLOW_CONTROL_DISABLE;
     sdmmc_handle.sd.Init.ClockDiv = SDIO_TRANSFER_CLK_DIV;
@@ -437,12 +442,16 @@ static void sdmmc_irq_handler(void) {
     }
 }
 
+#if !defined(MICROPY_HW_SDMMC2_CK)
+
 void SDMMC_IRQHandler(void) {
     IRQ_ENTER(SDMMC_IRQn);
     sdmmc_irq_handler();
     IRQ_EXIT(SDMMC_IRQn);
 }
+#endif
 
+#ifndef MICROPY_ENABLE_SDCARD_NIRQ
 static void sdcard_reset_periph(void) {
     // Fully reset the SDMMC peripheral before calling HAL SD DMA functions.
     // (There could be an outstanding DTIMEOUT event from a previous call and the
@@ -452,10 +461,12 @@ static void sdcard_reset_periph(void) {
     SDIO->DCTRL = 0;
     SDIO->ICR = SDMMC_STATIC_FLAGS;
 }
+#endif
 
 static HAL_StatusTypeDef sdcard_wait_finished(void) {
     // Wait for HAL driver to be ready (eg for DMA to finish)
     uint32_t start = HAL_GetTick();
+#ifndef MICROPY_ENABLE_SDCARD_NIRQ
     for (;;) {
         // Do an atomic check of the state; WFI will exit even if IRQs are disabled
         uint32_t irq_state = disable_irq();
@@ -479,7 +490,7 @@ static HAL_StatusTypeDef sdcard_wait_finished(void) {
             return HAL_TIMEOUT;
         }
     }
-
+#endif
     // Wait for SD card to complete the operation
     for (;;) {
         uint32_t state;
@@ -505,7 +516,11 @@ static HAL_StatusTypeDef sdcard_wait_finished(void) {
         if (HAL_GetTick() - start >= TIMEOUT_MS) {
             return HAL_TIMEOUT;
         }
+        #if MICROPY_ENABLE_SDCARD_NIRQ
+			mp_hal_delay_us(1);
+		#else
         __WFI();
+        #endif
     }
     return HAL_OK;
 }
@@ -552,6 +567,20 @@ int sdcard_read_blocks(uint8_t *dest, uint32_t block_num, uint32_t num_blocks) {
 
     HAL_StatusTypeDef err = HAL_OK;
 
+#if MICROPY_ENABLE_SDCARD_NIRQ
+    uint32_t quer_sta = query_irq();
+    uint32_t basepri = 0;
+    if (quer_sta == IRQ_STATE_ENABLED) {
+    basepri = raise_irq_pri(IRQ_PRI_OTG_FS);
+        }
+    err = HAL_SD_ReadBlocks(&sdmmc_handle.sd, dest, block_num, num_blocks, 60000);
+    if (err == HAL_OK) {
+            err = sdcard_wait_finished();
+    }
+    if (quer_sta == IRQ_STATE_ENABLED){
+        restore_irq_pri(basepri);
+    }
+#else
     if (query_irq() == IRQ_STATE_ENABLED) {
         #if MICROPY_HW_USB_MSC
         uint32_t basepri;
@@ -624,7 +653,7 @@ int sdcard_read_blocks(uint8_t *dest, uint32_t block_num, uint32_t num_blocks) {
             err = sdcard_wait_finished();
         }
     }
-
+#endif
     if (orig_dest != NULL) {
         // move the read data to the non-aligned position, and restore the initial bytes
         memmove(orig_dest, dest, num_blocks * SDCARD_BLOCK_SIZE);
@@ -659,7 +688,12 @@ int sdcard_write_blocks(const uint8_t *src, uint32_t block_num, uint32_t num_blo
     }
 
     HAL_StatusTypeDef err = HAL_OK;
-
+#if MICROPY_ENABLE_SDCARD_NIRQ
+    err = HAL_SD_WriteBlocks(&sdmmc_handle.sd, (uint8_t *)src, block_num, num_blocks, 60000);
+    if (err == HAL_OK) {
+        err = sdcard_wait_finished();
+    }
+#else
     if (query_irq() == IRQ_STATE_ENABLED) {
         #if MICROPY_HW_USB_MSC
         uint32_t basepri;
@@ -729,7 +763,7 @@ int sdcard_write_blocks(const uint8_t *src, uint32_t block_num, uint32_t num_blo
             err = sdcard_wait_finished();
         }
     }
-
+#endif
     return mp_hal_status_to_neg_errno(err);
 }
 

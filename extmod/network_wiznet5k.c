@@ -76,6 +76,8 @@
 #include "lib/wiznet5k/Internet/DNS/dns.h"
 #include "lib/wiznet5k/Internet/DHCP/dhcp.h"
 
+#include "wiznet5k_yield_override.h"
+
 #endif
 
 extern const mp_obj_type_t mod_network_nic_type_wiznet5k;
@@ -142,6 +144,17 @@ static void wiz_cs_deselect(void) {
     mp_hal_pin_high(wiznet5k_obj.cs);
 }
 
+bool mpy_wiznet_abort_requested(void) {
+    #if MICROPY_PY_THREAD
+    // 这里只读取状态。
+    // 不 clear、不 raise、不调用 VM。
+    return MP_STATE_THREAD(mp_pending_exception) != MP_OBJ_NULL;
+    #else
+    // 非线程模式已经在 mpy_wiznet_yield() 中处理。
+    return false;
+    #endif
+}
+
 void mpy_wiznet_yield(void) {
     // Used in socket.c via -DWIZCHIP_YIELD=mpy_wiznet_yield in make/cmake
     #if MICROPY_PY_THREAD
@@ -149,6 +162,19 @@ void mpy_wiznet_yield(void) {
     #else
     mp_handle_pending(MP_HANDLE_PENDING_CALLBACKS_AND_EXCEPTIONS);
     #endif
+}
+
+static bool wiznet5k_socket_handle_intr(mp_int_t ret, int *_errno) {
+    if (ret != MPY_WIZNET_SOCKERR_INTR) {
+        return false;
+    }
+
+    mp_handle_pending(MP_HANDLE_PENDING_CALLBACKS_AND_EXCEPTIONS);
+
+    // 正常情况下 Ctrl+C 会在上面直接 raise，
+    // 这里仅作为异常状态被提前清掉时的 fallback。
+    *_errno = MP_EINTR;
+    return true;
 }
 
 static void wiz_spi_read(uint8_t *buf, uint16_t len) {
@@ -492,6 +518,11 @@ static void wiznet5k_socket_close(mod_network_socket_obj_t *socket) {
 static int wiznet5k_socket_bind(mod_network_socket_obj_t *socket, byte *ip, mp_uint_t port, int *_errno) {
     // open the socket in server mode (if port != 0)
     mp_int_t ret = WIZCHIP_EXPORT(socket)(socket->fileno, socket->type, port, 0);
+
+    if (wiznet5k_socket_handle_intr(ret, _errno)) {
+        return -1;
+    }
+
     if (ret < 0) {
         wiznet5k_socket_close(socket);
         *_errno = -ret;
@@ -507,6 +538,11 @@ static int wiznet5k_socket_bind(mod_network_socket_obj_t *socket, byte *ip, mp_u
 
 static int wiznet5k_socket_listen(mod_network_socket_obj_t *socket, mp_int_t backlog, int *_errno) {
     mp_int_t ret = WIZCHIP_EXPORT(listen)(socket->fileno);
+
+    if (wiznet5k_socket_handle_intr(ret, _errno)) {
+        return -1;
+    }
+    
     if (ret < 0) {
         wiznet5k_socket_close(socket);
         *_errno = -ret;
@@ -546,6 +582,9 @@ static int wiznet5k_socket_accept(mod_network_socket_obj_t *socket, mod_network_
             *_errno = MP_ENOTCONN; // ??
             return -1;
         }
+
+        mp_handle_pending(MP_HANDLE_PENDING_CALLBACKS_AND_EXCEPTIONS);
+
         mp_hal_delay_ms(1);
     }
 }
@@ -560,6 +599,10 @@ static int wiznet5k_socket_connect(mod_network_socket_obj_t *socket, byte *ip, m
     MP_THREAD_GIL_EXIT();
     mp_int_t ret = WIZCHIP_EXPORT(connect)(socket->fileno, ip, port);
     MP_THREAD_GIL_ENTER();
+
+    if (wiznet5k_socket_handle_intr(ret, _errno)) {
+        return -1;
+    }
 
     if (ret < 0) {
         wiznet5k_socket_close(socket);
@@ -576,6 +619,10 @@ static mp_uint_t wiznet5k_socket_send(mod_network_socket_obj_t *socket, const by
     mp_int_t ret = WIZCHIP_EXPORT(send)(socket->fileno, (byte *)buf, len);
     MP_THREAD_GIL_ENTER();
 
+    if (wiznet5k_socket_handle_intr(ret, _errno)) {
+        return -1;
+    }
+
     // TODO convert Wiz errno's to POSIX ones
     if (ret < 0) {
         wiznet5k_socket_close(socket);
@@ -589,6 +636,10 @@ static mp_uint_t wiznet5k_socket_recv(mod_network_socket_obj_t *socket, byte *bu
     MP_THREAD_GIL_EXIT();
     mp_int_t ret = WIZCHIP_EXPORT(recv)(socket->fileno, buf, len);
     MP_THREAD_GIL_ENTER();
+
+    if (wiznet5k_socket_handle_intr(ret, _errno)) {
+        return -1;
+    }
 
     // TODO convert Wiz errno's to POSIX ones
     if (ret < 0) {
@@ -611,6 +662,11 @@ static mp_uint_t wiznet5k_socket_sendto(mod_network_socket_obj_t *socket, const 
     mp_int_t ret = WIZCHIP_EXPORT(sendto)(socket->fileno, (byte *)buf, len, ip, port);
     MP_THREAD_GIL_ENTER();
 
+    if (wiznet5k_socket_handle_intr(ret, _errno)) {
+        return -1;
+    }
+
+
     if (ret < 0) {
         wiznet5k_socket_close(socket);
         *_errno = -ret;
@@ -625,6 +681,11 @@ static mp_uint_t wiznet5k_socket_recvfrom(mod_network_socket_obj_t *socket, byte
     mp_int_t ret = WIZCHIP_EXPORT(recvfrom)(socket->fileno, buf, len, ip, &port2);
     MP_THREAD_GIL_ENTER();
     *port = port2;
+
+    if (wiznet5k_socket_handle_intr(ret, _errno)) {
+        return -1;
+    }
+
     if (ret < 0) {
         wiznet5k_socket_close(socket);
         *_errno = -ret;
@@ -641,8 +702,8 @@ static int wiznet5k_socket_setsockopt(mod_network_socket_obj_t *socket, mp_uint_
 
 static int wiznet5k_socket_settimeout(mod_network_socket_obj_t *socket, mp_uint_t timeout_ms, int *_errno) {
     // TODO
-    *_errno = MP_EINVAL;
-    return -1;
+    // *_errno = MP_EINVAL;
+    // return -1;
 
     /*
     if (timeout_ms == 0) {
@@ -651,6 +712,8 @@ static int wiznet5k_socket_settimeout(mod_network_socket_obj_t *socket, mp_uint_
         WIZCHIP_EXPORT(ctlsocket)(socket->fileno, CS_SET_IOMODE, &arg);
     }
     */
+
+   return 0;
 }
 
 static int wiznet5k_socket_ioctl(mod_network_socket_obj_t *socket, mp_uint_t request, mp_uint_t arg, int *_errno) {
@@ -687,6 +750,9 @@ static void wiznet5k_dhcp_init(wiznet5k_obj_t *self) {
                 break;
             }
             mpy_wiznet_yield();
+            if (mpy_wiznet_abort_requested()){
+                mp_handle_pending(MP_HANDLE_PENDING_CALLBACKS_AND_EXCEPTIONS);
+            }
         }
 
         if (dhcp_retry > 3) {
@@ -1057,8 +1123,20 @@ static MP_DEFINE_CONST_DICT(wiznet5k_locals_dict, wiznet5k_locals_dict_table);
 #if WIZNET5K_WITH_LWIP_STACK
 #define NIC_TYPE_WIZNET_PROTOCOL
 #else // WIZNET5K_PROVIDED_STACK
+
+void wiznet5k_deinit_provided(void) {
+    wiznet5k_obj.socket_used = 0;
+    wiznet5k_obj.active = false;
+
+    reg_wizchip_cris_cbfunc(NULL, NULL);
+    reg_wizchip_cs_cbfunc(NULL, NULL);
+    reg_wizchip_spi_cbfunc(NULL, NULL);
+    reg_wizchip_spiburst_cbfunc(NULL, NULL);
+}
+
 const mod_network_nic_protocol_t mod_network_nic_protocol_wiznet = {
     .gethostbyname = wiznet5k_gethostbyname,
+    .deinit =  wiznet5k_deinit_provided,
     .socket = wiznet5k_socket_socket,
     .close = wiznet5k_socket_close,
     .bind = wiznet5k_socket_bind,
