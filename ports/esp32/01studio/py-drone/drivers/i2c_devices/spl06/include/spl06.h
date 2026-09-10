@@ -25,18 +25,16 @@
 #include <stdbool.h>
 #include "mpconfigboard.h"
 
-#if (!MICROPY_HW_SPA06 && ! MICROPY_HW_SPA06_V1)
+#if (!MICROPY_HW_SPA06)
 
 #if MICROPY_HW_I2CDEV_V1
 #include "i2cdev_v1.h"
 #else
 #include "i2cdev.h"
 #endif
-#if MICROPY_HW_SPL06_V1
-#define SPL06_I2C_ADDR					(0x77)
-#else
-#define SPL06_I2C_ADDR					(0x76)
-#endif
+
+#define SPL06_I2C_ADDR  MICROPY_HW_SPL06_I2C_ADDR		
+
 #define SPL06_DEFAULT_CHIP_ID			(0x10)
 
 #define SPL06_PRESSURE_MSB_REG			(0x00)  /* Pressure MSB Register */

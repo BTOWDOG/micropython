@@ -13,7 +13,7 @@
 
 #include "pm_esplane.h"
 #if MICROPY_HW_QMI8658
-#include "sensors_qmi8658_spl06.h"
+#include "sensors_qmi8658_spa06.h"
 #else
 #include "sensors_mpu6050_spl06.h"
 #endif
@@ -50,7 +50,7 @@ void systemInit(void)
 	pmInit();
 	//初始化传感器
 #if MICROPY_HW_QMI8658
-	sensorsQmi8658Spl06Init();
+	sensorsQmi8658Spa06Init();
 #else
 	sensorsMpu6050Spl06Init();
 #endif
@@ -62,6 +62,7 @@ void systemDeInit(void)
 {
 	stabilizerDeInit();
 #if MICROPY_HW_QMI8658
+	sensorsQmi8658Spa06DeInit();
 #else
 	sensorsMpu6050Spl06DeInit();
 #endif

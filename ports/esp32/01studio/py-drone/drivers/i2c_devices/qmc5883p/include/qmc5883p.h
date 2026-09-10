@@ -46,7 +46,7 @@
 
 void qmc5883pInit(I2C_Dev *i2cPort);
 bool qmc5883pTestConnection();
-
+void qmc5883pDeInit(void);
 
 uint8_t qmc5883pReadByte(uint8_t reg_addr);
 void qmc5883pWriteByte(uint8_t reg_addr, uint8_t data);

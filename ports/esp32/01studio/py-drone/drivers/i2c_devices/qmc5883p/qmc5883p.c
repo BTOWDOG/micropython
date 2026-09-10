@@ -39,10 +39,26 @@ void qmc5883pInit(I2C_Dev *i2cPort)
     isInit = true;
 }
 
-// void qmc5883pInit(void)
-// {
-//     isInit = false;
-// }
+void qmc5883pDeInit(void)
+{
+    if (!isInit) {
+        return;
+    }
+
+    if (I2Cx != NULL && I2Cx->devHandle[QMC5883P] != NULL) {
+        esp_err_t err = i2c_master_bus_rm_device(I2Cx->devHandle[QMC5883P]);
+
+        if (err != ESP_OK) {
+            printf("rm qmc5883p device failed: %s",esp_err_to_name(err));
+            return;
+        }
+
+        I2Cx->devHandle[QMC5883P] = NULL;
+    }
+
+    I2Cx = NULL;
+    isInit = false;
+}
 
 bool qmc5883pTestConnection()
 {

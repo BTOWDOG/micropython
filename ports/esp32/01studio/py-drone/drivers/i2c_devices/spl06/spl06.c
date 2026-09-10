@@ -23,7 +23,7 @@
 #include "freertos/task.h"
 
 #include "spl06.h"
-#if (!MICROPY_HW_SPA06 && !MICROPY_HW_SPA06_V1)
+#if (!MICROPY_HW_SPA06)
 
 #if MICROPY_HW_I2CDEV_V1 
 #include "i2cdev_v1.h"
@@ -86,19 +86,17 @@ static bool spl06i2cdevRead(I2C_Dev *dev, uint8_t memAddress, uint8_t len, uint8
 {
 	return i2cdevReadReg8(dev->devHandle[SPL06], memAddress, len, data);
 }
-#else
-static bool spl06i2cdevRead(I2C_Dev *dev, uint8_t devAddress, uint8_t memAddress, uint16_t len, uint8_t *data)
-{
-	return i2cdevReadReg8(dev, devAddress,memAddress,(uint16_t) len, data);
-}
-#endif
 
-#if MICROPY_HW_I2CDEV_V1
 void spl06Read(uint8_t memAddress, uint8_t len, uint8_t *data)
 {
 	i2cdevReadReg8(I2Cx->devHandle[SPL06],memAddress, len, data);
 }
 #else
+static bool spl06i2cdevRead(I2C_Dev *dev, uint8_t devAddress, uint8_t memAddress, uint16_t len, uint8_t *data)
+{
+	return i2cdevReadReg8(dev, devAddress,memAddress,(uint16_t) len, data);
+}
+
 void spl06Read(uint8_t memAddress, uint16_t len, uint8_t *data)
 {
 	i2cdevReadReg8(I2Cx, devAddr,memAddress, len, data);

@@ -20,7 +20,7 @@ I2cDrv  sensorsBus  = {
     .def = &sensorBusDef,
 };
 
-#if MICROPY_HW_SPL06_V1 || MICROPY_HW_SPA06_V1
+
 static const I2cDef deckBusDef = {
     .i2cPort        = I2C_NUM_1,
     .gpioSclPin     = MICROPY_HW_DECK_I2C_PIN_SCL,
@@ -32,7 +32,7 @@ static const I2cDef deckBusDef = {
 I2cDrv  deckBus = {
     .def = &deckBusDef,
 };
-#endif
+
 
 static void i2cDrvInitBus(I2cDrv *i2c)
 {
@@ -61,10 +61,26 @@ void i2cDrvInit(I2cDrv *i2c)
 
 void i2cDrvDeInit(I2cDrv *i2c)
 {
-    if(isInit_i2cPort[i2c->def->i2cPort])
-    {
-        
+    uint8_t port = i2c->def->i2cPort;
+
+    if (!isInit_i2cPort[port]) {
+        return;
     }
+
+    if (i2c->busHandle != NULL) {
+        esp_err_t err = i2c_del_master_bus(i2c->busHandle);
+
+        if (err != ESP_OK) {
+            printf("i2c %d bus delete failed: %s", port, esp_err_to_name(err));
+            return;
+        }
+
+        i2c->busHandle = NULL;
+    }
+
+    isInit_i2cPort[port] = false;
+
+    printf("i2c %d driver uninstall", port);
 }
 
 #endif

@@ -24,13 +24,7 @@
 
 #include "spa06.h"
 
-#if MICROPY_HW_SPA06 || MICROPY_HW_SPA06_V1
-
-#if MICROPY_HW_I2CDEV_V1 
-#include "i2cdev_v1.h"
-#else
-#include "i2cdev.h"
-#endif
+#if MICROPY_HW_SPA06
 
 #include "math.h"
 
@@ -45,8 +39,8 @@
 #define T_OVERSAMP_RATE 		SPA06_OVERSAMP_8	//过采样率
 #define SPA06_TEMPERATURE_CFG	(TEMPERATURE_EXTERNAL_SENSOR<<7 | T_MEASURE_RATE<<4 | T_OVERSAMP_RATE)
 
-#define SPL06_MODE				(SPA06_CONTINUOUS_MODE)
-#define  SPL06_TIME_MS	10
+#define SPA06_MODE				(SPA06_CONTINUOUS_MODE)
+
 const uint32_t scaleFactor[8] = {524288, 1572864, 3670016, 7864320, 253952, 516096, 1040384, 2088960};
 static const char* TAG = "SPA06";
 
@@ -188,7 +182,7 @@ bool SPA06Init(I2C_Dev *i2cPort)
 	spa06_rateset(PRESURE_SENSOR, SPA06_MWASURE_16, SPA06_OVERSAMP_32);
 	spa06_rateset(TEMPERATURE_SENSOR, SPA06_MWASURE_16, SPA06_OVERSAMP_1);
 	
-	i2cdevWriteByte(I2Cx->devHandle[SPA06], SPA06_MODE_CFG_REG, SPL06_MODE);
+	i2cdevWriteByte(I2Cx->devHandle[SPA06], SPA06_MODE_CFG_REG, SPA06_MODE);
 
 
     isInit = true;
@@ -196,7 +190,23 @@ bool SPA06Init(I2C_Dev *i2cPort)
 }
 void SPA06DeInit(void)
 {
-	isInit = false;
+    if (!isInit) {
+        return;
+    }
+
+    if (I2Cx != NULL && I2Cx->devHandle[SPA06] != NULL) {
+        esp_err_t err = i2c_master_bus_rm_device(I2Cx->devHandle[SPA06]);
+
+        if (err != ESP_OK) {
+            printf("rm SPA06 device failed: %s",esp_err_to_name(err));
+            return;
+        }
+
+        I2Cx->devHandle[SPA06] = NULL;
+    }
+
+    I2Cx = NULL;
+    isInit = false;
 }
 
 float spa06_get_temperature(int32_t rawTemperature)

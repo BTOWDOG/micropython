@@ -16,18 +16,12 @@
 #include "i2cdev.h"
 #include "qmi8658.h"
 #include "qmc5883p.h"
-
-#if MICROPY_HW_SPA06 || MICROPY_HW_SPA06_V1
 #include "spa06.h"
-#else
-#include "spl06.h"
-#endif
 
 #include "stabilizer_types.h"
 #include "filter.h"
-
 #include "config.h"
-
+#include "sensfusion6.h"
 
 #define GYRO_LPF_CUTOFF_FREQ 80
 #define ACCEL_LPF_CUTOFF_FREQ 30
@@ -56,10 +50,7 @@ static sensorData_t sensorData;
 
 static uint8_t isprintf = 0;
 
-#define SENSORS_ENABLE_PRESSURE_SPL06
-#define SENSORS_ENABLE_MAG_HM5883L 
-#define MICROPY_MPU_PIN_IRQ				(9)
-
+#define SENSORS_ENABLE_MAG_QMC5883P 
 
 // Number of samples used in variance calculation. Changing this effects the threshold
 #define SENSORS_NBR_OF_BIAS_SAMPLES 1024 /* 计算方差的采样样本个数 */
@@ -151,9 +142,6 @@ static void sensorsDeviceInit(void)
 	isBarometerPresent = false;
 lab1:
     i2cdevInit(I2C0_DEV);
-#if MICROPY_HW_SPL06_V1 || MICROPY_HW_SPA06_V1
-    i2cdevInit(I2C1_DEV);
-#endif
     printf("i2c init\n");
     qmi8658Init(I2C0_DEV);
     printf("qmi8658 init\n");
@@ -209,77 +197,39 @@ lab1:
         lpf2pInit(&accLpf[i], 1793.6, ACCEL_LPF_CUTOFF_FREQ);
     }
     
-#ifdef SENSORS_ENABLE_MAG_HM5883L
+#ifdef SENSORS_ENABLE_MAG_QMC5883P
     qmc5883pInit(I2C0_DEV);
 
     if (qmc5883pTestConnection() == true) {
         isMagnetometerPresent = true;
         //hmc5883lSetMode(QMC5883L_MODE_CONTINUOUS); // 16bit 100Hz Continuous 
         //QMC5883L_OUTPUT_10HZ | QMC5883L_OUTPUT_2G | QMC5883L_SAMPLE_128
-        uint8_t tempMode = QMC5883P_MODE_CONTINUOUS || QMC5883P_OUTPUT_10HZ || QMC5883P_SAMPLE_128;
+        uint8_t tempMode = QMC5883P_MODE_CONTINUOUS | QMC5883P_OUTPUT_10HZ | QMC5883P_SAMPLE_128;
         qmc5883pWriteByte(QMC5883P_RA_CONFIG_1, tempMode);
         ESP_LOGI(TAG,"qmc5883p I2C connection [OK].\n");
-		// debugpeintf("hmc5883l I2C connection [OK]\r\n");
+        printf("qmc5883p I2C connection [OK].\n");
     } else {
         ESP_LOGE(TAG,"qmc5883p I2C connection [FAIL].\n");
-		// debugpeintf("hq5883l I2C connection [FAIL]\r\n");
         goto lab1;
     }
 
 #endif
-#if MICROPY_HW_SPL06_V1 || MICROPY_HW_SPA06_V1
-    #if MICROPY_HW_SPA06_V1
-    
-    if (SPA06Init(I2C1_DEV)) {
-        isBarometerPresent = true;
-        ESP_LOGI(TAG,"SPA06 I2C v1 connection [OK].\n");
-        printf("SPA06 I2C V1 \n");
-    } else {
-        //TODO: Should sensor test fail hard if no connection
-       ESP_LOGE(TAG,"SPA06 I2C v1 connection [FAIL].\n");
-	   goto lab1;
-    }
 
-    #else
-    if (SPL06Init(I2C1_DEV)) {
-        isBarometerPresent = true;
-        ESP_LOGI(TAG,"SPL06 I2C v1 connection [OK].\n");
-        printf("SPL06 I2C V1 \n");
-    } else {
-        //TODO: Should sensor test fail hard if no connection
-       ESP_LOGE(TAG,"SPL06 I2C v1 connection [FAIL].\n");
-	   goto lab1;
-    }
-
-    #endif
-#else
-    #if MICROPY_HW_SPA06
-    
+#if MICROPY_HW_SPA06
+ 
     if (SPA06Init(I2C0_DEV)) {
         isBarometerPresent = true;
         ESP_LOGI(TAG,"SPA06 I2C connection [OK].\n");
-        printf("SPL06 I2C  \n");
+        printf("SPA06 I2C connection [OK].\n");
     } else {
         //TODO: Should sensor test fail hard if no connection
        ESP_LOGE(TAG,"SPA06 I2C connection [FAIL].\n");
 	   goto lab1;
     }
 
-    #else
-    if (SPL06Init(I2C0_DEV)) {
-        isBarometerPresent = true;
-        ESP_LOGI(TAG,"SPL06 I2C connection [OK].\n");
-    } else {
-        //TODO: Should sensor test fail hard if no connection
-       ESP_LOGE(TAG,"SPL06 I2C connection [FAIL].\n");
-	   goto lab1;
-    }
-    #endif
 #endif
 
 }
-
-#define ESP_INTR_FLAG_DEFAULT 0
 
 static void IRAM_ATTR sensors_inta_isr_handler(void *arg)
 {
@@ -336,7 +286,7 @@ static void sensorsInterruptInit(void)
 // /*处理磁力计数据*/
 void processMagnetometerMeasurements(const uint8_t *buffer)
 {
-	#ifdef SENSORS_ENABLE_MAG_HM5883L
+	#ifdef SENSORS_ENABLE_MAG_QMC5883P
     //TODO: replace it to hmc5883l
     if (buffer[0] & QMC5883P_STATUS_DRDY_BIT) {
         int16_t headingx = (((int16_t)buffer[2]) << 8) | buffer[1];
@@ -372,23 +322,12 @@ void processBarometerMeasurements(const uint8_t *buffer)
 	int32_t rawTemp = (int32_t)buffer[4]<<16 | (int32_t)buffer[5]<<8 | (int32_t)buffer[6];
 	rawTemp = (rawTemp & 0x800000) ? (0xFF000000 | rawTemp) : rawTemp;
 
-    // printf("Pressure %ld rawTemp %ld\n", Pressure, rawTemp);
-    
-    #if MICROPY_HW_SPA06 || MICROPY_HW_SPA06_V1
 	temp = spa06_get_temperature(rawTemp);
 	pressure = spa06_get_pressure(Pressure, rawTemp);
 	sensorData.baro.pressure = pressure / 100.0f;
 	sensorData.baro.temperature = (float)temp; /*单位度*/
 	sensorData.baro.asl = SPA06PressureToAltitude(sensorData.baro.pressure) * 100.f; //cm
 
-    #else
-	temp = spl0601_get_temperature(rawTemp);
-	pressure = spl0601_get_pressure(Pressure, rawTemp);
-	sensorData.baro.pressure = pressure / 100.0f;
-	sensorData.baro.temperature = (float)temp; /*单位度*/
-	sensorData.baro.asl = SPL06PressureToAltitude(sensorData.baro.pressure) * 100.f; //cm
-
-    #endif
 }
 
 
@@ -471,16 +410,6 @@ static bool sensorsFindBiasValue(BiasObj *bias)
 		readvariance.x = bias->variance.x;
 		readvariance.y = bias->variance.y;
 		readvariance.z = bias->variance.z;
-		//printf("x:%0.2f,y:%0.2f,z:%0.2f\r\n",bias->variance.x,bias->variance.y,bias->variance.z);
-		
-		// ESP_LOGE(TAG,"x:%0.2f,y:%0.2f,z:%0.2f\r\n",bias->variance.x,bias->variance.y,bias->variance.z);
-		
-		// if(isprintf)
-		// {
-			// memset(peintf_buf, '\0', 100);
-			// sprintf(peintf_buf,"x:%0.2f,y:%0.2f,z:%0.2f\r\n",bias->variance.x,bias->variance.y,bias->variance.z);
-			// debugpeintf(peintf_buf);
-		// }
     }
 
     return foundBias;
@@ -636,7 +565,6 @@ static void applyAxis3fLpf(lpf2pData *data, Axis3f *in)
 }
 
 
-int flat = 0;
 /*处理加速计和陀螺仪数据*/
 void processAccGyroMeasurements(const uint8_t *buffer)
 {
@@ -712,7 +640,7 @@ void processAccGyroMeasurements(const uint8_t *buffer)
 
 
 static TaskHandle_t sensors_handle = NULL;
-#include "debug.h"
+
 static void sensorsTask(void *param)
 {
     vTaskDelay(M2T(200));
@@ -721,66 +649,15 @@ static void sensorsTask(void *param)
     uint8_t buf1[12] = {0};
     uint8_t buf2[7] ={0};
     uint8_t buf3[7] = {0};
-    static uint32_t last = 0;
-    // uint8_t buffer[512] = {0};
-    // //FIFO MODE
-    // qmi8658WriteByte(0x13, 0x0c);
-    // qmi8658WriteByte(0x14, 0x01);  //1000 0010
-    static int16_t conut3 = 0;
     while (1)
     {
 
-        uint32_t now = xTaskGetTickCount();
-
-        // printf("imu dt=%lu\n", now - last);
-
-        last = now;
-        if(pdTRUE == xSemaphoreTake(sensorsDataReady, portMAX_DELAY)  ){
+        if(pdTRUE == xSemaphoreTake(sensorsDataReady, portMAX_DELAY)){
             
             sensorData.interruptTimestamp = imuIntTimestamp;
             
-            // uint8_t read = qmi8658ReadByte(QMI8658_STATUS0);
-
-
- 
-            // uint16_t fifo_count;
-            // qmi8658WriteByte(0x14, 0x82); // Bit7 = 1 (RD_MODE)
-            // uint8_t cnt[2];
-            // qmi8658Read(0x15,2,cnt);
-            // fifo_count = (cnt[0] << 8) | cnt[1];
-
-            // uint16_t read_bytes = fifo_count * 12;
-
-            // qmi8658Read(0x17, read_bytes, buffer);
-
-            // printf("test\n");
-            // for(int i = 0; i < 6; i++)
-            // {
-            //     int  temp = i * 12; //0 ~ 11 :12 ~ 23 : 24 ~ 35: 36 ~ 47 : 48 ~ 59 : 60 ~ 71
-            //     accelRaw.y = (((int16_t)buffer[temp + 1]) << 8) | buffer[temp + 0];
-            //     accelRaw.x = (((int16_t)buffer[temp + 3]) << 8) | buffer[temp + 2];
-            //     accelRaw.z = (((int16_t)buffer[temp + 5]) << 8) | buffer[temp + 4];
-            //     gyroRaw.y = (((int16_t)buffer[temp + 7]) << 8)  | buffer[temp + 6];
-            //     gyroRaw.x = (((int16_t)buffer[temp + 9]) << 8)  | buffer[temp + 8];
-            //     gyroRaw.z = (((int16_t)buffer[temp + 11]) << 8) | buffer[temp + 10];
-
-            //     printf("gyro:[%d] %d %d %d\n",++flat, gyroRaw.x, gyroRaw.y, gyroRaw.z);
-            // }
-            // qmc5883pRead(0x09, 1, buf2);
-            // qmc5883pRead(0x01, 6, buf2 + 1);
-
-            // spl06Read(SPL06_MODE_CFG_REG, 1 ,buf3);
-            // spl06Read(SPL06_PRESSURE_MSB_REG, 6, buf3);
-
             qmi8658Read(0x35, 12, buf1);
             processAccGyroMeasurements(buf1);
-
-
-            // DBG_EVERY(qmi_raw_log, 400, "RAW acc[%d %d %d] gyro[%d %d %d] scaled_acc[%.3f %.3f %.3f] scaled_gyro[%.2f %.2f %.2f]",
-            //     accelRaw.x, accelRaw.y, accelRaw.z,
-            //     gyroRaw.x, gyroRaw.y, gyroRaw.z,
-            //     sensorData.acc.x, sensorData.acc.y, sensorData.acc.z,
-            //     sensorData.gyro.x, sensorData.gyro.y, sensorData.gyro.z);
 
             if(isMagnetometerPresent && gyroBiasRunning.isBiasValueFound){
 
@@ -791,7 +668,6 @@ static void sensorsTask(void *param)
 
             if(isBarometerPresent  && gyroBiasRunning.isBiasValueFound){
                 
-                #if MICROPY_HW_SPA06 || MICROPY_HW_SPA06_V1
                 spa06Read(SPA06_MODE_CFG_REG, 1 ,buf3);
                 // spl06Read(SPL06_PRESSURE_MSB_REG, 6, buf3 + 1);
                 // processBarometerMeasurements(buf3);
@@ -800,23 +676,7 @@ static void sensorsTask(void *param)
                     processBarometerMeasurements(buf3);
                     // xQueueOverwrite(barometerDataQueue, &sensorData.baro);
                 }
-                #else
-                spl06Read(SPL06_MODE_CFG_REG, 1 ,buf3);
-                // spl06Read(SPL06_PRESSURE_MSB_REG, 6, buf3 + 1);
-                // processBarometerMeasurements(buf3);
-                if((*buf3 & 0x30) == 0x30 ){
-                    spl06Read(SPL06_PRESSURE_MSB_REG, 6, buf3 + 1);
-                    processBarometerMeasurements(buf3);
-                    // xQueueOverwrite(barometerDataQueue, &sensorData.baro);
-                }
-                #endif
             }
-
-            // DBG_EVERY(baro_log, 500,
-            // "BARO pressure=%.2f temp=%.2f asl=%.2f",
-            // sensorData.baro.pressure,
-            // sensorData.baro.temperature,
-            // sensorData.baro.asl);
 
             vTaskSuspendAll();
 
@@ -835,52 +695,11 @@ static void sensorsTask(void *param)
             
             xSemaphoreGive(dataReady);
 
-            // qmi8658WriteByte(0x14, 0x03);
-            // qmi8658WriteByte(0x14, 0x01);
-            // printf("sensors ready\n");
-            // printf("g: %f %f %f  a: %f %f %f\n",
-            // sensorData.gyro.x,
-            // sensorData.gyro.y,
-            // sensorData.gyro.z,
-            // sensorData.acc.x,
-            // sensorData.acc.y,
-            // sensorData.acc.z);
-
         }
 
 
     }
     
-}
-
-static void sensorsTaskInit(void)
-{
-	accelerometerDataQueue = xQueueCreate(1, sizeof(Axis3f));
-	gyroDataQueue = xQueueCreate(1, sizeof(Axis3f));
-	magnetometerDataQueue = xQueueCreate(1, sizeof(Axis3f));
-	barometerDataQueue = xQueueCreate(1, sizeof(baro_t));
-
-    xTaskCreate(sensorsTask, SENSORS_TASK_NAME, SENSORS_TASK_STACKSIZE, NULL, SENSORS_TASK_PRI, &sensors_handle);
-
-    ESP_LOGI(TAG, "xTaskCreate sensorsTask");
-}
-
-
-//初始化传感器
-void sensorsQmi8658Spl06Init(void)
-{
-    if(isInit){
-        return;
-    }
-
-    sensorsBiasObjInit(&gyroBiasRunning);
-
-    sensorsDeviceInit();
-
-    sensorsInterruptInit();
-    sensorsTaskInit(); //传感器任务
-    isInit = true;
-
 }
 
 void readBiasVlue(Axis3f *variance)
@@ -905,4 +724,73 @@ void setPrintf(uint8_t set)
 {
 	isprintf = set;
 }
+
+static void sensorsTaskInit(void)
+{
+	accelerometerDataQueue = xQueueCreate(1, sizeof(Axis3f));
+	gyroDataQueue = xQueueCreate(1, sizeof(Axis3f));
+	magnetometerDataQueue = xQueueCreate(1, sizeof(Axis3f));
+	barometerDataQueue = xQueueCreate(1, sizeof(baro_t));
+
+    xTaskCreate(sensorsTask, SENSORS_TASK_NAME, SENSORS_TASK_STACKSIZE, NULL, SENSORS_TASK_PRI, &sensors_handle);
+
+    ESP_LOGI(TAG, "xTaskCreate sensorsTask");
+}
+
+
+//初始化传感器
+void sensorsQmi8658Spa06Init(void)
+{
+    if(isInit){
+        return;
+    }
+
+    sensorsBiasObjInit(&gyroBiasRunning);
+
+    sensorsDeviceInit();
+
+    sensorsInterruptInit();
+    sensorsTaskInit(); //传感器任务
+    isInit = true;
+
+}
+
+void sensorsI2CdevDeInit(void)
+{
+	i2cDrvDeInit(I2C0_DEV);
+}
+
+void sensorsQmi8658Spa06DeInit(void)
+{
+	if(!isInit) return;
+	gyroBiasFound = false;
+	
+	// hmc5883lDeInit();
+	qmi8658DeInit();
+    qmc5883pDeInit();
+    SPA06DeInit();
+	setCalibrated(false);
+	
+	gpio_isr_handler_remove(MICROPY_MPU_PIN_IRQ);
+	gpio_uninstall_isr_service();
+	esp_rom_gpio_pad_select_gpio(MICROPY_MPU_PIN_IRQ);
+	esp_rom_gpio_connect_out_signal(MICROPY_MPU_PIN_IRQ, SIG_GPIO_OUT_IDX, false, false);
+	gpio_set_direction(MICROPY_MPU_PIN_IRQ, GPIO_MODE_INPUT);
+	
+	if( sensors_handle != NULL )
+	{
+		vTaskDelete( sensors_handle );
+	}
+	
+	vSemaphoreDelete(dataReady);
+	vSemaphoreDelete(sensorsDataReady);
+
+	vQueueDelete(accelerometerDataQueue);
+	vQueueDelete(gyroDataQueue);
+	vQueueDelete(magnetometerDataQueue);
+	vQueueDelete(barometerDataQueue);
+
+	isInit = false;
+}
+
 #endif 

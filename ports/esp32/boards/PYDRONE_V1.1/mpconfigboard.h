@@ -6,9 +6,8 @@
 #define MICROPY_ENABLE_ESP_DRONE		(1)
 #define MICROPY_HW_I2CDEV_V1            (1)
 #define MICROPY_HW_QMI8658              (1)
-#define MICROPY_HW_SPL06_V1             (0)
 #define MICROPY_HW_SPA06                (1)
-#define MICROPY_HW_SPA06_V1             (0)
+#define MICROPY_HW_SPA06_I2C_ADDR       0x76
 
 #define MICROPY_HW_SENSOR_I2C_PIN_SCL	(15)
 #define MICROPY_HW_SENSOR_I2C_PIN_SDA	(16)

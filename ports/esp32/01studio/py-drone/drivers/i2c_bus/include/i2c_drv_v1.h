@@ -16,7 +16,7 @@ typedef struct
 typedef enum{
     QMI8658A = 0,
     QMC5883P,
-#if MICROPY_HW_SPA06 || MICROPY_HW_SPA06_V1
+#if MICROPY_HW_SPA06
     SPA06,
 #else
     SPL06,

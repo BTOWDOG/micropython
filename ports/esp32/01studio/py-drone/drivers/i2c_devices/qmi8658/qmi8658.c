@@ -32,29 +32,28 @@ void qmi8658Init(I2C_Dev *i2cPort)
 
     ESP_ERROR_CHECK(i2c_master_bus_add_device(I2Cx->busHandle, &conf, &I2Cx->devHandle[QMI8658A]));
     vTaskDelay(10 / portTICK_PERIOD_MS);
-    // uint8_t memAddress = QMI8658_WHO_AM_I;
-    // while (1)
-    // {
-    //     esp_err_t is = i2c_master_transmit_receive(I2Cx->devHandle[QMI8658A], &memAddress, 1, buffer, 1, 200 / portTICK_PERIOD_MS);
-    //     if (is == ESP_OK)
-    //     {
-    //         break;
-    //     }else{
-    //         printf("test\n");
-    //         printf("new bus ret=%d\n", ret);
-    //         vTaskDelay(100 / portTICK_PERIOD_MS);
-    //     }
-        
-    // }
-    
-
-
 
     isInit = true;
 }
 
 void qmi8658DeInit(void)
 {
+    if (!isInit) {
+        return;
+    }
+
+    if (I2Cx != NULL && I2Cx->devHandle[QMI8658A] != NULL) {
+        esp_err_t err = i2c_master_bus_rm_device(I2Cx->devHandle[QMI8658A]);
+
+        if (err != ESP_OK) {
+            printf("rm qmi8658 device failed: %s",esp_err_to_name(err));
+            return;
+        }
+
+        I2Cx->devHandle[QMI8658A] = NULL;
+    }
+
+    I2Cx = NULL;
     isInit = false;
 }
 

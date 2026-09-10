@@ -8,6 +8,7 @@
 #define MICROPY_HW_SENSOR_I2C_PIN_SCL	(15)
 #define MICROPY_HW_SENSOR_I2C_PIN_SDA	(16)
 #define MICROPY_MPU_PIN_IRQ				(7)
+#define MICROPY_HW_SPL06_I2C_ADDR       0x76
 
 #define MICROPY_HW_DECK_I2C_PIN_SCL		(1)
 #define MICROPY_HW_DECK_I2C_PIN_SDA		(6)
@@ -43,6 +44,6 @@
 #define CAM_PIN_PCLK					(14)
 
 #define MICROPY_HW_ENABLE_UART_REPL     (1)
-#define MICROPY_HW_ENABLE_USBDEV        (0)
-#define MICROPY_HW_USB_CDC               0
+#define MICROPY_HW_ENABLE_USBDEV        (1)
+#define MICROPY_HW_USB_CDC               1
 #define MICROPY_HW_ESP_USB_SERIAL_JTAG   0
